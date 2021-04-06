@@ -29,7 +29,7 @@ public class Lista02Activity extends AppCompatActivity {
 
     private ConstraintLayout constraintLayout;
 
-    //VOLTAR COM BOTÃO VIRTUAL DO CELULAR - PARA A LISTA DE HISTORIAS
+    //VOLTAR COM BOTÃO VIRTUAL DO CELULAR - PARA A TELA INICIAL
     @Override
     public void onBackPressed () {
         super.onBackPressed();
