@@ -26,6 +26,8 @@ public class Lista01Activity extends AppCompatActivity {
     private Button btHist015;
     private Button btHist016;
 
+    private Button btNovo;
+
     private ConstraintLayout constraintLayout;
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR - PARA A LISTA DE HISTORIAS
@@ -44,6 +46,17 @@ public class Lista01Activity extends AppCompatActivity {
         setContentView(R.layout.activity_lista01);
 
         constraintLayout = findViewById(R.id.constrainLayout);
+
+
+        btNovo = findViewById(R.id.btNovo);
+        btNovo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Lista02Activity.class);
+                startActivity(intent);
+            }
+        });
+
 
         btHist001 = findViewById(R.id.btHist001);
         btHist001.setOnClickListener(new View.OnClickListener() {

@@ -24,6 +24,8 @@ public class Lista02Activity extends AppCompatActivity {
     private Button btHist013;
     private Button btHist014;
 
+    private Button btAntigo;
+
 
     private ConstraintLayout constraintLayout;
 
@@ -43,6 +45,15 @@ public class Lista02Activity extends AppCompatActivity {
         setContentView(R.layout.activity_lista02);
 
         constraintLayout = findViewById(R.id.constrainLayout);
+
+        btAntigo = findViewById(R.id.btAntigo);
+        btAntigo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
+                startActivity(intent);
+            }
+        });
 
         btHist001 = findViewById(R.id.btHist001);
         btHist001.setOnClickListener(new View.OnClickListener() {
