@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">AppHistoria</string>
+    <string name="BotaoHistoria001">História 001</string>
+    <string name="ImagemHistoria001">ImagemHistoria001</string>
+    <string name="TextoHistoria001">A criação</string>
+
+    <string name="BotaoHistoria002">História 002</string>
+    <string name="TextoHistoria002">O pecado</string>
+
+    <string name="BotaoHistoria003">História 003</string>
+    <string name="TextoHistoria003">A arca</string>
+
+    <string name="BotaoHistoria004">História 004</string>
+    <string name="TextoHistoria004">A promessa</string>
+
+    <string name="BotaoHistoria005">História 005</string>
+    <string name="TextoHistoria005">A prova</string>
+
+    <string name="BotaoHistoria006">História 006</string>
+    <string name="TextoHistoria006">O sonhador</string>
+
+    <string name="BotaoHistoria007">Historia 007</string>
+    <string name="TextoHistoria007">Sonhos relizados</string>
+
+    <string name="BotaoHistoria008">Historia 008</string>
+    <string name="TextoHistoria008">Um bebê especial</string>
+
+    <string name="BotaoHistoria009">Historia 009</string>
+    <string name="TextoHistoria009">Os castigos </string>
+
+    <string name="BotaoHistoria010">Historia 010</string>
+    <string name="TextoHistoria010">O caminho</string>
+
+    <string name="BotaoHistoria011">Historia 011</string>
+    <string name="TextoHistoria011">O muro</string>
+
+    <string name="BotaoHistoria012">Historia 012</string>
+    <string name="TextoHistoria012">Herói cabeludo</string>
+
+    <string name="BotaoHistoria013">Historia 013</string>
+    <string name="TextoHistoria013">Rainha escolhida</string>
+
+    <string name="BotaoHistoria014">Historia 014</string>
+    <string name="TextoHistoria014">Acorda Samuel</string>
+
+    <string name="BotaoHistoria015">Historia 015</string>
+    <string name="TextoHistoria015">Davi e Golias</string>
+
+    <string name="BotaoHistoria016">Historia 016</string>
+    <string name="TextoHistoria016">Daniel e os leões</string>
+
+    <string name="BotaoInicio">Inicio</string>
+    <string name="BotaoProxima">Proxima</string>
+
+    <string name="BotaoMusica">Botao Musica</string>
+    <string name="BotaoPlayer">Botao Player</string>
+    <string name="BotaoReiniciar">Botao Reiniciar</string>
+
+    <string name="BotaoHistoria017">Historia 017</string>
+    <string name="TextoHistoria017">O Bebe Jesus</string>
+
+
+</resources>
+
