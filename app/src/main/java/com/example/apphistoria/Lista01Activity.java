@@ -36,8 +36,8 @@ public class Lista01Activity extends AppCompatActivity {
         super.onBackPressed();
         finish();
 
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        //startActivity(intent);
     }
 
     @Override
@@ -46,7 +46,6 @@ public class Lista01Activity extends AppCompatActivity {
         setContentView(R.layout.activity_lista01);
 
         constraintLayout = findViewById(R.id.constrainLayout);
-
 
         btNovo = findViewById(R.id.btNovo);
         btNovo.setOnClickListener(new View.OnClickListener() {
