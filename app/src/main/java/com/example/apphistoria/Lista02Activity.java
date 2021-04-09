@@ -10,7 +10,6 @@ import android.widget.Button;
 public class Lista02Activity extends AppCompatActivity {
 
     private Button btHist001;
-    /*
     private Button btHist002;
     private Button btHist003;
     private Button btHist004;
@@ -24,7 +23,6 @@ public class Lista02Activity extends AppCompatActivity {
     private Button btHist012;
     private Button btHist013;
     private Button btHist014;
-     */
 
     private Button btAntigo;
 
@@ -37,8 +35,8 @@ public class Lista02Activity extends AppCompatActivity {
         super.onBackPressed();
         finish();
 
-        //Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -66,8 +64,6 @@ public class Lista02Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        /*
 
         btHist002 = findViewById(R.id.btHist002);
         btHist002.setOnClickListener(new View.OnClickListener() {
@@ -199,7 +195,7 @@ public class Lista02Activity extends AppCompatActivity {
             }
         });
 
-         */
+
     }
 }
 

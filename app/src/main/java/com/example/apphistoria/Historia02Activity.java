@@ -196,9 +196,9 @@ public class Historia02Activity extends AppCompatActivity {
                     musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
                     finish();
 
-                    Intent intent = new Intent(getApplicationContext(), Lista02Activity.class);
+                    Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
 
-                    //intent.putExtra("escolhanova", 2);//Passa o numero da proxima historia
+                    intent.putExtra("escolhanova", 2);//Passa o numero da proxima historia
                     startActivity(intent);
                 }
             });
