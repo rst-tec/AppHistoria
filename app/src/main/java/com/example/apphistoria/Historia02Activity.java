@@ -113,12 +113,20 @@ public class Historia02Activity extends AppCompatActivity {
             foto.setImageResource(R.drawable.historia017);
 
             titulo = findViewById(R.id.idTitulo);
-            titulo.setText("O bebe Jesus");
+            titulo.setText("O bebê Jesus");
 
             historia = findViewById(R.id.idTexto);
-            historia.setText("O bebe Jesus");
+            historia.setText("O anjo Gabriel disse a Maria, \"Você terá um filho!\" \"Como?\" perguntou Maria. \"Eu não sou casada.\" \"O Espírito Santo de Deus virá sobre você. O bebê será Filho de Deus\". Maria acreditou nele.\n\n" +
+                    "Maria era noiva de José, mas ele não acreditou na história dela. Então, o anjo o visitou também. \"Maria não está mentindo. O bebê dela será o Filho de Deus. Seu nome será Jesus\".\n\n" +
+                    "Assim, José casou-se com Maria. Muitos meses se passaram. Então, eles viajaram para Belém, a cidade natal de José, por ordem do governo. Depois daquela longa viagem, chegou a hora do bebê nascer.\n\n" +
+                    "Mas todas as pousadas de Belém estavam cheias. Por isso, o Filho de Deus nasceu numa estrebaria, envolto em panos e deitado numa cama de palha. Deram a ele o nome de \"Jesus\".\n\n" +
+                    "Naquela noite, um anjo apareceu a alguns pastores nas montanhas perto de Belém. \"Boas notícias!\" disse o anjo. \"Nasceu o Salvador. Ele está em Belém, deitado numa manjedoura.\"\n\n" +
+                    "De repente, mais anjos apareceram; eram tantos que encheram o céu. \"Glória a Deus nas alturas!\" eles cantavam, \"E paz para todos os que lhe querem bem.\"\n\n" +
+                    "Quando os anjos se foram, os pastores correram para Belém. Eles encontraram o bebê, o seu Salvador, deitado sobre a palha; exatamente como o anjo havia dito.\n\n" +
+                    "Depois de verem Jesus, os pastores atravessaram a cidade. Eles estavam muito animados! Contaram a todo mundo o que havia acontecido e louvaram a Deus por tudo o que Ele fez!\n\n" +
+                    "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
 
             //BOTÃO PARA VOLTAR PARA A TELA INICIAL
@@ -127,7 +135,7 @@ public class Historia02Activity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017);
                     musicaFundo.stop();
                     musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
                     finish();
@@ -174,7 +182,7 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
@@ -191,7 +199,7 @@ public class Historia02Activity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017);
                     musicaFundo.stop();
                     musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
                     finish();

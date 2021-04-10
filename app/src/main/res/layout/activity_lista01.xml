@@ -495,7 +495,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/fundo_app"
-        android:text="Antigo"
+        android:text="Antigo Testamento"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -512,7 +512,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/fundo_app"
-        android:text="Novo"
+        android:text="Novo Testamento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />
