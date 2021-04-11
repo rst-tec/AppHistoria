@@ -55,11 +55,7 @@ public class Lista02Activity extends AppCompatActivity {
         constraintLayout = findViewById(R.id.constrainLayout);
 
         //ADMOB
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
+        MobileAds.initialize(this, "ca-app-pub-3774325968995797~8878180455");
 
         AdView adView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
