@@ -59,7 +59,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-3774325968995797/1002913064"
+        app:adUnitId="ca-app-pub-3774325968995797/3707105634"
         app:layout_constraintEnd_toStartOf="@+id/btColor"
         app:layout_constraintStart_toEndOf="@+id/btAlinha"
         app:layout_constraintTop_toTopOf="parent"
