@@ -13,6 +13,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 public class Historia02Activity extends AppCompatActivity {
 
     private ImageView foto;
@@ -53,6 +59,17 @@ public class Historia02Activity extends AppCompatActivity {
         setContentView(R.layout.activity_historia02);
 
         preferencias = PreferenceManager.getDefaultSharedPreferences(this);//Preferencias de alterações de cores
+
+        //ADMOB
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        AdView adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA HISTORIA
         Bundle dados = getIntent().getExtras();
