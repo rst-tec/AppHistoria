@@ -8,22 +8,6 @@
     android:background="@color/fundo_app"
     tools:context=".SplashActivity">
 
-    <Button
-        android:id="@+id/FotoCapa"
-        android:layout_width="0dp"
-        android:layout_height="289dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:background="@drawable/jesus"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/lendo" />
-
     <TextView
         android:id="@+id/TituloCapa"
         android:layout_width="0dp"
@@ -41,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FotoCapa" />
+        app:layout_constraintTop_toBottomOf="@+id/logoCapa" />
 
     <TextView
         android:id="@+id/idVersiculo"
@@ -49,7 +33,7 @@
         android:layout_height="139dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center"
@@ -59,4 +43,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TituloCapa" />
+
+    <ImageView
+        android:id="@+id/logoCapa"
+        android:layout_width="0dp"
+        android:layout_height="274dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/jesus" />
 </androidx.constraintlayout.widget.ConstraintLayout>
