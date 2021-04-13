@@ -42,9 +42,8 @@ public class Lista02Activity extends AppCompatActivity {
     public void onBackPressed () {
         super.onBackPressed();
         finish();
-
-        //Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
     }
 
     @Override

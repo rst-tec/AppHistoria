@@ -12,12 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class Historia02Activity extends AppCompatActivity {
 
@@ -330,6 +327,13 @@ public class Historia02Activity extends AppCompatActivity {
 //*************************************************************
 //GRAVAR ALTERAÇÕES DE CORES
 //*************************************************************
+
+        if (preferencias.getString("mudaCor",null) == null){
+            SharedPreferences.Editor editorDePreferencias = preferencias.edit();
+            editorDePreferencias.putString("mudaCor", "desativado");
+            editorDePreferencias.putString("mudaTexto", "desativado");
+            editorDePreferencias.apply();
+        }
 
         if (preferencias.getString("mudaCor",null).equals("fundoCinza")){
             fundoCinza();

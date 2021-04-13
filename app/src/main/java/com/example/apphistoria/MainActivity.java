@@ -14,6 +14,13 @@ public class MainActivity extends AppCompatActivity {
     private Button botao3;
     private Button botao4;
 
+    //VOLTAR COM BOTÃO VIRTUAL DO CELULAR
+    @Override
+    public void onBackPressed () {
+        super.onBackPressed();
+        finish();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
