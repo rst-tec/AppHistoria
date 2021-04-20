@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 public class PerguntasActivity extends AppCompatActivity {
 
     private Button btFechar;
@@ -33,9 +32,9 @@ public class PerguntasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perguntas);
 
-        //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA HISTORIA
+        //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA
         Bundle dados = getIntent().getExtras();
-        int num = dados.getInt("perguntas");
+        int num = dados.getInt("pergunta");
 
         //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
         btFechar = findViewById(R.id.btFechar);
@@ -79,7 +78,7 @@ public class PerguntasActivity extends AppCompatActivity {
                     finish();
                     Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
 
-                    intent.putExtra("perguntas", 2);//Passa o numero da proxima pergunta
+                    intent.putExtra("pergunta", 2);//Passa o numero da proxima pergunta
                     startActivity(intent);
                 }
             });
@@ -115,7 +114,7 @@ public class PerguntasActivity extends AppCompatActivity {
                     finish();
                     Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
 
-                    intent.putExtra("perguntas", 3);//Passa o numero da proxima pergunta
+                    intent.putExtra("pergunta", 3);//Passa o numero da proxima pergunta
                     startActivity(intent);
                 }
             });
@@ -150,7 +149,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     finish();
                     Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                    intent.putExtra("perguntas", 3);//Passa o numero da proxima pergunta
+                    intent.putExtra("pergunta", 3);//Passa o numero da proxima pergunta
                     startActivity(intent);
                 }
             });
