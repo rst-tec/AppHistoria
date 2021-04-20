@@ -67,7 +67,6 @@ public class Lista01Activity extends AppCompatActivity {
             }
         });
 
-
         btHist001 = findViewById(R.id.btHist001);
         btHist001.setOnClickListener(new View.OnClickListener() {
             @Override
