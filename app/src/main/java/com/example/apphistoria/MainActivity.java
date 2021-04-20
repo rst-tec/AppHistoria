@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button botao1; //Abre a lista de historias 01
     private Button botao2; //Abre a lista de historias 02
-    private Button botao3;
+    private Button botao3; //Abre o jogo de perguntas
     private Button botao4;
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR
@@ -50,6 +50,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Lista02Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        botao3 = findViewById(R.id.botao3);
+        botao3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                intent.putExtra("perguntas", 1); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });

@@ -12,11 +12,22 @@
         android:roundIcon="@mipmap/ic_launcher_lendo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Historia02Activity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".Lista02Activity" android:screenOrientation="portrait"/>
-        <activity android:name=".Historia01Activity" android:screenOrientation="portrait"/>
-        <activity android:name=".Lista01Activity" android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".PerguntasActivity" android:screenOrientation="portrait" ></activity>
+        <activity
+            android:name=".Historia02Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lista02Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Historia01Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Lista01Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,13 +38,10 @@
 
         <meta-data
             android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
-
-        <!-- Sample AdMob app ID: ca-app-pub-3774325968995797~8136718500 -->
+            android:resource="@array/preloaded_fonts" /> <!-- Sample AdMob app ID: ca-app-pub-3774325968995797~8136718500 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3774325968995797~8878180455"/>
-
+            android:value="ca-app-pub-3774325968995797~8878180455" />
     </application>
 
 </manifest>
