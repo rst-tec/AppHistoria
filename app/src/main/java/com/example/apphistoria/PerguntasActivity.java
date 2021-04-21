@@ -12,7 +12,6 @@ public class PerguntasActivity extends AppCompatActivity {
 
     private Button btFechar;
     private Button btProxima;
-    private ImageView foto;
     private TextView pergunta;
     private TextView resposta1;
     private TextView resposta2;
@@ -55,20 +54,17 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 1) {
 
-            foto = findViewById(R.id.capaHistoria);
-            foto.setImageResource(R.drawable.historia001);
-
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("A Criação do Mundo");
+            pergunta.setText("Em quantos dias Deus fez a criação do mundo?");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("resposta 1");
+            resposta1.setText("365 dias");
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("resposta 2");
+            resposta2.setText("7 dias");
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("resposta 3");
+            resposta3.setText("10 dias");
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -90,9 +86,6 @@ public class PerguntasActivity extends AppCompatActivity {
 //MONTA A TELA DE PERGUNTAS
 
         if (num == 2) {
-
-            foto = findViewById(R.id.capaHistoria);
-            foto.setImageResource(R.drawable.historia002);
 
             pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("O Pecado de Adão e Eva");
@@ -126,9 +119,6 @@ public class PerguntasActivity extends AppCompatActivity {
 //MONTA A TELA DE PERGUNTAS
 
         if (num == 3) {
-
-            foto = findViewById(R.id.capaHistoria);
-            foto.setImageResource(R.drawable.historia003);
 
             pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("A Arca e o Diluvio");

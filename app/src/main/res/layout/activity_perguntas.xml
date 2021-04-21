@@ -8,39 +8,25 @@
     android:background="@color/fundo_app"
     tools:context=".PerguntasActivity">
 
-    <ImageView
-        android:id="@+id/capaHistoria"
-        android:layout_width="0dp"
-        android:layout_height="147dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/historia015" />
-
     <TextView
         android:id="@+id/idPergunta"
-        android:layout_width="345dp"
-        android:layout_height="80dp"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:background="@drawable/pergunta"
+        android:background="@drawable/fundocapa"
         android:gravity="center"
         android:inputType="textMultiLine"
+        android:padding="15dp"
         android:text="Qual o nome do gigante derrotado por Davi?"
         android:textColor="@color/color_verde"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/capaHistoria" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/resposta1"
