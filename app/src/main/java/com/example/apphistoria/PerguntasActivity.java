@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import androidx.appcompat.app.AlertDialog;
+import android.content.DialogInterface;
+import android.widget.Toast;
 
 public class PerguntasActivity extends AppCompatActivity {
 
@@ -56,13 +59,31 @@ public class PerguntasActivity extends AppCompatActivity {
             pergunta.setText("Em quantos dias Deus fez a criação do mundo?");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("365 dias");
+            resposta1.setText("7 dias");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("7 dias");
+            resposta2.setText("365 dias");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("10 dias");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -546,6 +567,7 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
 
+
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
             btProxima.setOnClickListener(new View.OnClickListener() {
@@ -558,5 +580,84 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    private void respostaCorreta(){
+
+        //Instanciar AlertDialog
+        AlertDialog.Builder dialog = new AlertDialog.Builder( this );
+
+        //Configurar titulo e mensagem
+        dialog.setTitle("Resposta correta");
+        dialog.setMessage("Parabéns você acertou!");
+
+        //Configurar cancelamento
+        dialog.setCancelable(false);
+
+        //Configurar icone
+        //dialog.setIcon( android.R.drawable.ic_btn_speak_now );
+
+        //Configura acoes para sim e nao
+        dialog.setPositiveButton("Próxima Pergunta", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                Toast.makeText(
+                        getApplicationContext(),
+                        "Executar ação ao clicar no botão Sim",
+                        Toast.LENGTH_SHORT
+                ).show();
+            }
+        });
+
+        //Criar e exibir AlertDialog
+        dialog.create();
+        dialog.show();
+    }
+
+    private void respostaErrada(){
+
+        //Instanciar AlertDialog
+        AlertDialog.Builder dialog = new AlertDialog.Builder( this );
+
+        //Configurar titulo e mensagem
+        dialog.setTitle("Resposta Errada");
+        dialog.setMessage("Que pena você errou!");
+
+        //Configurar cancelamento
+        dialog.setCancelable(false);
+
+        //Configurar icone
+        //dialog.setIcon( android.R.drawable.ic_btn_speak_now );
+
+        //Configura acoes para sim e nao
+        dialog.setPositiveButton("Próxima Pergunta", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                Toast.makeText(
+                        getApplicationContext(),
+                        "Executar ação ao clicar no botão Sim",
+                        Toast.LENGTH_SHORT
+                ).show();
+            }
+        });
+
+        dialog.setNegativeButton("Tentar novamente", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                Toast.makeText(
+                        getApplicationContext(),
+                        "Executar ação ao clicar no botão não",
+                        Toast.LENGTH_SHORT
+                ).show();
+
+            }
+        });
+
+        //Criar e exibir AlertDialog
+        dialog.create();
+        dialog.show();
     }
 }
