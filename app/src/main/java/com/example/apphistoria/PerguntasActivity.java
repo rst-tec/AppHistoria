@@ -3,6 +3,7 @@ package com.example.apphistoria;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -72,7 +73,7 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaErrada();
+                    //respostaErrada();
                 }
             });
 
@@ -81,7 +82,7 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaErrada();
+                    //respostaErrada();
                 }
             });
 
@@ -580,62 +581,37 @@ public class PerguntasActivity extends AppCompatActivity {
         }
     }
 
-    private void respostaCorreta(){
+    private AlertDialog alerta;
 
-        //Instanciar AlertDialog
-        AlertDialog.Builder dialog = new AlertDialog.Builder( this );
+    private void respostaCorreta() {
+        //LayoutInflater é utilizado para inflar nosso layout em uma view.
+        //-pegamos nossa instancia da classe
+        LayoutInflater li = getLayoutInflater();
 
-        //Configurar titulo e mensagem
-        dialog.setTitle("Resposta correta");
-        dialog.setMessage("Parabéns você acertou!");
+        //inflamos o layout alerta.xml na view
+        View view = li.inflate(R.layout.alerta, null);
+        //definimos para o botão do layout um clickListener
+        view.findViewById(R.id.btFechar).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                alerta.dismiss();
+            }
+        });
 
-        //Configurar cancelamento
-        dialog.setCancelable(false);
-
-        //Configurar icone
-        //dialog.setIcon( android.R.drawable.ic_btn_speak_now );
-
-        //Configura acoes para sim e nao
-        dialog.setPositiveButton("Próxima Pergunta", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
+        view.findViewById(R.id.btProxima).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
                 finish();
                 Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
                 intent.putExtra("pergunta", 2);//Passa o numero da proxima pergunta
                 startActivity(intent);
+                alerta.dismiss();
             }
         });
 
-        //Criar e exibir AlertDialog
-        dialog.create();
-        dialog.show();
-    }
-
-    private void respostaErrada(){
-
-        //Instanciar AlertDialog
-        AlertDialog.Builder dialog = new AlertDialog.Builder( this );
-
-        //Configurar titulo e mensagem
-        dialog.setTitle("Resposta Errada");
-        dialog.setMessage("Que pena você errou!");
-
-        //Configurar cancelamento
-        dialog.setCancelable(false);
-
-        //Configurar icone
-        //dialog.setIcon( android.R.drawable.ic_btn_speak_now );
-
-        //Configura acoes para sim e nao
-
-        dialog.setNegativeButton("Tente novamente", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        });
-
-        //Criar e exibir AlertDialog
-        dialog.create();
-        dialog.show();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("");
+        builder.setView(view);
+        alerta = builder.create();
+        alerta.show();
     }
 }
+
