@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/resposta1"
         android:layout_width="345dp"
         android:layout_height="80dp"
@@ -39,8 +39,8 @@
         android:layout_marginRight="24dp"
         android:background="@drawable/respostas"
         android:gravity="center"
-        android:inputType="textMultiLine"
         android:text="João do pé de feijão"
+        android:textAllCaps="false"
         android:textColor="@color/color_verde"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +48,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idPergunta" />
 
-    <TextView
+    <Button
         android:id="@+id/resposta2"
         android:layout_width="345dp"
         android:layout_height="80dp"
@@ -59,8 +59,8 @@
         android:layout_marginRight="24dp"
         android:background="@drawable/respostas"
         android:gravity="center"
-        android:inputType="textMultiLine"
         android:text="Gigante Guliver"
+        android:textAllCaps="false"
         android:textColor="@color/color_verde"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +68,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resposta1" />
 
-    <TextView
+    <Button
         android:id="@+id/resposta3"
         android:layout_width="345dp"
         android:layout_height="80dp"
@@ -79,8 +79,8 @@
         android:layout_marginRight="24dp"
         android:background="@drawable/respostas"
         android:gravity="center"
-        android:inputType="textMultiLine"
         android:text="Golias"
+        android:textAllCaps="false"
         android:textColor="@color/color_verde"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"

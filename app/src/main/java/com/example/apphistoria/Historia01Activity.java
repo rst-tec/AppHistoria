@@ -1869,7 +1869,6 @@ public class Historia01Activity extends AppCompatActivity {
                     finish();
 
                     Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-
                     //intent.putExtra("escolha", 15);//Passa o numero da proxima historia
                     startActivity(intent);
                 }
