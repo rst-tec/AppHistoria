@@ -92,7 +92,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     finish();
                     Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-
                     intent.putExtra("pergunta", 2);//Passa o numero da proxima pergunta
                     startActivity(intent);
                 }
@@ -125,7 +124,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     finish();
                     Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-
                     intent.putExtra("pergunta", 3);//Passa o numero da proxima pergunta
                     startActivity(intent);
                 }
@@ -601,12 +599,10 @@ public class PerguntasActivity extends AppCompatActivity {
         dialog.setPositiveButton("Próxima Pergunta", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
-                Toast.makeText(
-                        getApplicationContext(),
-                        "Executar ação ao clicar no botão Sim",
-                        Toast.LENGTH_SHORT
-                ).show();
+                finish();
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                intent.putExtra("pergunta", 2);//Passa o numero da proxima pergunta
+                startActivity(intent);
             }
         });
 
@@ -631,28 +627,10 @@ public class PerguntasActivity extends AppCompatActivity {
         //dialog.setIcon( android.R.drawable.ic_btn_speak_now );
 
         //Configura acoes para sim e nao
-        dialog.setPositiveButton("Próxima Pergunta", new DialogInterface.OnClickListener() {
+
+        dialog.setNegativeButton("Tente novamente", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
-                Toast.makeText(
-                        getApplicationContext(),
-                        "Executar ação ao clicar no botão Sim",
-                        Toast.LENGTH_SHORT
-                ).show();
-            }
-        });
-
-        dialog.setNegativeButton("Tentar novamente", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-                Toast.makeText(
-                        getApplicationContext(),
-                        "Executar ação ao clicar no botão não",
-                        Toast.LENGTH_SHORT
-                ).show();
-
             }
         });
 
