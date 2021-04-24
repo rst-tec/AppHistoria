@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -41,9 +40,8 @@ public class Lista01Activity extends AppCompatActivity {
     public void onBackPressed () {
         super.onBackPressed();
         finish();
-
-        //Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -68,7 +66,6 @@ public class Lista01Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         btHist001 = findViewById(R.id.btHist001);
         btHist001.setOnClickListener(new View.OnClickListener() {

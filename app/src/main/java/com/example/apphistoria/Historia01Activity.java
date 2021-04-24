@@ -12,12 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class Historia01Activity extends AppCompatActivity {
 
@@ -1872,7 +1869,6 @@ public class Historia01Activity extends AppCompatActivity {
                     finish();
 
                     Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-
                     //intent.putExtra("escolha", 15);//Passa o numero da proxima historia
                     startActivity(intent);
                 }
