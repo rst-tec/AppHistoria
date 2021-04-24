@@ -73,7 +73,7 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //respostaErrada();
+                    respostaErrada();
                 }
             });
 
@@ -82,7 +82,7 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //respostaErrada();
+                    respostaErrada();
                 }
             });
 
@@ -585,19 +585,14 @@ public class PerguntasActivity extends AppCompatActivity {
 
     private void respostaCorreta() {
         //LayoutInflater é utilizado para inflar nosso layout em uma view.
-        //-pegamos nossa instancia da classe
+        //pegamos nossa instancia da classe
         LayoutInflater li = getLayoutInflater();
 
         //inflamos o layout alerta.xml na view
         View view = li.inflate(R.layout.alerta, null);
+
         //definimos para o botão do layout um clickListener
         view.findViewById(R.id.btFechar).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
-                alerta.dismiss();
-            }
-        });
-
-        view.findViewById(R.id.btProxima).setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 finish();
                 Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
@@ -609,6 +604,30 @@ public class PerguntasActivity extends AppCompatActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("");
+        builder.setCancelable(false);
+        builder.setView(view);
+        alerta = builder.create();
+        alerta.show();
+    }
+
+    private void respostaErrada() {
+        //LayoutInflater é utilizado para inflar nosso layout em uma view.
+        //pegamos nossa instancia da classe
+        LayoutInflater li = getLayoutInflater();
+
+        //inflamos o layout alerta.xml na view
+        View view = li.inflate(R.layout.alerta02, null);
+
+        //definimos para o botão do layout um clickListener
+        view.findViewById(R.id.btFechar).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                alerta.dismiss();
+            }
+        });
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("");
+        builder.setCancelable(false);
         builder.setView(view);
         alerta = builder.create();
         alerta.show();
