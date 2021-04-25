@@ -2,6 +2,7 @@ package com.example.apphistoria;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +22,9 @@ public class PerguntasActivity extends AppCompatActivity {
     private Button resposta3;
 
     public int opc = 1;
+
+    private MediaPlayer respostaCorreta; //Toca musica de fundo
+    private MediaPlayer respostaErrada; //Toca musica de fundo
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR - PARA A TELA INICIAL
     @Override
@@ -58,6 +62,9 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 1) {
 
+            respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacerta);
+            respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+
             pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Em quantos dias Deus fez a criação do mundo?");
 
@@ -66,6 +73,9 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 2;//Passa o numero da proxima pergunta
                 }
@@ -76,6 +86,9 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -85,6 +98,9 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -109,6 +125,9 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 2) {
 
+            respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacerta);
+            respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+
             pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Qual foi o nome do primeiro homem e da primeira mulher criados por Deus?");
 
@@ -117,6 +136,9 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -126,6 +148,9 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -135,6 +160,9 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 3;//Passa o numero da proxima pergunta
                 }
