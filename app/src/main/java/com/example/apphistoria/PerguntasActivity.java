@@ -902,6 +902,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
     private AlertDialog alerta;
 
+    //ALERTA DE RESOSTA CORRETA
     private void respostaCorreta() {
         //LayoutInflater é utilizado para inflar nosso layout em uma view.
         //pegamos nossa instancia da classe
@@ -913,87 +914,9 @@ public class PerguntasActivity extends AppCompatActivity {
         //definimos para o botão do layout um clickListener
         view.findViewById(R.id.btFechar).setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
+                proximaHistoria();
                 finish();
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
 
-                if (opc == 2)
-                    intent.putExtra("pergunta", 2);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 3)
-                    intent.putExtra("pergunta", 3);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 4)
-                    intent.putExtra("pergunta", 4);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 5)
-                    intent.putExtra("pergunta", 5);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 6)
-                    intent.putExtra("pergunta", 6);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 7)
-                    intent.putExtra("pergunta", 7);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 8)
-                    intent.putExtra("pergunta", 8);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 9)
-                    intent.putExtra("pergunta", 9);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 10)
-                    intent.putExtra("pergunta", 10);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 11)
-                    intent.putExtra("pergunta", 11);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 12)
-                    intent.putExtra("pergunta", 12);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 13)
-                    intent.putExtra("pergunta", 13);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 14)
-                    intent.putExtra("pergunta", 14);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 15)
-                    intent.putExtra("pergunta", 15);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 16)
-                    intent.putExtra("pergunta", 16);//Passa o numero da proxima pergunta
-                startActivity(intent);
-                alerta.dismiss();
-
-                if (opc == 17)
-                    fechar();
-                    alerta.dismiss();
             }
         });
 
@@ -1005,6 +928,7 @@ public class PerguntasActivity extends AppCompatActivity {
         alerta.show();
     }
 
+    //ALERTA DE RESOSTA ERRADA
     private void respostaErrada() {
         //LayoutInflater é utilizado para inflar nosso layout em uma view.
         //pegamos nossa instancia da classe
@@ -1028,10 +952,99 @@ public class PerguntasActivity extends AppCompatActivity {
         alerta.show();
     }
 
-    private void fechar(){
+    private void finalJogo(){
         finish();
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), FinalJogoActivity.class);
         startActivity(intent);
+        respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.finaljogo);
+        if (!respostaCorreta.isPlaying()) {
+            respostaCorreta.start();
+        }
+    }
+
+    private void proximaHistoria(){
+
+        Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+
+        if (opc == 2)
+            intent.putExtra("pergunta", 2);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 3)
+            intent.putExtra("pergunta", 3);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 4)
+            intent.putExtra("pergunta", 4);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 5)
+            intent.putExtra("pergunta", 5);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 6)
+            intent.putExtra("pergunta", 6);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 7)
+            intent.putExtra("pergunta", 7);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 8)
+            intent.putExtra("pergunta", 8);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 9)
+            intent.putExtra("pergunta", 9);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 10)
+            intent.putExtra("pergunta", 10);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 11)
+            intent.putExtra("pergunta", 11);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 12)
+            intent.putExtra("pergunta", 12);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 13)
+            intent.putExtra("pergunta", 13);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 14)
+            intent.putExtra("pergunta", 14);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 15)
+            intent.putExtra("pergunta", 15);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 16)
+            intent.putExtra("pergunta", 16);//Passa o numero da proxima pergunta
+        startActivity(intent);
+        alerta.dismiss();
+
+        if (opc == 17)
+            finalJogo();
+        alerta.dismiss();
+
     }
 }
 
