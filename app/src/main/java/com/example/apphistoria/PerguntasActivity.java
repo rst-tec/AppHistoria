@@ -20,6 +20,8 @@ public class PerguntasActivity extends AppCompatActivity {
     private Button resposta2;
     private Button resposta3;
 
+    public int opc = 1;
+
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR - PARA A TELA INICIAL
     @Override
     public void onBackPressed() {
@@ -65,6 +67,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     respostaCorreta();
+                    opc = 2;//Passa o numero da proxima pergunta
                 }
             });
 
@@ -107,16 +110,35 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 2) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("O Pecado de Adão e Eva");
+            pergunta.setText("Qual foi o nome do primeiro homem e da primeira mulher criados por Deus?");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("João e Maria");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Sansão e Dalila");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Adão e Eva");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 3;//Passa o numero da proxima pergunta
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -143,12 +165,31 @@ public class PerguntasActivity extends AppCompatActivity {
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("Resposta 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 4;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
             resposta2.setText("Resposta 2");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -175,12 +216,31 @@ public class PerguntasActivity extends AppCompatActivity {
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("Resposta 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 5;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
             resposta2.setText("Resposta 2");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -207,12 +267,31 @@ public class PerguntasActivity extends AppCompatActivity {
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("Resposta 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 6;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
             resposta2.setText("Resposta 2");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -239,12 +318,31 @@ public class PerguntasActivity extends AppCompatActivity {
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("Resposta 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 7;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
             resposta2.setText("Resposta 2");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -271,12 +369,31 @@ public class PerguntasActivity extends AppCompatActivity {
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("Resposta 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 8;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
             resposta2.setText("Resposta 2");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -303,12 +420,31 @@ public class PerguntasActivity extends AppCompatActivity {
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("Resposta 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 9;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
             resposta2.setText("Resposta 2");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -335,12 +471,31 @@ public class PerguntasActivity extends AppCompatActivity {
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("Resposta 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 10;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
             resposta2.setText("Resposta 2");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -367,12 +522,31 @@ public class PerguntasActivity extends AppCompatActivity {
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("Resposta 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 11;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
             resposta2.setText("Resposta 2");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -399,12 +573,31 @@ public class PerguntasActivity extends AppCompatActivity {
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("Resposta 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 12;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
             resposta2.setText("Resposta 2");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -431,12 +624,31 @@ public class PerguntasActivity extends AppCompatActivity {
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("Resposta 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 13;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
             resposta2.setText("Resposta 2");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -463,12 +675,31 @@ public class PerguntasActivity extends AppCompatActivity {
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("Resposta 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 14;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
             resposta2.setText("Resposta 2");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -495,12 +726,31 @@ public class PerguntasActivity extends AppCompatActivity {
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("Resposta 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 15;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
             resposta2.setText("Resposta 2");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -523,16 +773,35 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 15) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Davi e Golias");
+            pergunta.setText("Qual era o nome do gigante derrota por Davi?");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("João do pé de feijão");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    respostaErrada();
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Gigante Golias");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    respostaCorreta();
+                    opc = 16;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Gigante Guliver");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    respostaErrada();
+                }
+            });
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
             btProxima = findViewById(R.id.btProxima);
@@ -559,12 +828,31 @@ public class PerguntasActivity extends AppCompatActivity {
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("Resposta 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                    opc = 17;//Passa o numero da proxima pergunta
+                }
+            });
 
             resposta2 = findViewById(R.id.resposta2);
             resposta2.setText("Resposta 2");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
             resposta3 = findViewById(R.id.resposta3);
             resposta3.setText("Resposta 3");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
 
 
             //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
@@ -596,9 +884,85 @@ public class PerguntasActivity extends AppCompatActivity {
             public void onClick(View arg0) {
                 finish();
                 Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 2);//Passa o numero da proxima pergunta
+
+                if (opc == 2)
+                    intent.putExtra("pergunta", 2);//Passa o numero da proxima pergunta
                 startActivity(intent);
                 alerta.dismiss();
+
+                if (opc == 3)
+                    intent.putExtra("pergunta", 3);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 4)
+                    intent.putExtra("pergunta", 4);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 5)
+                    intent.putExtra("pergunta", 5);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 6)
+                    intent.putExtra("pergunta", 6);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 7)
+                    intent.putExtra("pergunta", 7);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 8)
+                    intent.putExtra("pergunta", 8);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 9)
+                    intent.putExtra("pergunta", 9);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 10)
+                    intent.putExtra("pergunta", 10);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 11)
+                    intent.putExtra("pergunta", 11);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 12)
+                    intent.putExtra("pergunta", 12);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 13)
+                    intent.putExtra("pergunta", 13);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 14)
+                    intent.putExtra("pergunta", 14);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 15)
+                    intent.putExtra("pergunta", 15);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 16)
+                    intent.putExtra("pergunta", 16);//Passa o numero da proxima pergunta
+                startActivity(intent);
+                alerta.dismiss();
+
+                if (opc == 17)
+                    fechar();
+                    alerta.dismiss();
             }
         });
 
@@ -632,5 +996,12 @@ public class PerguntasActivity extends AppCompatActivity {
         alerta = builder.create();
         alerta.show();
     }
+
+    private void fechar(){
+        finish();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
 }
+
 
