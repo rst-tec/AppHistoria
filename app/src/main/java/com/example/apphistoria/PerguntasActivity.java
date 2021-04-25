@@ -62,9 +62,6 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 1) {
 
-            respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacerta);
-            respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
-
             pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Em quantos dias Deus fez a criação do mundo?");
 
@@ -73,6 +70,7 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacerta);
                     if (!respostaCorreta.isPlaying()) {
                         respostaCorreta.start();
                     }
@@ -86,6 +84,7 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
                     if (!respostaErrada.isPlaying()) {
                         respostaErrada.start();
                     }
@@ -98,6 +97,7 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
                     if (!respostaErrada.isPlaying()) {
                         respostaErrada.start();
                     }
@@ -136,6 +136,7 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
                     if (!respostaErrada.isPlaying()) {
                         respostaErrada.start();
                     }
@@ -148,6 +149,7 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
                     if (!respostaErrada.isPlaying()) {
                         respostaErrada.start();
                     }
@@ -160,6 +162,7 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacerta);
                     if (!respostaCorreta.isPlaying()) {
                         respostaCorreta.start();
                     }
