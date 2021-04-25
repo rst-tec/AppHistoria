@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
-import android.content.DialogInterface;
-import android.widget.Toast;
 
 public class PerguntasActivity extends AppCompatActivity {
 
@@ -63,14 +61,14 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 1) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Em quantos dias Deus fez a criação do mundo?");
+            pergunta.setText("01 - Em quantos dias Deus fez a criação do mundo?");
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("7 dias");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacerta);
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
                     if (!respostaCorreta.isPlaying()) {
                         respostaCorreta.start();
                     }
@@ -80,7 +78,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("365 dias");
+            resposta2.setText("30 dias");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -125,11 +123,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 2) {
 
-            respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacerta);
-            respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
-
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Qual foi o nome do primeiro homem e da primeira mulher criados por Deus?");
+            pergunta.setText("02 - Qual foi o nome do primeiro homem e da primeira mulher criados por Deus?");
 
             resposta1 = findViewById(R.id.resposta1);
             resposta1.setText("João e Maria");
@@ -162,7 +157,7 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacerta);
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
                     if (!respostaCorreta.isPlaying()) {
                         respostaCorreta.start();
                     }
@@ -192,32 +187,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 3) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("A Arca e o Diluvio");
+            pergunta.setText("03 - A Arca e o Diluvio");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("Resposta correta");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 4;//Passa o numero da proxima pergunta
                 }
             });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -243,32 +250,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 4) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("A grande promessa");
+            pergunta.setText("04 - Qual era o nome do filho de Abraão e Sara");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("Resposta correta");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 5;//Passa o numero da proxima pergunta
                 }
             });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -294,32 +313,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 5) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("A prova de Abraão e Isaque");
+            pergunta.setText("05 - Qual animal Deus enviou para o sacrifio de Abraão e Isaque");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("Jacaré");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
+                    respostaErrada();
+                }
+            });
+
+            resposta2 = findViewById(R.id.resposta2);
+            resposta2.setText("Carneiro");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 6;//Passa o numero da proxima pergunta
                 }
             });
 
-            resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
-            resposta2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaErrada();
-                }
-            });
-
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Elefante");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -345,32 +376,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 6) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("O sonhador José");
+            pergunta.setText("06 - O sonhador José");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("Resposta correta");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 7;//Passa o numero da proxima pergunta
                 }
             });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -396,32 +439,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 7) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Os sonhos se realizam");
+            pergunta.setText("07 - Os sonhos se realizam");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("Resposta correta");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 8;//Passa o numero da proxima pergunta
                 }
             });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -447,32 +502,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 8) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Moisés, um bebê especial");
+            pergunta.setText("08 - Moisés, um bebê especial");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("Resposta correta");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 9;//Passa o numero da proxima pergunta
                 }
             });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -498,32 +565,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 9) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Castigos para faraó");
+            pergunta.setText("09 - Castigos para faraó");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("Resposta correta");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 10;//Passa o numero da proxima pergunta
                 }
             });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -549,32 +628,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 10) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Deus abre um caminho");
+            pergunta.setText("10 - Deus abre um caminho");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("Resposta correta");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 11;//Passa o numero da proxima pergunta
                 }
             });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -600,32 +691,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 11) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("A queda do muro");
+            pergunta.setText("11 - A queda do muro");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("Resposta correta");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 12;//Passa o numero da proxima pergunta
                 }
             });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -651,32 +754,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 12) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Um herói cabeludo");
+            pergunta.setText("12 - Um herói cabeludo");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("Resposta correta");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 13;//Passa o numero da proxima pergunta
                 }
             });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -702,32 +817,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 13) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Rainha escolhida");
+            pergunta.setText("13 - Rainha escolhida");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("Resposta correta");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 14;//Passa o numero da proxima pergunta
                 }
             });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -753,32 +880,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 14) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Deus chama Samuel");
+            pergunta.setText("14 - Deus chama Samuel");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("Resposta correta");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 15;//Passa o numero da proxima pergunta
                 }
             });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -804,32 +943,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 15) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Qual era o nome do gigante derrota por Davi?");
+            pergunta.setText("15 - Qual era o nome do gigante derrota por Davi?");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("João do pé de feijão");
+            resposta1.setText("Resposta correta");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-                    respostaErrada();
-                }
-            });
-
-            resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Gigante Golias");
-            resposta2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+                public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 16;//Passa o numero da proxima pergunta
                 }
             });
 
+            resposta2 = findViewById(R.id.resposta2);
+            resposta2.setText("Resposta errada");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
+                    respostaErrada();
+                }
+            });
+
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Gigante Guliver");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
+                public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -855,32 +1006,44 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 16) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Daniel e os leões");
+            pergunta.setText("16 - Daniel e os leões");
 
             resposta1 = findViewById(R.id.resposta1);
-            resposta1.setText("Resposta 1");
+            resposta1.setText("Resposta correta");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.respostacorreta);
+                    if (!respostaCorreta.isPlaying()) {
+                        respostaCorreta.start();
+                    }
                     respostaCorreta();
                     opc = 17;//Passa o numero da proxima pergunta
                 }
             });
 
             resposta2 = findViewById(R.id.resposta2);
-            resposta2.setText("Resposta 2");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
 
             resposta3 = findViewById(R.id.resposta3);
-            resposta3.setText("Resposta 3");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.respostaerrada);
+                    if (!respostaErrada.isPlaying()) {
+                        respostaErrada.start();
+                    }
                     respostaErrada();
                 }
             });
@@ -952,6 +1115,7 @@ public class PerguntasActivity extends AppCompatActivity {
         alerta.show();
     }
 
+    //ABRIR TELA FINAL DO JOGO
     private void finalJogo(){
         finish();
         Intent intent = new Intent(getApplicationContext(), FinalJogoActivity.class);
@@ -962,6 +1126,7 @@ public class PerguntasActivity extends AppCompatActivity {
         }
     }
 
+    //ABRIR PROXIMA HISTORIA
     private void proximaHistoria(){
 
         Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
