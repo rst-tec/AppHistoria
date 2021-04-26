@@ -24,8 +24,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
     public int pontos;
 
-    private MediaPlayer respostaCorreta; //Toca musica de fundo
-    private MediaPlayer respostaErrada; //Toca musica de fundo
+    private MediaPlayer somResposta; //Toca som de respota Correta ou Errada
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR - PARA A TELA INICIAL
     @Override
@@ -245,10 +244,6 @@ public class PerguntasActivity extends AppCompatActivity {
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.som_errou);
-                    if (!respostaErrada.isPlaying()) {
-                        respostaErrada.start();
-                    }
                     respostaErrada();
                 }
             });
@@ -885,14 +880,13 @@ public class PerguntasActivity extends AppCompatActivity {
     //ALERTA DE RESOSTA CORRETA
     private void respostaCorreta() {
 
-        respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.som_acertou);
-        if (!respostaCorreta.isPlaying()) {
-            respostaCorreta.start();
+        somResposta = MediaPlayer.create(getApplicationContext(), R.raw.som_acertou);
+        if (!somResposta.isPlaying()) {
+            somResposta.start();
         }
 
-        pontos = pontos + 1;
-
-        idResultado.setText("Pontuação: " + pontos);
+        //pontos = pontos + 1;
+        //idResultado.setText("Pontuação: " + pontos);
 
         //LayoutInflater é utilizado para inflar nosso layout em uma view.
         //pegamos nossa instancia da classe
@@ -920,14 +914,13 @@ public class PerguntasActivity extends AppCompatActivity {
 
     //ALERTA DE RESOSTA ERRADA
     private void respostaErrada() {
-        respostaErrada = MediaPlayer.create(getApplicationContext(), R.raw.som_errou);
-        if (!respostaErrada.isPlaying()) {
-            respostaErrada.start();
+        somResposta = MediaPlayer.create(getApplicationContext(), R.raw.som_errou);
+        if (!somResposta.isPlaying()) {
+            somResposta.start();
         }
 
-        pontos = pontos - 1;
-
-        idResultado.setText("Pontuação: " + pontos);
+        //pontos = pontos - 1;
+        //idResultado.setText("Pontuação: " + pontos);
 
         //LayoutInflater é utilizado para inflar nosso layout em uma view.
         //pegamos nossa instancia da classe
@@ -955,6 +948,7 @@ public class PerguntasActivity extends AppCompatActivity {
     private void proximaHistoria(){
 
         Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+
 
         if (opc == 2)
             intent.putExtra("pergunta", 2);//Passa o numero da proxima pergunta
@@ -1042,9 +1036,9 @@ public class PerguntasActivity extends AppCompatActivity {
         finish();
         Intent intent = new Intent(getApplicationContext(), FinalJogoActivity.class);
         startActivity(intent);
-        respostaCorreta = MediaPlayer.create(getApplicationContext(), R.raw.finaljogo);
-        if (!respostaCorreta.isPlaying()) {
-            respostaCorreta.start();
+        somResposta = MediaPlayer.create(getApplicationContext(), R.raw.som_final_jogo);
+        if (!somResposta.isPlaying()) {
+            somResposta.start();
         }
     }
 
