@@ -8,25 +8,38 @@
     android:background="@color/fundo_app"
     tools:context=".PerguntasActivity">
 
-    <TextView
-        android:id="@+id/idPergunta"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="230dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:background="@drawable/fundocapa"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fundocapa" />
+
+    <TextView
+        android:id="@+id/idPergunta"
+        android:layout_width="325dp"
+        android:layout_height="163dp"
+
         android:gravity="center"
         android:inputType="textMultiLine"
         android:padding="15dp"
-        android:text="Qual o nome do gigante derrotado por Davi?"
+        android:text="02 - Qual foi o nome do primeiro homem e da primeira mulher criados por Deus?"
         android:textColor="@color/color_verde"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.652" />
 
     <Button
         android:id="@+id/txAcertou"
@@ -34,7 +47,7 @@
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:background="@drawable/respostas"
@@ -45,7 +58,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idPergunta" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
         android:id="@+id/txErrou"
@@ -109,12 +122,16 @@
 
     <TextView
         android:id="@+id/idResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/pergunta"
+        android:gravity="center"
+        android:text="00 Pontos"
+        android:textColor="@color/color_verde"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btProxima"
-        app:layout_constraintStart_toEndOf="@+id/btFechar"
-        app:layout_constraintTop_toBottomOf="@+id/txResultado" />
+        app:layout_constraintStart_toEndOf="@+id/btFechar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

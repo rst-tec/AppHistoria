@@ -14,9 +14,11 @@ public class FinalJogoActivity extends AppCompatActivity {
 
     private Button btFechar;
 
-    public TextView txAcertou;
-    public TextView txErrou;
-    public TextView txResultado;
+    private TextView txAcertou;
+    private TextView txErrou;
+    private TextView txResultado;
+
+    private int pontos;
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR - PARA A TELA INICIAL
     @Override
@@ -38,7 +40,13 @@ public class FinalJogoActivity extends AppCompatActivity {
 
         txAcertou.setText("txAcertou");
         txErrou.setText("txErrou");
-        txResultado.setText("txResultado");
+
+        //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
+        Bundle dados = getIntent().getExtras();
+
+        pontos = dados.getInt("pontos");
+
+        txResultado.setText(pontos + "  Pontos" );
 
         //BOTÃO PARA VOLTAR PARA A TELA INICIAL
         btFechar = findViewById(R.id.btFechar);
