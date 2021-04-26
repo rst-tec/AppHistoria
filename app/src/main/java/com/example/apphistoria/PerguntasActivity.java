@@ -25,6 +25,8 @@ public class PerguntasActivity extends AppCompatActivity {
     private int opc = 0;
 
     private int pontos;
+    private int acertos;
+    private int erros;
 
     private MediaPlayer somResposta; //Toca som de respota Correta ou Errada
 
@@ -49,6 +51,8 @@ public class PerguntasActivity extends AppCompatActivity {
         int num = dados.getInt("pergunta");
 
         pontos = dados.getInt("pontos");
+        acertos = dados.getInt("acertos");
+        erros = dados.getInt("erros");
 
         idResultado.setText(pontos + "  Pontos" );
 
@@ -59,23 +63,6 @@ public class PerguntasActivity extends AppCompatActivity {
             public void onClick(View view) {
                 finish();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
-        btProxima = findViewById(R.id.btProxima);
-        btProxima.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                Bundle parametros = new Bundle();
-
-                parametros.putInt("pergunta", 2); ////Passa o numero da proxima pergunta
-                parametros.putInt("pontos", pontos);
-
-                intent.putExtras(parametros);
                 startActivity(intent);
             }
         });
@@ -115,6 +102,25 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
+            btProxima = findViewById(R.id.btProxima);
+            btProxima.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                    Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                    Bundle parametros = new Bundle();
+
+                    parametros.putInt("pergunta", 2); ////Passa o numero da proxima pergunta
+                    parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
+
+                    intent.putExtras(parametros);
+                    startActivity(intent);
                 }
             });
         }
@@ -168,6 +174,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 3); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -224,6 +232,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 4); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -280,6 +290,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 5); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -336,6 +348,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 6); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -392,6 +406,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 7); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -448,6 +464,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 8); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -504,6 +522,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 9); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -560,6 +580,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 10); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -616,6 +638,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 11); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -672,6 +696,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 12); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -728,6 +754,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 13); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -784,6 +812,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 14); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -840,6 +870,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 15); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -896,6 +928,8 @@ public class PerguntasActivity extends AppCompatActivity {
 
                     parametros.putInt("pergunta", 16); ////Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
 
                     intent.putExtras(parametros);
                     startActivity(intent);
@@ -966,9 +1000,10 @@ public class PerguntasActivity extends AppCompatActivity {
         if (!somResposta.isPlaying()) {
             somResposta.start();
         }
+        acertos = acertos + 1;
 
         pontos = pontos + 1;
-        idResultado.setText(pontos + " Pontos" );
+        idResultado.setText(pontos + "  Pontos" );
 
         //LayoutInflater é utilizado para inflar nosso layout em uma view.
         //pegamos nossa instancia da classe
@@ -1001,8 +1036,10 @@ public class PerguntasActivity extends AppCompatActivity {
             somResposta.start();
         }
 
+        erros = erros +1;
+
         pontos = pontos - 1;
-        idResultado.setText(pontos + " Pontos" );
+        idResultado.setText(pontos + "  Pontos" );
 
         //LayoutInflater é utilizado para inflar nosso layout em uma view.
         //pegamos nossa instancia da classe
@@ -1028,22 +1065,26 @@ public class PerguntasActivity extends AppCompatActivity {
 
     //ABRIR PROXIMA PERGUNTA
     private void proximaPergunta(){
-
         Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
         Bundle parametros = new Bundle();
 
         if (opc == 2) {
-            parametros.putInt("pergunta", opc);
-            parametros.putInt("pontos", pontos);
 
-            intent.putExtras(parametros);
-            startActivity(intent);
-            alerta.dismiss();
+        parametros.putInt("pergunta", opc);
+        parametros.putInt("pontos", pontos);
+        parametros.putInt("acertos", acertos);
+        parametros.putInt("erros", erros);
+
+        intent.putExtras(parametros);
+        startActivity(intent);
+        alerta.dismiss();
         }
 
         if (opc == 3) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1054,6 +1095,8 @@ public class PerguntasActivity extends AppCompatActivity {
         if (opc == 4) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1063,6 +1106,8 @@ public class PerguntasActivity extends AppCompatActivity {
         if (opc == 5) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1072,6 +1117,8 @@ public class PerguntasActivity extends AppCompatActivity {
         if (opc == 6) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1081,6 +1128,8 @@ public class PerguntasActivity extends AppCompatActivity {
         if (opc == 7) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1090,6 +1139,8 @@ public class PerguntasActivity extends AppCompatActivity {
         if (opc == 8) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1099,6 +1150,8 @@ public class PerguntasActivity extends AppCompatActivity {
         if (opc == 9) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1108,6 +1161,8 @@ public class PerguntasActivity extends AppCompatActivity {
         if (opc == 10) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1117,6 +1172,8 @@ public class PerguntasActivity extends AppCompatActivity {
         if (opc == 11) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1126,6 +1183,8 @@ public class PerguntasActivity extends AppCompatActivity {
         if (opc == 12) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1135,6 +1194,8 @@ public class PerguntasActivity extends AppCompatActivity {
         if (opc == 13) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1144,6 +1205,8 @@ public class PerguntasActivity extends AppCompatActivity {
         if (opc == 14) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1153,6 +1216,8 @@ public class PerguntasActivity extends AppCompatActivity {
         if (opc == 15) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1162,6 +1227,8 @@ public class PerguntasActivity extends AppCompatActivity {
         if (opc == 16) {
             parametros.putInt("pergunta", opc);
             parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
 
             intent.putExtras(parametros);
             startActivity(intent);
@@ -1182,10 +1249,12 @@ public class PerguntasActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), FinalJogoActivity.class);
         Bundle parametros = new Bundle();
 
-            parametros.putInt("pontos", pontos);
+        parametros.putInt("pontos", pontos);
+        parametros.putInt("acertos", acertos);
+        parametros.putInt("erros", erros);
 
-            intent.putExtras(parametros);
-            startActivity(intent);
+        intent.putExtras(parametros);
+        startActivity(intent);
 
         somResposta = MediaPlayer.create(getApplicationContext(), R.raw.som_final_jogo);
         if (!somResposta.isPlaying()) {
