@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class FinalJogoActivity extends AppCompatActivity {
 
     private Button btFechar;
@@ -36,9 +34,9 @@ public class FinalJogoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_jogo);
 
-        txAcertou = findViewById(R.id.txAcertou);
-        txErrou = findViewById(R.id.txErrou);
-        txResultado = findViewById(R.id.txResultado);
+        txAcertou = findViewById(R.id.idResposta1);
+        txErrou = findViewById(R.id.idResposta2);
+        txResultado = findViewById(R.id.idResposta3);
 
         //BUNDLE  RECEBENDO PONTUAÇÃO
         Bundle dados = getIntent().getExtras();

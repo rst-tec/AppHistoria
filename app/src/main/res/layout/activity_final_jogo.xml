@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/resultado01" />
 
     <TextView
-        android:id="@+id/txAcertou"
+        android:id="@+id/idResposta1"
         android:layout_width="345dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/txErrou"
+        android:id="@+id/idResposta2"
         android:layout_width="345dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
@@ -52,10 +52,10 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txAcertou" />
+        app:layout_constraintTop_toBottomOf="@+id/idResposta1" />
 
     <TextView
-        android:id="@+id/txResultado"
+        android:id="@+id/idResposta3"
         android:layout_width="345dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txErrou" />
+        app:layout_constraintTop_toBottomOf="@+id/idResposta2" />
 
     <Button
         android:id="@+id/btFechar"

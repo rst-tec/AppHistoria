@@ -42,7 +42,7 @@
         app:layout_constraintVertical_bias="0.652" />
 
     <Button
-        android:id="@+id/txAcertou"
+        android:id="@+id/idResposta1"
         android:layout_width="345dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
@@ -61,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
-        android:id="@+id/txErrou"
+        android:id="@+id/idResposta2"
         android:layout_width="345dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
@@ -77,10 +77,10 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txAcertou" />
+        app:layout_constraintTop_toBottomOf="@+id/idResposta1" />
 
     <Button
-        android:id="@+id/txResultado"
+        android:id="@+id/idResposta3"
         android:layout_width="345dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
@@ -96,7 +96,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txErrou" />
+        app:layout_constraintTop_toBottomOf="@+id/idResposta2" />
 
     <Button
         android:id="@+id/btProxima"
@@ -124,14 +124,14 @@
         android:id="@+id/idResultado"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/pergunta"
         android:gravity="center"
         android:text="00 Pontos"
         android:textColor="@color/color_verde"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btProxima"
-        app:layout_constraintStart_toEndOf="@+id/btFechar" />
+        app:layout_constraintStart_toEndOf="@+id/btFechar"
+        app:layout_constraintTop_toBottomOf="@+id/idResposta3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
