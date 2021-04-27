@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class FinalJogoActivity extends AppCompatActivity {
 
     private Button btFechar;
+    private Button btJogarNovamente;
 
     private TextView idAcertos;
     private TextView idErros;
@@ -60,5 +61,14 @@ public class FinalJogoActivity extends AppCompatActivity {
             }
         });
 
+        btJogarNovamente = findViewById(R.id.btJogarNovamente);
+        btJogarNovamente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                intent.putExtra("pergunta", 1); //PASSANDO VALOR PARA O BUNDLE
+                startActivity(intent);
+            }
+        });
     }
 }
