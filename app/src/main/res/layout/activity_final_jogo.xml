@@ -4,20 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fundo_app"
     tools:context=".FinalJogoActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="355dp"
         android:layout_height="161dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/resultado01" />
 
     <TextView
-        android:id="@+id/idResposta1"
+        android:id="@+id/idAcertos"
         android:layout_width="345dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
@@ -36,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/idResposta2"
+        android:id="@+id/idErros"
         android:layout_width="345dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
@@ -52,10 +53,10 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idResposta1" />
+        app:layout_constraintTop_toBottomOf="@+id/idAcertos" />
 
     <TextView
-        android:id="@+id/idResposta3"
+        android:id="@+id/idPontos"
         android:layout_width="345dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
@@ -72,7 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idResposta2" />
+        app:layout_constraintTop_toBottomOf="@+id/idErros" />
 
     <Button
         android:id="@+id/btFechar"

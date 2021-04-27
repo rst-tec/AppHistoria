@@ -12,9 +12,9 @@ public class FinalJogoActivity extends AppCompatActivity {
 
     private Button btFechar;
 
-    private TextView txAcertou;
-    private TextView txErrou;
-    private TextView txResultado;
+    private TextView idAcertos;
+    private TextView idErros;
+    private TextView idPontos;
 
     private int pontos;
     private int acertos;
@@ -34,9 +34,9 @@ public class FinalJogoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_jogo);
 
-        txAcertou = findViewById(R.id.idResposta1);
-        txErrou = findViewById(R.id.idResposta2);
-        txResultado = findViewById(R.id.idResposta3);
+        idAcertos   = findViewById(R.id.idAcertos);
+        idErros     = findViewById(R.id.idErros);
+        idPontos    = findViewById(R.id.idPontos);
 
         //BUNDLE  RECEBENDO PONTUAÇÃO
         Bundle dados = getIntent().getExtras();
@@ -45,9 +45,9 @@ public class FinalJogoActivity extends AppCompatActivity {
         acertos = dados.getInt("acertos");
         erros   = dados.getInt("erros");
 
-        txAcertou.setText("Você acertou: " + acertos + " Perguntas");
-        txErrou.setText("Você errou: " + erros + " Perguntas");
-        txResultado.setText("Você fez: " + pontos + "  Pontos" );
+        idAcertos.setText("Você acertou: " + acertos + " Perguntas");
+        idErros.setText("Você errou: " + erros + " Perguntas");
+        idPontos.setText("Você fez: " + pontos + "  Pontos" );
 
         //BOTÃO PARA VOLTAR PARA A TELA INICIAL
         btFechar = findViewById(R.id.btFechar);
