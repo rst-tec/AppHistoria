@@ -101,7 +101,7 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 1) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("01 - Em quantos dias Deus fez a criação do mundo?");
+            pergunta.setText("Em quantos dias Deus fez a criação do mundo?");
 
             resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("7 dias");
@@ -129,7 +129,6 @@ public class PerguntasActivity extends AppCompatActivity {
                     respostaErrada();
                 }
             });
-
         }
 
 //*************************************************************
@@ -140,7 +139,7 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 2) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("02 - Qual foi o nome do primeiro homem e da primeira mulher criados por Deus?");
+            pergunta.setText("Qual foi o nome do primeiro homem e da primeira mulher criados por Deus?");
 
             resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("João e Maria");
@@ -178,28 +177,28 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 3) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("03 - A Arca e o Diluvio");
+            pergunta.setText("Aonde Noé colocou os animais?");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Resposta correta");
+            resposta1.setText("Numa casa");
             resposta1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaCorreta();
-                }
-            });
-
-            resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Resposta errada");
-            resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
 
+            resposta2 = findViewById(R.id.idResposta2);
+            resposta2.setText("Numa arca");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Em uma muralha");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -216,28 +215,28 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 4) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("04 - Qual era o nome do filho de Abraão e Sara");
+            pergunta.setText("Qual era o nome do filho de Abraão e Sara");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Resposta correta");
+            resposta1.setText("Pedro");
             resposta1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaCorreta();
-                }
-            });
-
-            resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Resposta errada");
-            resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
 
+            resposta2 = findViewById(R.id.idResposta2);
+            resposta2.setText("Isaque");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Paulo");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -254,23 +253,23 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 5) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("05 - Qual animal Deus enviou para o sacrifio de Abraão e Isaque");
+            pergunta.setText("Qual animal Deus enviou para o sacrifio de Abraão e Isaque");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Jacaré");
+            resposta1.setText("Carneiro");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaErrada();
+                    respostaCorreta();
                 }
             });
 
             resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Carneiro");
+            resposta2.setText("Jacaré");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaCorreta();
+                    respostaErrada();
                 }
             });
 
@@ -292,10 +291,10 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 6) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("06 - O sonhador José");
+            pergunta.setText("Quem foi vendido como escravo por seus irmãos e se tornou governador do Egito?");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Resposta correta");
+            resposta1.setText("José");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -304,7 +303,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Resposta errada");
+            resposta2.setText("João");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -313,7 +312,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Pedro");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -323,35 +322,35 @@ public class PerguntasActivity extends AppCompatActivity {
         }
 
 //*************************************************************
-//PERGUNTA 007 - Os sonhos se realizam
+//PERGUNTA 007
 //*************************************************************
 //MONTA A TELA DE PERGUNTAS
 
         if (num == 7) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("07 - Os sonhos se realizam");
+            pergunta.setText("Qual o nome do gigante que Davi derrubou?");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Resposta correta");
+            resposta1.setText("Barrabás");
             resposta1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaCorreta();
-                }
-            });
-
-            resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Resposta errada");
-            resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
 
+            resposta2 = findViewById(R.id.idResposta2);
+            resposta2.setText("Golias");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Anaque");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -361,17 +360,17 @@ public class PerguntasActivity extends AppCompatActivity {
         }
 
 //*************************************************************
-//PERGUNTA 008 - Moisés, um bebê especial
+//PERGUNTA 008
 //*************************************************************
 //MONTA A TELA DE PERGUNTAS
 
         if (num == 8) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("08 - Moisés, um bebê especial");
+            pergunta.setText("Quem é considerado o homem mais forte da Bíblia?");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Resposta correta");
+            resposta1.setText("Sansão");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -380,7 +379,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Resposta errada");
+            resposta2.setText("Pedro");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -389,7 +388,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Faraó");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -406,10 +405,10 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 9) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("09 - Castigos para faraó");
+            pergunta.setText("Quando Sansão perdeu as suas forças?");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Resposta correta");
+            resposta1.setText("Quando cortaram o seu cabelo");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -418,7 +417,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Resposta errada");
+            resposta2.setText("Quando foi acorrentado");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -427,7 +426,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Quando ele usou um chapéu");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -444,28 +443,28 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 10) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("10 - Deus abre um caminho");
+            pergunta.setText("Quem foi colocado em um cestinho e jogado em um rio ainda bebê?");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Resposta correta");
+            resposta1.setText("Jesus");
             resposta1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaCorreta();
-                }
-            });
-
-            resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Resposta errada");
-            resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
 
+            resposta2 = findViewById(R.id.idResposta2);
+            resposta2.setText("Moisés");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Jacó");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -482,19 +481,19 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 11) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("11 - A queda do muro");
+            pergunta.setText("Qual o profeta que foi engolido por um grande peixe?");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Resposta correta");
+            resposta1.setText("João");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaCorreta();
+                    respostaErrada();
                 }
             });
 
             resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Resposta errada");
+            resposta2.setText("Isaías");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -503,27 +502,27 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Jonas");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaErrada();
+                    respostaCorreta();
                 }
             });
         }
 
 //*************************************************************
-//PERGUNTA 012 - Um herói cabeludo
+//PERGUNTA 012
 //*************************************************************
 //MONTA A TELA DE PERGUNTAS
 
         if (num == 12) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("12 - Um herói cabeludo");
+            pergunta.setText("Quantos animais foram colocados na arca de Noé?");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Resposta correta");
+            resposta1.setText("Um casal de cada espécie");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -532,7 +531,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Resposta errada");
+            resposta2.setText("Só animais machos");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -541,7 +540,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Só os animais filhote");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -558,28 +557,28 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 13) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("13 - Rainha escolhida");
+            pergunta.setText("Que instrumento Josué usou para derrubar as muralhas de Jericó?");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Resposta correta");
+            resposta1.setText("Bateria");
             resposta1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaCorreta();
-                }
-            });
-
-            resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Resposta errada");
-            resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
 
+            resposta2 = findViewById(R.id.idResposta2);
+            resposta2.setText("Trombeta");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Flauta");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -596,19 +595,19 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 14) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("14 - Deus chama Samuel");
+            pergunta.setText("Quando o anjo disse a Abraão que ele teria um filho, como Sara reagiu?");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Resposta correta");
+            resposta1.setText("Ela chorou");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaCorreta();
+                    respostaErrada();
                 }
             });
 
             resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Resposta errada");
+            resposta2.setText("Ela desmaiou");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -617,11 +616,11 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Ela riu");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaErrada();
+                    respostaCorreta();
                 }
             });
         }
@@ -634,10 +633,10 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 15) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("15 - Qual era o nome do gigante derrota por Davi?");
+            pergunta.setText("Quem foi jogado na cova com os leões");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Resposta correta");
+            resposta1.setText("Daniel");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -646,7 +645,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Resposta errada");
+            resposta2.setText("José");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -655,7 +654,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Paulo");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -672,28 +671,28 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 16) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("16 - Daniel e os leões");
+            pergunta.setText("Qual animal tentou Eva no Jardim do Éden?");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Resposta correta");
+            resposta1.setText("Leão");
             resposta1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaCorreta();
-                }
-            });
-
-            resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Resposta errada");
-            resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
 
+            resposta2 = findViewById(R.id.idResposta2);
+            resposta2.setText("Serpente");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Lagarto");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
