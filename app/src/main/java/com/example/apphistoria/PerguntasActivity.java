@@ -1,9 +1,12 @@
 package com.example.apphistoria;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -42,7 +45,7 @@ public class PerguntasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perguntas);
 
-        idResultado = findViewById(R.id.idResultado);
+        //idResultado = findViewById(R.id.idResultado);
 
         //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
         Bundle dados = getIntent().getExtras();
@@ -52,7 +55,7 @@ public class PerguntasActivity extends AppCompatActivity {
         acertos = dados.getInt("acertos");
         erros = dados.getInt("erros");
 
-        idResultado.setText(pontos + "  Pontos" );
+        //idResultado.setText(pontos + "  Pontos" );
 
         //BOTÃO PARA VOLTAR PARA A TELA INICIAL
         btFechar = findViewById(R.id.btFechar);
@@ -712,7 +715,7 @@ public class PerguntasActivity extends AppCompatActivity {
         acertos = acertos + 1;
 
         pontos = pontos + 1;
-        idResultado.setText(pontos + "  Pontos" );
+        //idResultado.setText(pontos + "  Pontos" );
 
         //LayoutInflater é utilizado para inflar nosso layout em uma view.
         //pegamos nossa instancia da classe
@@ -726,7 +729,6 @@ public class PerguntasActivity extends AppCompatActivity {
             public void onClick(View arg0) {
                 proximaPergunta();
                 finish();
-
             }
         });
 
@@ -737,6 +739,28 @@ public class PerguntasActivity extends AppCompatActivity {
         alerta = builder.create();
         alerta.show();
 
+        //FECHAR ALERTA
+        final Handler handler = new Handler();
+        final Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                // verificar se a caixa de diálogo está visível
+                if (alerta.isShowing()) {
+                    // fecha a caixa de diálogo
+                    alerta.dismiss();
+                }
+                proximaPergunta();//ABRIR PROXIMA PERGUNTA
+            }
+        };
+
+        alerta.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                handler.removeCallbacks(runnable);
+            }
+        });
+
+        handler.postDelayed(runnable, 1500);
     }
 
     //ALERTA DE RESOSTA ERRADA
@@ -749,7 +773,7 @@ public class PerguntasActivity extends AppCompatActivity {
         erros = erros +1;
 
         pontos = pontos - 1;
-        idResultado.setText(pontos + "  Pontos" );
+        //idResultado.setText(pontos + "  Pontos" );
 
         //LayoutInflater é utilizado para inflar nosso layout em uma view.
         //pegamos nossa instancia da classe
@@ -771,6 +795,28 @@ public class PerguntasActivity extends AppCompatActivity {
         builder.setView(view);
         alerta = builder.create();
         alerta.show();
+
+        //FECHAR ALERTA
+        final Handler handler = new Handler();
+        final Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                // verificar se a caixa de diálogo está visível
+                if (alerta.isShowing()) {
+                    // fecha a caixa de diálogo
+                    alerta.dismiss();
+                }
+            }
+        };
+
+        alerta.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                handler.removeCallbacks(runnable);
+            }
+        });
+
+        handler.postDelayed(runnable, 1500);
     }
 
     //ABRIR PROXIMA PERGUNTA
@@ -817,7 +863,6 @@ public class PerguntasActivity extends AppCompatActivity {
             somResposta.start();
         }
     }
-
 }
 
 

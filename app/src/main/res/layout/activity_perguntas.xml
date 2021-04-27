@@ -103,7 +103,7 @@
         android:layout_height="100dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/proximo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -114,23 +114,9 @@
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/fechar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/idResultado"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/pergunta"
-        android:gravity="center"
-        android:text="00 Pontos"
-        android:textColor="@color/color_verde"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/btProxima"
-        app:layout_constraintStart_toEndOf="@+id/btFechar"
-        app:layout_constraintTop_toBottomOf="@+id/idResposta3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
