@@ -46,9 +46,9 @@ public class FinalJogoActivity extends AppCompatActivity {
         acertos = dados.getInt("acertos");
         erros   = dados.getInt("erros");
 
-        idAcertos.setText("Você acertou: " + acertos + " Perguntas");
-        idErros.setText("Você errou: " + erros + " Perguntas");
-        idPontos.setText("Você fez: " + pontos + "  Pontos" );
+        idAcertos.setText("Você acertou: " + acertos );
+        idErros.setText("Você errou: " + erros);
+        idPontos.setText("Você fez: " + pontos + " Pontos" );
 
         //BOTÃO PARA VOLTAR PARA A TELA INICIAL
         btFechar = findViewById(R.id.btFechar);
