@@ -21,13 +21,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fundocapa" />
+        app:srcCompat="@drawable/fundo_pergunta" />
 
     <TextView
         android:id="@+id/idPergunta"
         android:layout_width="325dp"
         android:layout_height="163dp"
-
         android:gravity="center"
         android:inputType="textMultiLine"
         android:padding="15dp"

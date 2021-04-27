@@ -59,5 +59,6 @@ public class FinalJogoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }

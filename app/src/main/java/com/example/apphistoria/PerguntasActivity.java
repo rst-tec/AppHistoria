@@ -736,6 +736,7 @@ public class PerguntasActivity extends AppCompatActivity {
         builder.setView(view);
         alerta = builder.create();
         alerta.show();
+
     }
 
     //ALERTA DE RESOSTA ERRADA
