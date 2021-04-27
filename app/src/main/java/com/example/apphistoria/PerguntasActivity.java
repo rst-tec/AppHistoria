@@ -291,7 +291,7 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 6) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Quem foi vendido como escravo por seus irmãos e se tornou governador do Egito?");
+            pergunta.setText("Quem foi vendido como escravo por seus irmãos?");
 
             resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("José");
@@ -329,7 +329,7 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 7) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Qual o nome do gigante que Davi derrubou?");
+            pergunta.setText("Qual o nome do gigante derrotado por Davi?");
 
             resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Barrabás");
@@ -408,7 +408,7 @@ public class PerguntasActivity extends AppCompatActivity {
             pergunta.setText("Quando Sansão perdeu as suas forças?");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Quando cortaram o seu cabelo");
+            resposta1.setText("Cortaram o seu cabelo");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -426,7 +426,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Quando ele usou um chapéu");
+            resposta3.setText("Quando usou um chapéu");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -443,7 +443,7 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 10) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Quem foi colocado em um cestinho e jogado em um rio ainda bebê?");
+            pergunta.setText("Qual bebê foi colocado em um cestinho e jogado em um rio?");
 
             resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Jesus");
@@ -595,10 +595,10 @@ public class PerguntasActivity extends AppCompatActivity {
         if (num == 14) {
 
             pergunta = findViewById(R.id.idPergunta);
-            pergunta.setText("Quando o anjo disse a Abraão que ele teria um filho, como Sara reagiu?");
+            pergunta.setText("Depois do dilúvio, qual o sinal que Deus criou?");
 
             resposta1 = findViewById(R.id.idResposta1);
-            resposta1.setText("Ela chorou");
+            resposta1.setText("Uma tempestade");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -607,7 +607,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta2 = findViewById(R.id.idResposta2);
-            resposta2.setText("Ela desmaiou");
+            resposta2.setText("Fez descer fogo do céu");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -616,7 +616,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
 
             resposta3 = findViewById(R.id.idResposta3);
-            resposta3.setText("Ela riu");
+            resposta3.setText("Um Arco-Íris");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
