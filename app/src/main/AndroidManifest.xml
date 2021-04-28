@@ -12,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_lendo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PerguntasActivity" android:screenOrientation="portrait" ></activity>
+        <activity android:name=".FinalJogoActivity"
+            android:screenOrientation="portrait" ></activity>
+        <activity
+            android:name=".PerguntasActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Historia02Activity"
             android:screenOrientation="portrait" />
