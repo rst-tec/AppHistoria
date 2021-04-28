@@ -3,6 +3,7 @@ package com.example.apphistoria;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,8 @@ public class FinalJogoActivity extends AppCompatActivity {
     private TextView idAcertos;
     private TextView idErros;
     private TextView idPontos;
+
+    private int num;
 
     private int pontos;
     private int acertos;
@@ -42,8 +45,9 @@ public class FinalJogoActivity extends AppCompatActivity {
         idPontos = findViewById(R.id.idPontos);
         idFundoResultado = findViewById(R.id.idFundoResultado);
 
-        //BUNDLE  RECEBENDO PONTUAÇÃO
+        //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
         Bundle dados = getIntent().getExtras();
+        num = dados.getInt("pergunta");
 
         pontos  = dados.getInt("pontos");
         acertos = dados.getInt("acertos");
@@ -76,14 +80,37 @@ public class FinalJogoActivity extends AppCompatActivity {
 
         //BOTÃO PARA JOGAR NOVAMENTE
         btJogarNovamente = findViewById(R.id.btJogarNovamente);
-        btJogarNovamente.setOnClickListener(new View.OnClickListener() {
+        btJogarNovamente.setBackgroundResource(R.drawable.jogar_novamente);
+
+        if (num == 21) {
+            btJogarNovamente.setBackgroundResource(R.drawable.bt_voltar);
+        }
+            btJogarNovamente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 11); //PASSANDO VALOR PARA O BUNDLE
-                startActivity(intent);
+                //PARA FINALIZAR O JOGO
+                if (num == 21) {
+                    telaInicial();
+                }else {
 
+                    finish();
+                    Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                    Bundle parametros = new Bundle();
+
+                    parametros.putInt("pergunta", num); //Passa o numero da proxima pergunta
+                    parametros.putInt("pontos", pontos);
+                    parametros.putInt("acertos", acertos);
+                    parametros.putInt("erros", erros);
+
+                    intent.putExtras(parametros);
+                    startActivity(intent);
+                }
             }
         });
+    }
+    private void telaInicial(){
+        finish();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
     }
 }

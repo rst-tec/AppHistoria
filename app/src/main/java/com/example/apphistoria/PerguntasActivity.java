@@ -87,7 +87,7 @@ public class PerguntasActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
                     Bundle parametros = new Bundle();
 
-                    parametros.putInt("pergunta", num + 1); ////Passa o numero da proxima pergunta
+                    parametros.putInt("pergunta", num + 1); //Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
                     parametros.putInt("acertos", acertos);
                     parametros.putInt("erros", erros);
@@ -573,25 +573,25 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 17) {
 
-            pergunta.setText("17 - Qual animal tentou Eva no Jardim do Éden?");
+            pergunta.setText("17 - Como chamava o jardim onde morou Adão e Eva?");
 
-            resposta1.setText("Leão");
+            resposta1.setText("Jardim do éden");
             resposta1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaErrada();
-                }
-            });
-
-            resposta2.setText("Serpente");
-            resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaCorreta();
                 }
             });
 
-            resposta3.setText("Lagarto");
+            resposta2.setText("Jardim Magnólia");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Jardim Guanabara");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -602,9 +602,9 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 18) {
 
-            pergunta.setText("18  - Qual animal tentou Eva no Jardim do Éden?");
+            pergunta.setText("18  - Como era o nome do esposo de Maria, mãe de Jesus? ");
 
-            resposta1.setText("Leão");
+            resposta1.setText("Tiago");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -612,44 +612,44 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText("Serpente");
+            resposta2.setText("Simão");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaCorreta();
+                    respostaErrada();
                 }
             });
 
-            resposta3.setText("Lagarto");
+            resposta3.setText("José");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaErrada();
+                    respostaCorreta();
                 }
             });
         }
 
         if (num == 19) {
 
-            pergunta.setText("19 - Qual animal tentou Eva no Jardim do Éden?");
+            pergunta.setText("19 - Quando Jesus nasceu, onde Ele foi colocado?");
 
-            resposta1.setText("Leão");
+            resposta1.setText("manjedoura");
             resposta1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaErrada();
-                }
-            });
-
-            resposta2.setText("Serpente");
-            resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaCorreta();
                 }
             });
 
-            resposta3.setText("Lagarto");
+            resposta2.setText("cama");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("trono");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -660,9 +660,9 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 20) {
 
-            pergunta.setText("20 - Qual animal tentou Eva no Jardim do Éden?");
+            pergunta.setText("20 - Qual era o nome da mãe de Jesus?");
 
-            resposta1.setText("Leão");
+            resposta1.setText("Ana");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -670,7 +670,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText("Serpente");
+            resposta2.setText("Maria");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -678,7 +678,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3.setText("Lagarto");
+            resposta3.setText("Rebeca");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -698,9 +698,7 @@ public class PerguntasActivity extends AppCompatActivity {
             somResposta.start();
         }
         acertos = acertos + 1;
-
         pontos = pontos + 1;
-        //idResultado.setText(pontos + "  Pontos" );
 
         //LayoutInflater é utilizado para inflar nosso layout em uma view.
         //pegamos nossa instancia da classe
@@ -712,7 +710,7 @@ public class PerguntasActivity extends AppCompatActivity {
         //definimos para o botão do layout um clickListener
         view.findViewById(R.id.btFechar).setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                proximaPergunta();
+                //proximaPergunta();
                 finish();
             }
         });
@@ -745,7 +743,7 @@ public class PerguntasActivity extends AppCompatActivity {
             }
         });
 
-        handler.postDelayed(runnable, 1000);
+        handler.postDelayed(runnable, 800);
     }
 
     //ALERTA DE RESOSTA ERRADA
@@ -756,9 +754,7 @@ public class PerguntasActivity extends AppCompatActivity {
         }
 
         erros = erros +1;
-
         pontos = pontos - 1;
-        //idResultado.setText(pontos + "  Pontos" );
 
         //LayoutInflater é utilizado para inflar nosso layout em uma view.
         //pegamos nossa instancia da classe
@@ -801,27 +797,27 @@ public class PerguntasActivity extends AppCompatActivity {
             }
         });
 
-        handler.postDelayed(runnable, 1000);
+        handler.postDelayed(runnable, 800);
     }
 
     //ABRIR PROXIMA PERGUNTA
     private void proximaPergunta(){
-        Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-        Bundle parametros = new Bundle();
 
-        num = num +1; //Passando para proxima pergunta
-
-        parametros.putInt("pergunta", num);
-        parametros.putInt("pontos", pontos);
-        parametros.putInt("acertos", acertos);
-        parametros.putInt("erros", erros);
-
-        intent.putExtras(parametros);
-        startActivity(intent);
-        alerta.dismiss();
-
-        if (num == 11 || num == 21) {
+        if (num == 10|| num == 20) {
             finalJogo();
+            alerta.dismiss();
+        }else {
+
+            Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+            Bundle parametros = new Bundle();
+
+            parametros.putInt("pergunta", num + 1); //Passa o numero da proxima pergunta
+            parametros.putInt("pontos", pontos);
+            parametros.putInt("acertos", acertos);
+            parametros.putInt("erros", erros);
+
+            intent.putExtras(parametros);
+            startActivity(intent);
             alerta.dismiss();
         }
     }
@@ -833,6 +829,7 @@ public class PerguntasActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), FinalJogoActivity.class);
         Bundle parametros = new Bundle();
 
+        parametros.putInt("pergunta", num +1); //Passa o numero da proxima pergunta
         parametros.putInt("pontos", pontos);
         parametros.putInt("acertos", acertos);
         parametros.putInt("erros", erros);
