@@ -93,17 +93,19 @@ public class PerguntasActivity extends AppCompatActivity {
             }
         });
 
-//*************************************************************
-//PERGUNTA 001 - A Criação do Mundo
+        pergunta = findViewById(R.id.idPergunta);
+        resposta1 = findViewById(R.id.idResposta1);
+        resposta2 = findViewById(R.id.idResposta2);
+        resposta3 = findViewById(R.id.idResposta3);
+
 //*************************************************************
 //MONTA A TELA DE PERGUNTAS
+//*************************************************************
 
         if (num == 1) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Em quantos dias Deus fez a criação do mundo?");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("7 dias");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -112,7 +114,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("30 dias");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -121,7 +122,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("10 dias");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -131,17 +131,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 002 - O Pecado de Adão e Eva
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 2) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Qual foi o nome do primeiro homem e da primeira mulher criados por Deus?");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("João e Maria");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -150,7 +143,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("Sansão e Dalila");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -159,7 +151,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Adão e Eva");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -169,17 +160,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 003 - A Arca e o Diluvio
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 3) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Aonde Noé colocou os animais?");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Numa casa");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -188,7 +172,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("Numa arca");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -197,7 +180,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Em uma muralha");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -207,17 +189,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 004 - A grande promessa
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 4) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Qual era o nome do filho de Abraão e Sara");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Pedro");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -226,7 +201,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("Isaque");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -235,7 +209,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Paulo");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -245,17 +218,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 005 - A prova de Abraão e Isaque
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 5) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Qual animal Deus enviou para o sacrifio de Abraão e Isaque");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Carneiro");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -264,7 +230,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("Jacaré");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -273,7 +238,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Elefante");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -283,17 +247,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 006 - O sonhador José
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 6) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Quem foi vendido como escravo por seus irmãos?");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("José");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -302,7 +259,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("João");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -311,7 +267,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Pedro");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -321,17 +276,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 007
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 7) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Qual o nome do gigante derrotado por Davi?");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Barrabás");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -340,7 +288,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("Golias");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -349,7 +296,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Anaque");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -359,17 +305,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 008
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 8) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Quem é considerado o homem mais forte da Bíblia?");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Sansão");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -378,7 +317,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("Pedro");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -387,7 +325,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Faraó");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -397,17 +334,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 009 - Castigos para faraó
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 9) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Quando Sansão perdeu as suas forças?");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Cortaram o seu cabelo");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -416,7 +346,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("Quando foi acorrentado");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -425,7 +354,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Quando usou um chapéu");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -435,17 +363,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 010 - Deus abre um caminho
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 10) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Qual bebê foi colocado em um cestinho e jogado em um rio?");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Jesus");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -454,7 +375,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("Moisés");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -463,7 +383,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Jacó");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -473,17 +392,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 011 - A queda do muro
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 11) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Qual o profeta que foi engolido por um grande peixe?");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("João");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -492,7 +404,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("Isaías");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -501,7 +412,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Jonas");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -511,17 +421,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 012
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 12) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Quantos animais foram colocados na arca de Noé?");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Um casal de cada espécie");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -530,7 +433,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("Só animais machos");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -539,7 +441,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Só os animais filhote");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -549,17 +450,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 013 - Rainha escolhida
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 13) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Que instrumento Josué usou para derrubar as muralhas de Jericó?");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Bateria");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -568,7 +462,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("Trombeta");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -577,7 +470,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Flauta");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -587,17 +479,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 014 - Deus chama Samuel
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 14) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Depois do dilúvio, qual o sinal que Deus criou?");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Uma tempestade");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -606,7 +491,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("Fez descer fogo do céu");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -615,7 +499,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Um Arco-Íris");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -625,17 +508,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 015 - Davi e Golias
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 15) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Quem foi jogado na cova com os leões");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Daniel");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -644,7 +520,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("José");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -653,7 +528,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Paulo");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -663,17 +537,10 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-//*************************************************************
-//PERGUNTA 016 - Daniel e os leões
-//*************************************************************
-//MONTA A TELA DE PERGUNTAS
-
         if (num == 16) {
 
-            pergunta = findViewById(R.id.idPergunta);
             pergunta.setText("Qual animal tentou Eva no Jardim do Éden?");
 
-            resposta1 = findViewById(R.id.idResposta1);
             resposta1.setText("Leão");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -682,7 +549,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2 = findViewById(R.id.idResposta2);
             resposta2.setText("Serpente");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -691,7 +557,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3 = findViewById(R.id.idResposta3);
             resposta3.setText("Lagarto");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
