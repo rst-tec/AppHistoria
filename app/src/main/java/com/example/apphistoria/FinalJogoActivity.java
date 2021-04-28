@@ -53,13 +53,13 @@ public class FinalJogoActivity extends AppCompatActivity {
         idErros.setText("Errou: " + erros);
         idPontos.setText("Total: " + pontos + " Pontos" );
 
-        if(pontos <=5) {
+        if(pontos <=3) {
             idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
         }
-        if(pontos >5 && pontos <=10) {
+        if(pontos >4 && pontos <=6) {
             idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
         }
-        if(pontos >= 13){
+        if(pontos >= 7){
             idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
         }
 
@@ -74,13 +74,15 @@ public class FinalJogoActivity extends AppCompatActivity {
             }
         });
 
+        //BOTÃO PARA JOGAR NOVAMENTE
         btJogarNovamente = findViewById(R.id.btJogarNovamente);
         btJogarNovamente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 1); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("pergunta", 11); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
+
             }
         });
     }

@@ -21,7 +21,7 @@ public class PerguntasActivity extends AppCompatActivity {
     private Button resposta1;
     private Button resposta2;
     private Button resposta3;
-    private TextView idResultado;
+    private TextView idStatus;
 
     private int num;
 
@@ -45,7 +45,7 @@ public class PerguntasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perguntas);
 
-        //idResultado = findViewById(R.id.idResultado);
+        idStatus = findViewById(R.id.idStatus);
 
         //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
         Bundle dados = getIntent().getExtras();
@@ -55,7 +55,12 @@ public class PerguntasActivity extends AppCompatActivity {
         acertos = dados.getInt("acertos");
         erros = dados.getInt("erros");
 
-        //idResultado.setText(pontos + "  Pontos" );
+        //EXIBIR NUMERAÇÃO DA PERGUNTA
+        idStatus.setText("Pergunta " + num + " de 10");
+
+        if (num >=11) {
+            idStatus.setText("Pergunta " + num + " de 20");
+        }
 
         //BOTÃO PARA VOLTAR PARA A TELA INICIAL
         btFechar = findViewById(R.id.btFechar);
@@ -74,7 +79,7 @@ public class PerguntasActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (num == 16) {
+                if (num == 10|| num == 20) {
                     finalJogo();
                 }else {
 
@@ -104,7 +109,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 1) {
 
-            pergunta.setText("Em quantos dias Deus fez a criação do mundo?");
+            pergunta.setText("1 - Em quantos dias Deus fez a criação do mundo?");
 
             resposta1.setText("7 dias");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -133,7 +138,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 2) {
 
-            pergunta.setText("Qual foi o nome do primeiro homem e da primeira mulher criados por Deus?");
+            pergunta.setText("2 - Qual foi o nome do primeiro homem e da primeira mulher criados por Deus?");
 
             resposta1.setText("João e Maria");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -162,7 +167,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 3) {
 
-            pergunta.setText("Aonde Noé colocou os animais?");
+            pergunta.setText("3 - Aonde Noé colocou os animais?");
 
             resposta1.setText("Numa casa");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -191,7 +196,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 4) {
 
-            pergunta.setText("Qual era o nome do filho de Abraão e Sara");
+            pergunta.setText("4 - Qual era o nome do filho de Abraão e Sara");
 
             resposta1.setText("Pedro");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -220,7 +225,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 5) {
 
-            pergunta.setText("Qual animal Deus enviou para o sacrifio de Abraão e Isaque");
+            pergunta.setText("5 - Qual animal Deus enviou para o sacrifio de Abraão e Isaque");
 
             resposta1.setText("Carneiro");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -249,7 +254,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 6) {
 
-            pergunta.setText("Quem foi vendido como escravo por seus irmãos?");
+            pergunta.setText("6 - Quem foi vendido como escravo por seus irmãos?");
 
             resposta1.setText("José");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -278,7 +283,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 7) {
 
-            pergunta.setText("Qual o nome do gigante derrotado por Davi?");
+            pergunta.setText("7 - Qual o nome do gigante derrotado por Davi?");
 
             resposta1.setText("Barrabás");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -307,7 +312,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 8) {
 
-            pergunta.setText("Quem é considerado o homem mais forte da Bíblia?");
+            pergunta.setText("8 - Quem é considerado o homem mais forte da Bíblia?");
 
             resposta1.setText("Sansão");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -336,7 +341,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 9) {
 
-            pergunta.setText("Quando Sansão perdeu as suas forças?");
+            pergunta.setText("9 - Quando Sansão perdeu as suas forças?");
 
             resposta1.setText("Cortaram o seu cabelo");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -365,7 +370,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 10) {
 
-            pergunta.setText("Qual bebê foi colocado em um cestinho e jogado em um rio?");
+            pergunta.setText("10 - Qual bebê foi colocado em um cestinho e jogado em um rio?");
 
             resposta1.setText("Jesus");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -394,7 +399,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 11) {
 
-            pergunta.setText("Qual o profeta que foi engolido por um grande peixe?");
+            pergunta.setText("11 - Qual o profeta que foi engolido por um grande peixe?");
 
             resposta1.setText("João");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -423,7 +428,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 12) {
 
-            pergunta.setText("Quantos animais foram colocados na arca de Noé?");
+            pergunta.setText("12 - Quantos animais foram colocados na arca de Noé?");
 
             resposta1.setText("Um casal de cada espécie");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -452,7 +457,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 13) {
 
-            pergunta.setText("Que instrumento Josué usou para derrubar as muralhas de Jericó?");
+            pergunta.setText("13 - Que instrumento Josué usou para derrubar as muralhas de Jericó?");
 
             resposta1.setText("Bateria");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -481,7 +486,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 14) {
 
-            pergunta.setText("Depois do dilúvio, qual o sinal que Deus criou?");
+            pergunta.setText("14 - Depois do dilúvio, qual o sinal que Deus criou?");
 
             resposta1.setText("Uma tempestade");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -510,7 +515,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 15) {
 
-            pergunta.setText("Quem foi jogado na cova com os leões");
+            pergunta.setText("15 - Quem foi jogado na cova com os leões");
 
             resposta1.setText("Daniel");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -539,7 +544,123 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 16) {
 
-            pergunta.setText("Qual animal tentou Eva no Jardim do Éden?");
+            pergunta.setText("16 - Qual animal tentou Eva no Jardim do Éden?");
+
+            resposta1.setText("Leão");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Serpente");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Lagarto");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
+
+        if (num == 17) {
+
+            pergunta.setText("17 - Qual animal tentou Eva no Jardim do Éden?");
+
+            resposta1.setText("Leão");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Serpente");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Lagarto");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
+
+        if (num == 18) {
+
+            pergunta.setText("18  - Qual animal tentou Eva no Jardim do Éden?");
+
+            resposta1.setText("Leão");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Serpente");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Lagarto");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
+
+        if (num == 19) {
+
+            pergunta.setText("19 - Qual animal tentou Eva no Jardim do Éden?");
+
+            resposta1.setText("Leão");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Serpente");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Lagarto");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
+
+        if (num == 20) {
+
+            pergunta.setText("20 - Qual animal tentou Eva no Jardim do Éden?");
 
             resposta1.setText("Leão");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -624,7 +745,7 @@ public class PerguntasActivity extends AppCompatActivity {
             }
         });
 
-        handler.postDelayed(runnable, 1500);
+        handler.postDelayed(runnable, 1000);
     }
 
     //ALERTA DE RESOSTA ERRADA
@@ -680,7 +801,7 @@ public class PerguntasActivity extends AppCompatActivity {
             }
         });
 
-        handler.postDelayed(runnable, 1500);
+        handler.postDelayed(runnable, 1000);
     }
 
     //ABRIR PROXIMA PERGUNTA
@@ -690,8 +811,6 @@ public class PerguntasActivity extends AppCompatActivity {
 
         num = num +1; //Passando para proxima pergunta
 
-        if (num <= 16) {
-
         parametros.putInt("pergunta", num);
         parametros.putInt("pontos", pontos);
         parametros.putInt("acertos", acertos);
@@ -700,9 +819,8 @@ public class PerguntasActivity extends AppCompatActivity {
         intent.putExtras(parametros);
         startActivity(intent);
         alerta.dismiss();
-        }
 
-        if (num == 17) {
+        if (num == 11 || num == 21) {
             finalJogo();
             alerta.dismiss();
         }
