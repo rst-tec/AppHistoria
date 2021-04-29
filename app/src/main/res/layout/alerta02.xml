@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
     android:layout_height="400dp"
+    android:background="@color/fundo_app"
     android:orientation="vertical">
 
     <ImageView
