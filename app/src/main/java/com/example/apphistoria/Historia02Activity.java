@@ -36,6 +36,8 @@ public class Historia02Activity extends AppCompatActivity {
     private Button btAlinha;    //Alinhamento de texto
     private int opc = 1;        //Opção do alinhamento e ou cores
 
+    private int num; //Numero da proxima historia
+
     SharedPreferences preferencias;//Preferencias de alterações de cores
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR - PARA A LISTA DE HISTORIAS
@@ -63,7 +65,7 @@ public class Historia02Activity extends AppCompatActivity {
 
         //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA HISTORIA
         Bundle dados = getIntent().getExtras();
-        int num = dados.getInt("escolhanova");
+        num = dados.getInt("historia");
 
         //BOTÃO PARA ALTERAR AS CORES
         fundoHistoria = findViewById(R.id.idLayout);
@@ -155,6 +157,31 @@ public class Historia02Activity extends AppCompatActivity {
             }
         });
 
+        //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
+        btProxima = findViewById(R.id.btProxima);
+        btProxima.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mediaPlayer.stop();
+                musicaFundo.stop();
+
+                //ALTERAR ESSE NUMERO PARA O NUMERO DA ULTIMA HISTORIA
+                if (num == 1) {
+                    finish();  //VOLTAR PARA A LISTA DE HISTORIAS
+                }else {
+
+                    finish();
+                    Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
+                    Bundle parametros = new Bundle();
+
+                    parametros.putInt("historia", num + 1); //Numero da proxima historia
+
+                    intent.putExtras(parametros);
+                    startActivity(intent);
+                }
+            }
+        });
+
 //*************************************************************
 //ESCOLHEU HISTORIA 001 - O BEBE JESUS
 //*************************************************************
@@ -194,24 +221,6 @@ public class Historia02Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Lista02Activity.class);
-
-                    //intent.putExtra("escolhanova", 2);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -240,24 +249,6 @@ public class Historia02Activity extends AppCompatActivity {
                         mediaPlayer.pause();
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
-                }
-            });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-
-                    intent.putExtra("escolhanova", 3);//Passa o numero da proxima historia
-                    startActivity(intent);
                 }
             });
         }

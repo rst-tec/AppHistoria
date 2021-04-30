@@ -72,7 +72,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 1); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 1); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -84,7 +84,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 2); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 2); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -94,7 +94,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 3); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 3); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -104,7 +104,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 4); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 4); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -114,7 +114,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 5); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 5); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -124,7 +124,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 6); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 6); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -134,7 +134,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 7); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 7); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -144,7 +144,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 8); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 8); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -154,7 +154,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 9); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 9); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -164,7 +164,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 10); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 10); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -174,7 +174,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 11); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 11); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -184,7 +184,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 12); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 12); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -194,7 +194,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 13); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 13); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -204,7 +204,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("escolhanova", 14); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 14); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
