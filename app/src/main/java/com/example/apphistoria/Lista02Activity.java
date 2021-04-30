@@ -41,8 +41,6 @@ public class Lista02Activity extends AppCompatActivity {
     public void onBackPressed () {
         super.onBackPressed();
         finish();
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
     }
 
     @Override
@@ -63,6 +61,7 @@ public class Lista02Activity extends AppCompatActivity {
         btAntigo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
                 startActivity(intent);
             }

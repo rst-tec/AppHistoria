@@ -855,8 +855,6 @@ public class Historia01Activity extends AppCompatActivity {
             });
         }
 
-
-
 //*************************************************************
 //GRAVAR ALTERAÇÕES DE CORES
 //*************************************************************

@@ -9,8 +9,6 @@ import android.widget.Button;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class Lista01Activity extends AppCompatActivity {
 
@@ -30,7 +28,6 @@ public class Lista01Activity extends AppCompatActivity {
     private Button btHist014;
     private Button btHist015;
     private Button btHist016;
-
     private Button btNovo;
 
     private ConstraintLayout constraintLayout;
@@ -40,8 +37,6 @@ public class Lista01Activity extends AppCompatActivity {
     public void onBackPressed () {
         super.onBackPressed();
         finish();
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
     }
 
     @Override
@@ -62,6 +57,7 @@ public class Lista01Activity extends AppCompatActivity {
         btNovo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent intent = new Intent(getApplicationContext(), Lista02Activity.class);
                 startActivity(intent);
             }

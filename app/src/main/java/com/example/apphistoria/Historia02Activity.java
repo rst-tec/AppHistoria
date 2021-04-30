@@ -45,9 +45,6 @@ public class Historia02Activity extends AppCompatActivity {
         mediaPlayer.stop();
         musicaFundo.stop();
         finish();
-
-        Intent intent = new Intent(getApplicationContext(), Lista02Activity.class);
-        startActivity(intent);
     }
 
     @Override
@@ -112,6 +109,52 @@ public class Historia02Activity extends AppCompatActivity {
             }
         });
 
+        //INICIANDO ELEMENTOS
+        foto = findViewById(R.id.idFoto);
+        titulo = findViewById(R.id.idTitulo);
+        historia = findViewById(R.id.idTexto);
+
+        //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
+        btInicio = findViewById(R.id.btInicio);
+        btInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mediaPlayer.stop();
+                musicaFundo.stop();
+                finish();
+            }
+        });
+
+        //BOTÃO PARA INICIAR MUSICA DE FUNDO
+        btMusica = findViewById(R.id.btMusica);
+        btMusica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!musicaFundo.isPlaying()) {
+                    musicaFundo.start();
+                    btMusica.setBackgroundResource(R.drawable.musica_on);
+                } else {
+                    musicaFundo.pause();
+                    btMusica.setBackgroundResource(R.drawable.musica_off);
+                }
+            }
+        });
+
+        //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
+        btPlayer = findViewById(R.id.btPlayer);
+        btPlayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!mediaPlayer.isPlaying()) {
+                    mediaPlayer.start();
+                    btPlayer.setBackgroundResource(R.drawable.pause);
+                } else {
+                    mediaPlayer.pause();
+                    btPlayer.setBackgroundResource(R.drawable.play);
+                }
+            }
+        });
+
 //*************************************************************
 //ESCOLHEU HISTORIA 001 - O BEBE JESUS
 //*************************************************************
@@ -119,13 +162,8 @@ public class Historia02Activity extends AppCompatActivity {
 
         if (num == 1) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia017);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("O bebê Jesus");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("O anjo Gabriel disse a Maria, \"Você terá um filho!\" \"Como?\" perguntou Maria. \"Eu não sou casada.\" \"O Espírito Santo de Deus virá sobre você. O bebê será Filho de Deus\". Maria acreditou nele.\n\n" +
                     "Maria era noiva de José, mas ele não acreditou na história dela. Então, o anjo o visitou também. \"Maria não está mentindo. O bebê dela será o Filho de Deus. Seu nome será Jesus\".\n\n" +
                     "Assim, José casou-se com Maria. Muitos meses se passaram. Então, eles viajaram para Belém, a cidade natal de José, por ordem do governo. Depois daquela longa viagem, chegou a hora do bebê nascer.\n\n" +
@@ -138,52 +176,6 @@ public class Historia02Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-
-            //BOTÃO PARA VOLTAR PARA A TELA INICIAL
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista02Activity.class);
-                    startActivity(intent);
-
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -229,48 +221,12 @@ public class Historia02Activity extends AppCompatActivity {
 
         if (num == 2) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia018);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("Bons amigos");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("Bons amigos");
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-
-            //BOTÃO PARA VOLTAR PARA A TELA INICIAL
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista02Activity.class);
-                    startActivity(intent);
-
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
 
             //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
             btPlayer = findViewById(R.id.btPlayer);
@@ -283,24 +239,6 @@ public class Historia02Activity extends AppCompatActivity {
                     } else {
                         mediaPlayer.pause();
                         btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
-
-            //BOTÃO PARA REINICIAR A LEITURA
-            btReiniciar = findViewById(R.id.btReiniciar);
-            btReiniciar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (mediaPlayer.isPlaying()) {
-                        mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                    if (musicaFundo.isPlaying()) {
-                        musicaFundo.stop();
-                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
                     }
                 }
             });
