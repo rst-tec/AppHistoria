@@ -7,11 +7,13 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
+import java.util.Locale;
 
 public class PerguntasActivity extends AppCompatActivity {
 
@@ -30,6 +32,9 @@ public class PerguntasActivity extends AppCompatActivity {
     private int erros;
 
     private MediaPlayer somResposta; //Toca som de respota Correta ou Errada
+
+    private Button btLeitor;        //BOTÃO CHAMA LEITOR DE PERGUNTA
+    private TextToSpeech leitor;    //LEITOR DE PERGUNTA
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR - PARA A TELA INICIAL
     @Override
@@ -102,6 +107,18 @@ public class PerguntasActivity extends AppCompatActivity {
         resposta1 = findViewById(R.id.idResposta1);
         resposta2 = findViewById(R.id.idResposta2);
         resposta3 = findViewById(R.id.idResposta3);
+        btLeitor = findViewById(R.id.btLeitor);
+
+        //LEITOR DE DE PERGUNTA
+        leitor=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status != TextToSpeech.ERROR) {
+                    Locale locale = new Locale("pt", "br");
+                    leitor.setLanguage(locale);
+                }
+            }
+        });
 
 //*************************************************************
 //MONTA A TELA DE PERGUNTAS
@@ -134,6 +151,18 @@ public class PerguntasActivity extends AppCompatActivity {
                     respostaErrada();
                 }
             });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoPergunta ="Em quantos dias Deus fez a criação do mundo? " +
+                                    "7 dias, 30 dias, ou 10 dias.";
+                    leitor.speak(textoPergunta, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+
         }
 
         if (num == 2) {
@@ -161,6 +190,17 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoPergunta ="Qual foi o nome do primeiro homem e da primeira mulher criados por Deus?"+
+                            "João e Maria, Sansão e Dalila, ou Adão e Eva.";
+                    leitor.speak(textoPergunta, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
@@ -192,6 +232,18 @@ public class PerguntasActivity extends AppCompatActivity {
                     respostaErrada();
                 }
             });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor = findViewById(R.id.btLeitor);
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoPergunta = "Aonde Noé colocou os animais?"+
+                            "Numa casa, Numa arca, ou Em uma muralha.";
+                    leitor.speak(textoPergunta, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
         }
 
         if (num == 4) {
@@ -221,11 +273,22 @@ public class PerguntasActivity extends AppCompatActivity {
                     respostaErrada();
                 }
             });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoPergunta = "Qual era o nome do filho de Abraão e Sara?"+
+                            "Pedro, Isaque, ou  Paulo.";
+                    leitor.speak(textoPergunta, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
         }
 
         if (num == 5) {
 
-            pergunta.setText("5 - Qual animal Deus enviou para o sacrifio de Abraão e Isaque");
+            pergunta.setText("5 - Qual animal Deus enviou para o sacrifio de Abraão e Isaque?");
 
             resposta1.setText("Carneiro");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -248,6 +311,17 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoPergunta = "Qual animal Deus enviou para o sacrifio de Abraão e Isaque?"+
+                            "Carneiro, Jacaré, ou  Elefante.";
+                    leitor.speak(textoPergunta, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
@@ -279,6 +353,17 @@ public class PerguntasActivity extends AppCompatActivity {
                     respostaErrada();
                 }
             });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoPergunta = "Quem foi vendido como escravo por seus irmãos?"+
+                            "José, João, ou  Pedro.";
+                    leitor.speak(textoPergunta, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
         }
 
         if (num == 7) {
@@ -306,6 +391,17 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoPergunta = "Qual o nome do gigante derrotado por Davi?"+
+                            "Barrabás, Golias, ou  Anaque.";
+                    leitor.speak(textoPergunta, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
@@ -688,6 +784,15 @@ public class PerguntasActivity extends AppCompatActivity {
         }
     }
 
+    public void onPause(){
+        if(leitor !=null){
+            leitor.stop();
+            leitor.shutdown();
+        }
+
+        super.onPause();
+    }
+
     private AlertDialog alerta;
 
     //ALERTA DE RESOSTA CORRETA
@@ -818,6 +923,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
             intent.putExtras(parametros);
             startActivity(intent);
+
             alerta.dismiss();
         }
     }
@@ -841,6 +947,33 @@ public class PerguntasActivity extends AppCompatActivity {
         if (!somResposta.isPlaying()) {
             somResposta.start();
         }
+    }
+
+    private void chamaLeitor(){
+        if (num == 1) {
+
+            btLeitor.setBackgroundResource(R.drawable.musica_on);
+            String textoPergunta = "Em quantos dias Deus fez a criação do mundo? " +
+                    "7 dias, 30 dias, ou 10 dias.";
+            leitor.speak(textoPergunta, TextToSpeech.QUEUE_FLUSH, null);
+        }
+
+        if (num == 2) {
+
+            btLeitor.setBackgroundResource(R.drawable.musica_on);
+            String textoPergunta ="Qual foi o nome do primeiro homem e da primeira mulher criados por Deus?"+
+                    "João e Maria, Sansão e Dalila, ou Adão e Eva.";
+            leitor.speak(textoPergunta, TextToSpeech.QUEUE_FLUSH, null);
+        }
+
+        if (num == 3) {
+
+            btLeitor.setBackgroundResource(R.drawable.musica_on);
+            String textoPergunta = "Aonde Noé colocou os animais?"+
+                    "Numa casa, Numa arca, ou Em uma muralha.";
+            leitor.speak(textoPergunta, TextToSpeech.QUEUE_FLUSH, null);
+        }
+
     }
 }
 
