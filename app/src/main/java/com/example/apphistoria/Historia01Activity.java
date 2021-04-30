@@ -36,6 +36,8 @@ public class Historia01Activity extends AppCompatActivity {
     private Button btAlinha;    //Alinhamento de texto
     private int opc = 1;        //Opção do alinhamento e ou cores
 
+    private int num; //Numero da proxima historia
+
     SharedPreferences preferencias;//Preferencias de alterações de cores
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR - PARA A LISTA DE HISTORIAS
@@ -45,9 +47,6 @@ public class Historia01Activity extends AppCompatActivity {
         mediaPlayer.stop();
         musicaFundo.stop();
         finish();
-
-        Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-        startActivity(intent);
     }
 
     @Override
@@ -66,7 +65,7 @@ public class Historia01Activity extends AppCompatActivity {
 
         //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA HISTORIA
         Bundle dados = getIntent().getExtras();
-        int num = dados.getInt("escolha");
+        num = dados.getInt("historia");
 
         //BOTÃO PARA ALTERAR AS CORES
         fundoHistoria = findViewById(R.id.idLayout);
@@ -108,6 +107,76 @@ public class Historia01Activity extends AppCompatActivity {
             }
         });
 
+        //INICIANDO ELEMENTOS
+        foto = findViewById(R.id.idFoto);
+        titulo = findViewById(R.id.idTitulo);
+        historia = findViewById(R.id.idTexto);
+
+        //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
+        btInicio = findViewById(R.id.btInicio);
+        btInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mediaPlayer.stop();
+                musicaFundo.stop();
+                finish();
+            }
+        });
+
+        //BOTÃO PARA INICIAR MUSICA DE FUNDO
+        btMusica = findViewById(R.id.btMusica);
+        btMusica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!musicaFundo.isPlaying()) {
+                    musicaFundo.start();
+                    btMusica.setBackgroundResource(R.drawable.musica_on);
+                } else {
+                    musicaFundo.pause();
+                    btMusica.setBackgroundResource(R.drawable.musica_off);
+                }
+            }
+        });
+
+        //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
+        btPlayer = findViewById(R.id.btPlayer);
+        btPlayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!mediaPlayer.isPlaying()) {
+                    mediaPlayer.start();
+                    btPlayer.setBackgroundResource(R.drawable.pause);
+                } else {
+                    mediaPlayer.pause();
+                    btPlayer.setBackgroundResource(R.drawable.play);
+                }
+            }
+        });
+
+        //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
+        btProxima = findViewById(R.id.btProxima);
+        btProxima.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mediaPlayer.stop();
+                musicaFundo.stop();
+
+                if (num == 16) {
+                    finish();  //VOLTAR PARA A LISTA DE HISTORIAS
+                }else {
+
+                    finish();
+                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
+                    Bundle parametros = new Bundle();
+
+                    parametros.putInt("historia", num + 1); //Numero da proxima historia
+
+                    intent.putExtras(parametros);
+                    startActivity(intent);
+                }
+            }
+        });
+
 //*************************************************************
 //ESCOLHEU HISTORIA 001 - A Criação do Mundo
 //*************************************************************
@@ -115,13 +184,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 1) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia001);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("A Criação do Mundo");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("No início, quando Deus criou o universo, a Terra não tinha forma. Ela era vazia e escura.\n" +
                     "Então, Deus disse: Que haja luz. E a luz apareceu. Deus separou a escuridão e a luz, Ele chamou a escuridão de noite, e a luz de dia.\n\n" +
                     "No segundo dia Deus disse: Que haja céu e ar para respirar e um lindo céu apareceu. No mesmo dia, Deus disse: Que as águas se ajuntem aos mares e deixem a terra seca aparecer.\n" +
@@ -136,51 +200,6 @@ public class Historia01Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -199,24 +218,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 2);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -226,14 +227,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 2) {
 
-
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia002);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("O Pecado de Adão e Eva");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("Deus soprou Seu próprio folego no Homem, e ele teve vida.\n" +
                     "Deus o chamou de Adão. Então, Deus fez um jardim adorável chamado Éden. Ele era cheio de arvores que davam frutos e tinha um rio no meio do jardim!\n\n" +
                     "Os animais circulavam sem qualquer medo. A \"Árvore da Vida\" e a \"Árvore do Conhecimento do Bem e do Mal\" estavam lá no jardim também.\n\n" +
@@ -256,51 +251,6 @@ public class Historia01Activity extends AppCompatActivity {
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia002);
 
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
-
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
             btReiniciar.setOnClickListener(new View.OnClickListener() {
@@ -318,24 +268,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia002);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 3);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -345,13 +277,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 3) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia003);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("A Arca e o Diluvio");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("Com o passar do tempo, as pessoas começaram a desagradar a Deus mais e mais. Deus estava muito triste de ver Seu mundo tão estragado.\n" +
                     "Ele teve pena de ter criado o homem. Ele decidiu destruir toda a Sua criação!\n\n" +
                     "No entanto, entre todos aqueles que eram maus, existia um homem bom chamado Noé. Deus queria salvar Noé e sua família.\n" +
@@ -379,52 +306,6 @@ public class Historia01Activity extends AppCompatActivity {
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia003);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
 
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia003);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
-
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
             btReiniciar.setOnClickListener(new View.OnClickListener() {
@@ -442,24 +323,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia003);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 4);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -469,13 +332,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 4) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia004);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("A grande promessa");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("Muito depois de Noé, viveu Abraão, seu descendente. Ao contrário de outros, Abraão acreditava em Deus.\n\n" +
                     "Portanto um dia, Abraão ouviu a voz de Deus que dizia: Saia e Vá para a terra que eu mostrarei para você. Abraão obedeceu a Deus, ele pegou seu pai Terá, sua esposa Sara e Ló, seu sobrinho, seu gado e servos e chegou a Canaã. \n\n" +
                     "Novamente Deus falou a Abraão e prometeu dar à sua descendência a terra de Canaã. Deus contou a ele que ele teria gerações depois dele tão inúmeras quanto as estrelas do céu e o pó da Terra. \n\n" +
@@ -495,51 +353,6 @@ public class Historia01Activity extends AppCompatActivity {
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia004);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
 
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia004);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
-
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
             btReiniciar.setOnClickListener(new View.OnClickListener() {
@@ -557,24 +370,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia004);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 5);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -584,13 +379,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 5) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia005);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("A prova de Abraão e Isaque");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("Um dia Deus disse para Abraão: Sacrifique seu único filho Isaque para Mim, em uma montanha que eu vou te mostrar.\n\n" +
                     "Abraão ficou com o coração partido. Ele também ficou surpreso, uma vez que Deus tinha prometido a ele muitos descendentes, mas ele decidiu obedecer a Deus.\n\n" +
                     "Então no dia seguinte, Abraão e Isaque subiram até montanha com fogo, faca e madeira. Isaque entendeu tudo mas manteve-se quieto. \n\n" +
@@ -604,51 +394,6 @@ public class Historia01Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia005);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia005);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -667,24 +412,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia005);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 6);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -694,13 +421,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 6) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia006);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("O sonhador José");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("Jacó tinha doze Filhos, ele amava todos os seus filhos, mas era José quem mais amava, o primogênito de sua amada Raquel.\n\n" +
                     "Um dia, Jacó deu de presente para José uma bela túnica. Seus irmãos mais velhos, vendo a túnica, ficaram com ciúmes de José. E depois daquele dia sua benignidade para com José diminuiu.\n\n" +
                     "José tinha um dom, ele sonhava e os interpretava muito sabiamente para sua pouca idade. Um dia, ele foi com seus irmãos levar seus rebanhos para as pastagens. Lá, José contou aos irmãos sobre um sonho que ele havia tido.\n\n" +
@@ -714,51 +436,6 @@ public class Historia01Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia006);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia006);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -777,24 +454,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia006);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 7);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -804,13 +463,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 7) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia007);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("Os sonhos se realizam");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("No Egito, os homens que compraram José, voltaram a vende-lo para Potifar, e José trabalhou para ele até se tornar administrador de toda a casa. Porém uma mentira contada pela esposa de Potifar, fez com que José fosse preso.\n\n" +
                     "Na prisão, José teve contato com o padeiro e o copeiro do faraó, que também estavam presos. Esses homens tiveram sonhos, e José os interpretou.\n\n" +
                     "Depois de algum tempo o rei do Egito teve dois sonhos bem estranhos, mas nenhum sábio conseguiu interpretá-los.\n\n" +
@@ -823,51 +477,6 @@ public class Historia01Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia007);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia007);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -886,24 +495,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia007);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 8);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -913,13 +504,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 8) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia008);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("Moisés, um bebê especial");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("Com a ordem de matar todos os bebês do sexo masculino dada pelo faraó, uma mãe israelita conseguiu esconder seu bebê em casa.\n\n" +
                     "Após três meses, ela já não podia mais esconder o bebê, então, com medo de que o matassem, colocou-o em um cesto e o deixou à beira do Rio Nilo. \n\n" +
                     "A irmã do menino ficou observando tudo de longe. Lá, a princesa, filha do faraó, encontrou a criança e decidiu adotá-la. A irmã do bebê aproximou-se e se ofereceu para cuidar do menino até que ele estivesse grande. A princesa aceitou a oferta e deu ao menino o nome de Moisés. Então, o bebê acabou sendo cuidado por sua própria mãe.\n\n" +
@@ -929,51 +515,6 @@ public class Historia01Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia008);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia008);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -992,24 +533,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia008);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 9);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -1019,13 +542,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 9) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia009);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("Castigos para faraó");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("Moisés obedeceu a Deus e partiu para o Egito com seu irmão Arão. Juntos, eles pediram ao faraó que libertasse os israelitas, pois aquilo era um desejo do Senhor.\n\n" +
                     "Mas o faraó era teimoso e não acreditou em Moisés, mesmo quando o bastão do israelita se transformou em cobra. Deus, então, lançou dez pragas sobre o povo egípcio. \n\n" +
                     "Quando o faraó estava no Rio Nilo, Arão estendeu seu bastão sobre as águas e elas transformaram-se em sangue. \n\n" +
@@ -1038,51 +556,6 @@ public class Historia01Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia009);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia009);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -1101,24 +574,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia009);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 10);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -1128,13 +583,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 10) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia010);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("Deus abre um caminho");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("Depois que o filho do faraó morreu durante a décima praga, ele deixou os israelitas partirem. Eles estavam perto do Mar Vermelho quando o faraó mudou de ideia e foi persegui-los.\n\n" +
                     "Quando os israelitas viram o exército do faraó, ficaram apavorados. Mas Deus disse a Moisés que levantasse seu cajado na direção do Mar Vermelho. Deus mandou um vento forte e dividiu o mar!\n\n" +
                     "Um caminho seco apareceu e os israelitas atravessaram o Mar Vermelho! Havia uma parede de água de cada lado. Eles chegaram em segurança na outra margem.\n\n" +
@@ -1147,51 +597,6 @@ public class Historia01Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia010);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia010);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -1210,24 +615,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia010);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 11);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -1237,13 +624,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 11) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia011);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("A queda do muro");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("Moisés enviou doze espias para a Terra Prometida. Dez disseram, \"Nunca vamos derrotar aquele povo\". Mas Josué e Calebe disseram, \"Com a ajuda de Deus, vamos conseguir!\" \n\n" +
                     "Amedrontado, o povo acreditou nos dez espias. Deus disse, \"Somente seus filhos, com Josué e Calebe, entrarão na Terra Prometida\". Então, depois de quarenta anos no deserto, chegou a hora!\n\n" +
                     "Josué enviou dois espias para Jericó. Eles encontraram uma mulher chamada Raabe, que os escondeu e os ajudou a escapar pelo muro da cidade. Eles prometeram poupar a vida dela e de sua família.\n\n" +
@@ -1254,51 +636,6 @@ public class Historia01Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia011);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia011);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -1317,24 +654,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia011);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 12);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -1344,13 +663,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 12) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia012);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("Um herói cabeludo");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("Tempos depois da libertação liderada por Gideão, os israelitas começaram a fazer novamente coisas que não agradavam a Deus. Por isso, os filisteus escravizaram o povo de Israel durante 40 anos.\n\n" +
                     "Deus, por sua infinita bondade, enviou seu anjo à esposa de Manoá, e disse que ela daria à luz um menino especial, que libertaria seu povo. Ele se chamaria Sansão, e nunca poderia ter os cabelos cortados. \n\n" +
                     "Sansão nasceu, e recebeu de Deus muita força.  O segredo de tanta força estava e seus cabelos, mas ninguém sabia disso. \n\n" +
@@ -1361,51 +675,6 @@ public class Historia01Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia012);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia012);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -1424,24 +693,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia012);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 13);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -1451,13 +702,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 13) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia013);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("Rainha escolhida");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("Ester era a Rainha da Persia. Nem mesmo seu marido, o Rei Xerxes, sabia de seu segredo. Ester era judia. O primo de Ester, Mordecai, trabalhava no palácio e ficava de olho nela.\n\n" +
                     "O conselheiro de Xerxes, Hamã, recebeu uma grande promoção. Ele estava muito orgulhoso. Todos menos Mordecai se inclinavam diante dele. Hamã se sentiu insultado e jurou que mataria ele e todos os judeus!\n\n" +
                     "Hamã mentiu para Xerxes dizendo que os judeus eram perigosos e deviam morrer. Ele concordou e marcou um dia para mata-los. Mordecai ficou horrorizado e mandou uma mensagem para a Rainha Ester.\n\n" +
@@ -1470,51 +716,6 @@ public class Historia01Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia013);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia013);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -1533,24 +734,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia013);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 14);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -1560,13 +743,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 14) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia014);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("Deus chama Samuel");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("Ana estava triste porque não tinha filhos. Ela orou e Deus deu a ela um filho, Samuel. Ela ficou muito agradecida e entregou Samuel a Deus para servi-Lo.\n\n" +
                     "Ana deixou seu filhinho no tabernáculo com Eli, o sacerdote. Samuel ajudava o velho e cego Eli. Ele até dormia no tabernáculo, enquanto Eli dormia em um quarto próximo.\n\n" +
                     "Uma noite, Samuel ouviu uma voz chamando seu nome. Ele levantou e correu até Eli. \"Aqui estou\", ele disse. \"Eu não te chamei\", resmungou Eli. \"Volte para cama\".\n\n" +
@@ -1577,51 +755,6 @@ public class Historia01Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia014);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia014);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -1640,24 +773,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia014);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 15);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -1667,13 +782,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 15) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia015);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("Davi e Golias");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("O tempo passou. Mais uma vez, os Filisteus travaram uma guerra contra o povo de Deus. O exército do Rei Saul e os Filisteus tinham acampado em ambos os lados de uma colina. No entanto, os soldados de Israel estavam com medo porque, diariamente, um gigante do exército dos Filisteus desafiava os Israelitas. \n\n" +
                     "Por quarenta dias, o gigante chamado Golias gritava: — Israelitas, mandem o melhor homem de vocês para lutar comigo. Se ele vencer, os Filisteus serão seus servos, mas se eu vencer, então vocês serão nossos escravos.\n\n" +
                     "Nenhum soldado Israelita respondeu ao desafio dele. Então, um dia, Davi, que tinha trazido comida para seus irmãos mais velhos, soldados no exército do Rei Saul, ouviu o desafio do gigante. — Se ninguém for, eu vou lutar com ele. — disse Davi.\n\n" +
@@ -1685,51 +795,6 @@ public class Historia01Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia015);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia015);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -1748,24 +813,6 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia015);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-
-                    intent.putExtra("escolha", 16);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
 
 //*************************************************************
@@ -1775,13 +822,8 @@ public class Historia01Activity extends AppCompatActivity {
 
         if (num == 16) {
 
-            foto = findViewById(R.id.idFoto);
             foto.setImageResource(R.drawable.historia016);
-
-            titulo = findViewById(R.id.idTitulo);
             titulo.setText("Daniel e os leões");
-
-            historia = findViewById(R.id.idTexto);
             historia.setText("O Rei da Babilônia, conquistou Israel e levou os mais jovens e mais fortes como cativos. Ele ordenou para escolherem dentre os Israelitas os rapazes que fossem inteligentes e de boa aparência. Queria esses rapazes para serem treinados em certas habilidades. Entre os rapazes escolhidos estavam Daniel, Sadraque, Mesaque e Abednego. \n\n" +
                     "Estes escolhidos receberiam comida da mesa do Rei, mas Daniel pediu para não forçá-los a comer comida do Rei. Daniel disse: Faça um teste por dez dias. Iremos comer somente vegetais e água, e estaremos mais saudáveis do que os outros. \n\n" +
                     "O superintendente fez exatamente aquilo e dez dias depois foi como Daniel havia dito. Mais tarde, esses rapazes foram enviados para servir ao Rei.\n\n" +
@@ -1793,51 +835,6 @@ public class Historia01Activity extends AppCompatActivity {
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia016);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-
-            //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
-            btInicio = findViewById(R.id.btInicio);
-            btInicio.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia016);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    startActivity(intent);
-                }
-            });
-
-            //BOTÃO PARA INICIAR MUSICA DE FUNDO
-            btMusica = findViewById(R.id.btMusica);
-            btMusica.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!musicaFundo.isPlaying()) {
-                        musicaFundo.start();
-                        btMusica.setBackgroundResource(R.drawable.musica_on);
-                    } else {
-                        musicaFundo.pause();
-                        btMusica.setBackgroundResource(R.drawable.musica_off);
-                    }
-                }
-            });
-
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
-                        btPlayer.setBackgroundResource(R.drawable.play);
-                    }
-                }
-            });
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -1856,24 +853,9 @@ public class Historia01Activity extends AppCompatActivity {
                     }
                 }
             });
-
-            //BOTÃO PARA AVANÇAR PARA PROXIMA HISTORIA
-            btProxima = findViewById(R.id.btProxima);
-            btProxima.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mediaPlayer.stop();
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia016);
-                    musicaFundo.stop();
-                    musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
-                    finish();
-
-                    Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    //intent.putExtra("escolha", 15);//Passa o numero da proxima historia
-                    startActivity(intent);
-                }
-            });
         }
+
+
 
 //*************************************************************
 //GRAVAR ALTERAÇÕES DE CORES

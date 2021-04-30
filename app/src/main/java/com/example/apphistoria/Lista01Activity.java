@@ -72,7 +72,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 1); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 1); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -82,7 +82,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 2); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 2); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -92,7 +92,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 3); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 3); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -102,7 +102,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 4); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 4); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -112,7 +112,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 5); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 5); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -122,7 +122,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 6); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 6); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -132,7 +132,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 7); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 7); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -142,7 +142,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 8); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 8); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -152,7 +152,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 9); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 9); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -162,7 +162,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 10); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 10); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -172,7 +172,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 11); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 11); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -182,7 +182,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 12); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 12); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -192,7 +192,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 13); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 13); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -202,7 +202,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 14); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 14); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -212,7 +212,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 15); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 15); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -222,7 +222,7 @@ public class Lista01Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
-                intent.putExtra("escolha", 16); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 16); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
 
+        //Abre a lista de historias 01
         botao1 = findViewById(R.id.botao1);
         botao1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Abre a lista de historias 02
         botao2 = findViewById(R.id.botao2);
         botao2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Abre o jogo de perguntas
         botao3 = findViewById(R.id.botao3);
         botao3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
                 intent.putExtra("pergunta", 1); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
+            }
+        });
+
+        botao4 = findViewById(R.id.botao4);
+        botao4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Em construção",Toast.LENGTH_LONG).show();
             }
         });
     }
