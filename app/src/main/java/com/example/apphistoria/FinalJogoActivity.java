@@ -55,7 +55,7 @@ public class FinalJogoActivity extends AppCompatActivity {
         acertos = dados.getInt("acertos");
         erros   = dados.getInt("erros");
 
-        idAcertos.setText("Acertou: " + acertos );
+        //idAcertos.setText("Acertou: " + acertos );
         idErros.setText("Errou: " + erros);
         idPontos.setText("Total: " + pontos + " Pontos" );
 

@@ -592,11 +592,22 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3.setText("Só os animais filhote");
+            resposta3.setText("Só os animais filhotes");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quantos animais foram colocados na arca de Noé? " +
+                            "Um casal de cada espécie, Só animais machos, ou Só os animais filhotes.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
@@ -628,6 +639,17 @@ public class PerguntasActivity extends AppCompatActivity {
                     respostaErrada();
                 }
             });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Que instrumento Josué usou para derrubar as muralhas de Jericó? " +
+                            "Bateria, Trombeta, ou Flauta.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
         }
 
         if (num == 14) {
@@ -655,6 +677,17 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Depois do dilúvio, qual o sinal que Deus criou? " +
+                            "Uma tempestade, Fez descer fogo do céu, ou Um Arco-Íris.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
@@ -686,6 +719,17 @@ public class PerguntasActivity extends AppCompatActivity {
                     respostaErrada();
                 }
             });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quem foi jogado na cova com os leões " +
+                            "Daniel, José, ou Paulo.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
         }
 
         if (num == 16) {
@@ -713,6 +757,17 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual animal tentou Eva no Jardim do Éden? " +
+                            "Leão, Serpente, ou Lagarto.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
@@ -744,11 +799,22 @@ public class PerguntasActivity extends AppCompatActivity {
                     respostaErrada();
                 }
             });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Como chamava o jardim onde morou Adão e Eva? " +
+                            "Jardim do éden, Jardim Magnólia, ou Jardim Guanabara.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
         }
 
         if (num == 18) {
 
-            pergunta.setText("Como era o nome do esposo de Maria, mãe de Jesus? ");
+            pergunta.setText("Como era o nome do esposo de Maria, mãe de Jesus?");
 
             resposta1.setText("Tiago");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -771,6 +837,17 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Como era o nome do esposo de Maria, mãe de Jesus? " +
+                            "Tiago, Simão, ou José.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
@@ -802,6 +879,17 @@ public class PerguntasActivity extends AppCompatActivity {
                     respostaErrada();
                 }
             });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quando Jesus nasceu, onde Ele foi colocado? " +
+                            "manjedoura, cama, ou trono.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
         }
 
         if (num == 20) {
@@ -829,6 +917,17 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual era o nome da mãe de Jesus? " +
+                            "Ana, Maria, ou Rebeca.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
