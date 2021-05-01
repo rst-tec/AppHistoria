@@ -694,7 +694,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 15) {
 
-            pergunta.setText("Quem foi jogado na cova com os leões");
+            pergunta.setText("Quem foi jogado na cova com os leões?");
 
             resposta1.setText("Daniel");
             resposta1.setOnClickListener(new View.OnClickListener() {
@@ -725,7 +725,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     btLeitor.setBackgroundResource(R.drawable.musica_on);
-                    String textoLeitura ="Quem foi jogado na cova com os leões " +
+                    String textoLeitura ="Quem foi jogado na cova com os leões? " +
                             "Daniel, José, ou Paulo.";
                     leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }

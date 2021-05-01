@@ -16,7 +16,7 @@ public class FinalJogoActivity extends AppCompatActivity {
     private Button btJogarNovamente;
     private ImageView idFundoResultado;
 
-    private TextView idAcertos;
+    //private TextView idAcertos;
     private TextView idErros;
     private TextView idPontos;
 
@@ -42,7 +42,7 @@ public class FinalJogoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_jogo);
 
-        idAcertos = findViewById(R.id.idAcertos);
+        //idAcertos = findViewById(R.id.idAcertos);
         idErros = findViewById(R.id.idErros);
         idPontos = findViewById(R.id.idPontos);
         idFundoResultado = findViewById(R.id.idFundoResultado);
