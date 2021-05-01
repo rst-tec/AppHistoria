@@ -89,4 +89,5 @@
         android:layout_marginRight="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idFundoResultado" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

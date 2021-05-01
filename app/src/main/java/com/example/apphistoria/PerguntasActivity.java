@@ -24,6 +24,7 @@ public class PerguntasActivity extends AppCompatActivity {
     private Button resposta2;
     private Button resposta3;
     private TextView idStatus;
+    private TextView idNivel;
 
     private int num;
 
@@ -51,6 +52,14 @@ public class PerguntasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_perguntas);
 
         idStatus = findViewById(R.id.idStatus);
+        idNivel = findViewById(R.id.idNivel);
+
+        pergunta = findViewById(R.id.idPergunta);
+        resposta1 = findViewById(R.id.idResposta1);
+        resposta2 = findViewById(R.id.idResposta2);
+        resposta3 = findViewById(R.id.idResposta3);
+        btLeitor = findViewById(R.id.btLeitor);
+
 
         //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
         Bundle dados = getIntent().getExtras();
@@ -62,9 +71,11 @@ public class PerguntasActivity extends AppCompatActivity {
 
         //EXIBIR NUMERAÇÃO DA PERGUNTA
         idStatus.setText("Pergunta " + num + " de 10");
+        idNivel.setText("Fase - 01  ");
 
         if (num >=11) {
             idStatus.setText("Pergunta " + num + " de 20");
+            idNivel.setText("Fase - 02  ");
         }
 
         //BOTÃO PARA VOLTAR PARA A TELA INICIAL
@@ -103,12 +114,6 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             }
         });
-
-        pergunta = findViewById(R.id.idPergunta);
-        resposta1 = findViewById(R.id.idResposta1);
-        resposta2 = findViewById(R.id.idResposta2);
-        resposta3 = findViewById(R.id.idResposta3);
-        btLeitor = findViewById(R.id.btLeitor);
 
         //LEITOR DE DE PERGUNTA
         leitor = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -554,6 +559,17 @@ public class PerguntasActivity extends AppCompatActivity {
                     respostaCorreta();
                 }
             });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura = "Qual o profeta que foi engolido por um grande peixe?"+
+                            "João, Isaías, ou  Jonas.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
         }
 
         if (num == 12) {
@@ -979,10 +995,6 @@ public class PerguntasActivity extends AppCompatActivity {
         intent.putExtras(parametros);
         startActivity(intent);
 
-        somResposta = MediaPlayer.create(getApplicationContext(), R.raw.som_final_jogo);
-        if (!somResposta.isPlaying()) {
-            somResposta.start();
-        }
     }
 
     private void chamaLeitor(){

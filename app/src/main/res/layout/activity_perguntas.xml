@@ -130,4 +130,18 @@
         app:layout_constraintBottom_toBottomOf="@+id/idPergunta"
         app:layout_constraintEnd_toEndOf="@+id/idPergunta" />
 
+    <TextView
+        android:id="@+id/idNivel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/bangers"
+        android:gravity="center"
+        android:text="Nivel"
+        android:textColor="@color/color_rosa"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/idPergunta"
+        app:layout_constraintStart_toStartOf="@+id/idPergunta"
+        app:layout_constraintTop_toTopOf="@+id/idPergunta" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
