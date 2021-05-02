@@ -18,7 +18,7 @@ import java.util.Locale;
 public class PerguntasActivity extends AppCompatActivity {
 
     private Button btFechar;
-    private Button btProxima;
+    //private Button btProxima;
     private TextView pergunta;
     private Button resposta1;
     private Button resposta2;
@@ -26,7 +26,8 @@ public class PerguntasActivity extends AppCompatActivity {
     private TextView idStatus;
     private TextView idNivel;
 
-    private int num;
+    private int num;    // RECEBE O NUMERO DA PERGUNTA
+    private int chave;  // RECEBE UM CODIGO QUE IDENTIFICA A PERGUNTA QUANDO ABERTO PELA TELA DA HISTORIA
 
     private int pontos;
     private int acertos;
@@ -69,51 +70,44 @@ public class PerguntasActivity extends AppCompatActivity {
         acertos = dados.getInt("acertos");
         erros = dados.getInt("erros");
 
-        //EXIBIR NUMERAÇÃO DA PERGUNTA
-        idStatus.setText("Pergunta " + num + " de 10");
-        idNivel.setText("Fase - 01  ");
+        chave = dados.getInt("chave");
 
-        if (num >=11) {
-            idStatus.setText("Pergunta " + num + " de 20");
-            idNivel.setText("Fase - 02  ");
-        }
+            //EXIBIR NUMERAÇÃO DA PERGUNTA
+            idStatus.setText("Pergunta " + num + " de 10");
+            idNivel.setText("Fase - 01  ");
 
-        //BOTÃO PARA VOLTAR PARA A TELA INICIAL
-        btFechar = findViewById(R.id.btFechar);
-        btFechar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+            if (num >= 11) {
+                idStatus.setText("Pergunta " + num + " de 20");
+                idNivel.setText("Fase - 02  ");
             }
-        });
 
-        //BOTÃO PARA AVANÇAR PARA PROXIMA PERGUNTA
-        btProxima = findViewById(R.id.btProxima);
-        btProxima.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (num == 10|| num == 20) {
-                    finalJogo();
-                }else {
-
+            //BOTÃO PARA VOLTAR PARA A TELA INICIAL
+            btFechar = findViewById(R.id.btFechar);
+            btFechar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
                     finish();
-                    Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                    Bundle parametros = new Bundle();
-
-                    parametros.putInt("pergunta", num + 1); //Passa o numero da proxima pergunta
-                    parametros.putInt("pontos", pontos);
-                    parametros.putInt("acertos", acertos);
-                    parametros.putInt("erros", erros);
-
-                    intent.putExtras(parametros);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
-
                 }
-            }
-        });
+            });
+
+        //CHAVE 999 PERGUNTA ABRIU PELA TELA DE HISTORIA
+        if (chave == 999){
+            idStatus.setText(" ");
+            idNivel.setText(" ");
+
+            //BOTÃO PARA VOLTAR PARA A TELA INICIAL
+            btFechar = findViewById(R.id.btFechar);
+            btFechar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                    //Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
+                    //startActivity(intent);
+                }
+            });
+        }
 
         //LEITOR DE DE PERGUNTA
         leitor = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -986,7 +980,12 @@ public class PerguntasActivity extends AppCompatActivity {
                     // fecha a caixa de diálogo
                     alerta.dismiss();
                 }
-                proximaPergunta();//ABRIR PROXIMA PERGUNTA
+
+                //CHAVE 999 PERGUNTA ABRIU DENTRO DA HISTORIA
+
+                if (chave != 999) {
+                    proximaPergunta();//ABRIR PROXIMA PERGUNTA
+                }
             }
         };
 
@@ -1073,8 +1072,6 @@ public class PerguntasActivity extends AppCompatActivity {
             intent.putExtras(parametros);
             startActivity(intent);
 
-            chamaLeitor();
-
             alerta.dismiss();
         }
     }
@@ -1096,32 +1093,6 @@ public class PerguntasActivity extends AppCompatActivity {
 
     }
 
-    private void chamaLeitor(){
-
-            String textoLeitura = "Em quantos dias Deus fez a criação do mundo? " +
-                    "7 dias, 30 dias, ou 10 dias.";
-            leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
-        /*
-
-        if (num == 2) {
-
-            btLeitor.setBackgroundResource(R.drawable.musica_on);
-            String textoPergunta ="Qual foi o nome do primeiro homem e da primeira mulher criados por Deus?"+
-                    "João e Maria, Sansão e Dalila, ou Adão e Eva.";
-            leitor.speak(textoPergunta, TextToSpeech.QUEUE_FLUSH, null);
-        }
-
-        if (num == 3) {
-
-            btLeitor.setBackgroundResource(R.drawable.musica_on);
-            String textoPergunta = "Aonde Noé colocou os animais?"+
-                    "Numa casa, Numa arca, ou Em uma muralha.";
-            leitor.speak(textoPergunta, TextToSpeech.QUEUE_FLUSH, null);
-        }
-
-         */
-
-    }
 }
 
 

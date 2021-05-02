@@ -22,6 +22,7 @@ public class Historia01Activity extends AppCompatActivity {
     private TextView titulo;
     private TextView historia;
     private ConstraintLayout fundoHistoria;
+    private Button btPergunta;
 
     private Button btInicio;    //Voltar para tela Inicial          - OK
     private Button btMusica;    //Iniciar Musica de fundo           - OK
@@ -111,6 +112,22 @@ public class Historia01Activity extends AppCompatActivity {
         foto = findViewById(R.id.idFoto);
         titulo = findViewById(R.id.idTitulo);
         historia = findViewById(R.id.idTexto);
+        btPergunta = findViewById(R.id.btPergunta);
+
+        btPergunta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                Bundle parametros = new Bundle();
+
+                parametros.putInt("pergunta", num); //Passa o numero da proxima pergunta
+                parametros.putInt("chave", 999);
+                intent.putExtras(parametros);
+                startActivity(intent);
+            }
+        });
+
+
 
         //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
         btInicio = findViewById(R.id.btInicio);

@@ -84,7 +84,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/idTitulo"
@@ -102,6 +103,12 @@
                 android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btPergunta"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bt_perguntas" />
 
         </LinearLayout>
     </ScrollView>

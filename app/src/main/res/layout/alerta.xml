@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
-    android:layout_height="400dp"
+    android:layout_height="350dp"
     android:background="@color/fundo_app"
     android:orientation="vertical">
 
@@ -33,7 +33,7 @@
     <TextView
         android:id="@+id/idtexto"
         android:layout_width="196dp"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:gravity="center"
         android:text="Resposta Correta!"
         android:textColor="@color/color_verde"
@@ -47,7 +47,7 @@
     <TextView
         android:id="@+id/textView5"
         android:layout_width="196dp"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:gravity="center"
         android:text="Parabéns você Acertou!"
         android:textColor="@color/color_verde"
