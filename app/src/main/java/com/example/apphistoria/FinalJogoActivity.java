@@ -16,9 +16,11 @@ public class FinalJogoActivity extends AppCompatActivity {
     private Button btJogarNovamente;
     private ImageView idFundoResultado;
 
-    private TextView idAcertos;
+    //private TextView idAcertos;
     private TextView idErros;
     private TextView idPontos;
+
+    private MediaPlayer somFinal; //Toca som de final de jogo
 
     private int num;
 
@@ -40,7 +42,7 @@ public class FinalJogoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_jogo);
 
-        idAcertos = findViewById(R.id.idAcertos);
+        //idAcertos = findViewById(R.id.idAcertos);
         idErros = findViewById(R.id.idErros);
         idPontos = findViewById(R.id.idPontos);
         idFundoResultado = findViewById(R.id.idFundoResultado);
@@ -53,7 +55,7 @@ public class FinalJogoActivity extends AppCompatActivity {
         acertos = dados.getInt("acertos");
         erros   = dados.getInt("erros");
 
-        idAcertos.setText("Acertou: " + acertos );
+        //idAcertos.setText("Acertou: " + acertos );
         idErros.setText("Errou: " + erros);
         idPontos.setText("Total: " + pontos + " Pontos" );
 
@@ -67,11 +69,18 @@ public class FinalJogoActivity extends AppCompatActivity {
             idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
         }
 
+        //INICIA A MUSICA DE FINAL DE JOGO
+        somFinal = MediaPlayer.create(getApplicationContext(), R.raw.som_final_jogo);
+        if (!somFinal.isPlaying()) {
+            somFinal.start();
+        }
+
         //BOTÃO PARA VOLTAR PARA A TELA INICIAL
         btFechar = findViewById(R.id.btFechar);
         btFechar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                somFinal.stop();//FINALIZA MUSICA FINAL DE JOGO
                 finish();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
@@ -88,6 +97,9 @@ public class FinalJogoActivity extends AppCompatActivity {
             btJogarNovamente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                somFinal.stop();//FINALIZA MUSICA FINAL DE JOGO
+
                 //PARA FINALIZAR O JOGO
                 if (num == 21) {
                     telaInicial();
@@ -114,3 +126,4 @@ public class FinalJogoActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
+

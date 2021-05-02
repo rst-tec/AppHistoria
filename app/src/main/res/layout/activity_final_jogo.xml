@@ -18,29 +18,15 @@
         android:layout_marginRight="16dp"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/idAcertos"
-        android:layout_width="350dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="160dp"
-        android:gravity="center"
-        android:text='Você Acertou "X" perguntas'
-        android:textAllCaps="false"
-        android:textColor="@color/color_verde"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/idFundoResultado"
-        app:layout_constraintHorizontal_bias="0.50"
-        app:layout_constraintStart_toStartOf="@+id/idFundoResultado"
-        app:layout_constraintTop_toTopOf="@+id/idFundoResultado" />
 
     <TextView
         android:id="@+id/idErros"
         android:layout_width="350dp"
         android:layout_height="80dp"
+        android:layout_marginTop="180dp"
         android:gravity="center"
         android:text='Você Errou "X" perguntas'
         android:textAllCaps="false"
@@ -49,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="@+id/idFundoResultado"
         app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="@+id/idFundoResultado"
-        app:layout_constraintTop_toBottomOf="@+id/idAcertos" />
+        app:layout_constraintTop_toTopOf="@+id/idFundoResultado" />
 
     <TextView
         android:id="@+id/idPontos"
@@ -89,4 +75,5 @@
         android:layout_marginRight="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idFundoResultado" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
