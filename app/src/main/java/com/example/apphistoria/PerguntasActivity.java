@@ -18,7 +18,6 @@ import java.util.Locale;
 public class PerguntasActivity extends AppCompatActivity {
 
     private Button btFechar;
-    //private Button btProxima;
     private TextView pergunta;
     private Button resposta1;
     private Button resposta2;
@@ -54,43 +53,39 @@ public class PerguntasActivity extends AppCompatActivity {
 
         idStatus = findViewById(R.id.idStatus);
         idNivel = findViewById(R.id.idNivel);
-
         pergunta = findViewById(R.id.idPergunta);
         resposta1 = findViewById(R.id.idResposta1);
         resposta2 = findViewById(R.id.idResposta2);
         resposta3 = findViewById(R.id.idResposta3);
         btLeitor = findViewById(R.id.btLeitor);
 
-
         //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
         Bundle dados = getIntent().getExtras();
         num = dados.getInt("pergunta");
-
+        chave = dados.getInt("chave");
         pontos = dados.getInt("pontos");
         acertos = dados.getInt("acertos");
         erros = dados.getInt("erros");
 
-        chave = dados.getInt("chave");
+        //EXIBIR NUMERAÇÃO DA PERGUNTA
+        idStatus.setText("Pergunta " + num + " de 10");
+        idNivel.setText("Fase - 01  ");
 
-            //EXIBIR NUMERAÇÃO DA PERGUNTA
-            idStatus.setText("Pergunta " + num + " de 10");
-            idNivel.setText("Fase - 01  ");
+        if (num >= 11) {
+            idStatus.setText("Pergunta " + num + " de 20");
+            idNivel.setText("Fase - 02  ");
+        }
 
-            if (num >= 11) {
-                idStatus.setText("Pergunta " + num + " de 20");
-                idNivel.setText("Fase - 02  ");
+        //BOTÃO PARA VOLTAR PARA A TELA INICIAL
+        btFechar = findViewById(R.id.btFechar);
+        btFechar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
-
-            //BOTÃO PARA VOLTAR PARA A TELA INICIAL
-            btFechar = findViewById(R.id.btFechar);
-            btFechar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
-                }
-            });
+        });
 
         //CHAVE 999 PERGUNTA ABRIU PELA TELA DE HISTORIA
         if (chave == 999){
@@ -959,7 +954,7 @@ public class PerguntasActivity extends AppCompatActivity {
         view.findViewById(R.id.btFechar).setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 //proximaPergunta();
-                finish();
+                //finish();
             }
         });
 
@@ -981,8 +976,7 @@ public class PerguntasActivity extends AppCompatActivity {
                     alerta.dismiss();
                 }
 
-                //CHAVE 999 PERGUNTA ABRIU DENTRO DA HISTORIA
-
+                //CHAVE 999 PERGUNTA ABRIU DENTRO DA HISTORIA NÃO VAI PARA PROXIMA PERGUNTA
                 if (chave != 999) {
                     proximaPergunta();//ABRIR PROXIMA PERGUNTA
                 }
@@ -1019,7 +1013,7 @@ public class PerguntasActivity extends AppCompatActivity {
         //definimos para o botão do layout um clickListener
         view.findViewById(R.id.btFechar).setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                alerta.dismiss();
+                //alerta.dismiss();
             }
         });
 

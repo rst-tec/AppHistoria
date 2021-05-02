@@ -117,6 +117,7 @@ public class Historia01Activity extends AppCompatActivity {
         btPergunta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //finish();
                 Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
                 Bundle parametros = new Bundle();
 
@@ -126,8 +127,6 @@ public class Historia01Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
 
         //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
         btInicio = findViewById(R.id.btInicio);
@@ -211,7 +210,7 @@ public class Historia01Activity extends AppCompatActivity {
                     "Então, a Terra produziu plantas, e as plantas produziram sementes, para crescerem mais plantas. A noite passou e o dia veio. O terceiro dia também terminou.\n\n" +
                     "Então, no quarto dia, Deus fez o sol para brilhar de dia e a lua e as estrelas de noite. Tudo era bom em todos os sentidos. A noite passou e a manhã veio. O quarto dia também terminou.\n\n" +
                     "No quinto dia, Deus disse: Que as águas se encham de Ser vivos e o ar se encha com pássaro. E então Deus fez as criaturas do mar e pássaros de todas as espécies e o quinto dia terminou.\n\n" +
-                    "No dia seguinte, Deus disse: Que haja todos os tipos de animais. E o mundo inteiro estava agora vivo com as criaturas de Deus. Ele os abençoou para terem bebés.\\n Finalmente, Deus fez o Homem a Sua própria imagem, do pó da Terra. O sexto dia terminou. Ele disse alegremente: Está tudo muito bom!\n\n" +
+                    "No dia seguinte, Deus disse: Que haja todos os tipos de animais. E o mundo inteiro estava agora vivo com as criaturas de Deus. Ele os abençoou para terem bebés. Finalmente, Deus fez o Homem a Sua própria imagem, do pó da Terra. O sexto dia terminou. Ele disse alegremente: Está tudo muito bom!\n\n" +
                     "Deus levou apenas seis dias para fazer tudo. Ele descansou no sétimo dia e o abençoou como um dia de descanso.\n\n" +
                     "FIM.\n");
 
