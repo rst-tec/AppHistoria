@@ -442,7 +442,7 @@ public class Historia01Activity extends AppCompatActivity {
             foto.setImageResource(R.drawable.historia006);
             titulo.setText("O sonhador José");
             historia.setText("Jacó tinha doze Filhos, ele amava todos os seus filhos, mas era José quem mais amava, o primogênito de sua amada Raquel.\n\n" +
-                    "Um dia, Jacó deu de presente para José uma bela túnica. Seus irmãos mais velhos, vendo a túnica, ficaram com ciúmes de José. E depois daquele dia sua benignidade para com José diminuiu.\n\n" +
+                    "Um dia, Jacó deu de presente para José uma bela túnica toda colorida. Seus irmãos mais velhos, vendo a túnica, ficaram com ciúmes de José. E depois daquele dia sua benignidade para com José diminuiu.\n\n" +
                     "José tinha um dom, ele sonhava e os interpretava muito sabiamente para sua pouca idade. Um dia, ele foi com seus irmãos levar seus rebanhos para as pastagens. Lá, José contou aos irmãos sobre um sonho que ele havia tido.\n\n" +
                     "Ele tinha sonhado que todos eles estavam amarrando feixes de grãos no campo. De repente, apenas o feixe de José ficou em pé no centro e os feixes de todos os irmãos ficaram em pé ao redor do feixe dele e se curvaram!\n\n" +
                     "Seus irmãos entenderam o sonho, e gritaram: — O que? Nós nos curvaremos diante de você? Depois daquele dia, os irmãos de José o odiaram ainda mais.\n\n" +
