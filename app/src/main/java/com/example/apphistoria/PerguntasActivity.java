@@ -59,11 +59,11 @@ public class PerguntasActivity extends AppCompatActivity {
 
         //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
         Bundle dados = getIntent().getExtras();
-        num = dados.getInt("pergunta");
-        chave = dados.getInt("chave");
-        pontos = dados.getInt("pontos");
+        num     = dados.getInt("pergunta");
+        chave   = dados.getInt("chave");
+        pontos  = dados.getInt("pontos");
         acertos = dados.getInt("acertos");
-        erros = dados.getInt("erros");
+        erros   = dados.getInt("erros");
 
         //EXIBIR NUMERAÇÃO DA PERGUNTA
         idStatus.setText("Pergunta " + num + " de 10");
@@ -80,8 +80,8 @@ public class PerguntasActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                //startActivity(intent);
             }
         });
 
