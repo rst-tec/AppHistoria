@@ -114,10 +114,14 @@ public class Historia01Activity extends AppCompatActivity {
         historia = findViewById(R.id.idTexto);
         btPergunta = findViewById(R.id.btPergunta);
 
+        //BOTÃO PARA ABRIR UMA PERGUNTA
         btPergunta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //finish();
+                mediaPlayer.stop();
+                musicaFundo.stop();
+                finish();
+
                 Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
                 Bundle parametros = new Bundle();
 
@@ -184,9 +188,7 @@ public class Historia01Activity extends AppCompatActivity {
                     finish();
                     Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
                     Bundle parametros = new Bundle();
-
                     parametros.putInt("historia", num + 1); //Numero da proxima historia
-
                     intent.putExtras(parametros);
                     startActivity(intent);
                 }
