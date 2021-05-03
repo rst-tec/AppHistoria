@@ -42,8 +42,6 @@ public class PerguntasActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
     }
 
     @Override
@@ -1054,7 +1052,7 @@ public class PerguntasActivity extends AppCompatActivity {
             finalJogo();
             alerta.dismiss();
         }else {
-
+            finish();
             Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
             Bundle parametros = new Bundle();
 
