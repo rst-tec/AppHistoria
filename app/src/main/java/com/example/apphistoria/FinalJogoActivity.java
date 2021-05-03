@@ -94,7 +94,8 @@ public class FinalJogoActivity extends AppCompatActivity {
         if (num == 21) {
             btJogarNovamente.setBackgroundResource(R.drawable.bt_voltar);
         }
-            btJogarNovamente.setOnClickListener(new View.OnClickListener() {
+
+        btJogarNovamente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
