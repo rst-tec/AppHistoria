@@ -483,7 +483,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
             pergunta.setText("Como o povo de Israel conseguiu sair do Egito?");
 
-            resposta1.setText("Deus abriu o mar");
+            resposta1.setText("Deus abriu o mar vermelho");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -491,7 +491,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText("Nadando");
+            resposta2.setText("De barco");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -499,7 +499,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3.setText("De cavalos");
+            resposta3.setText("Nadando");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -513,7 +513,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     btLeitor.setBackgroundResource(R.drawable.musica_on);
                     String textoLeitura = "Como o povo de Israel conseguiu sair do Egito?"+
-                            "Deus abriu o mar, nadando, ou  de cavalos.";
+                            "Deus abriu o mar vermelho, De barco, ou  Nadando.";
                     leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
