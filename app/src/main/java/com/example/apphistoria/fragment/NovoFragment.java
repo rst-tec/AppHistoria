@@ -12,28 +12,24 @@ import com.example.apphistoria.R;
 
 public class NovoFragment extends Fragment {
 
-    private Button btHist001;
-    private Button btHist002;
-    private Button btHist003;
-    private Button btHist004;
-    private Button btHist005;
-    private Button btHist006;
-    private Button btHist007;
-    private Button btHist008;
-    private Button btHist009;
-    private Button btHist010;
-    private Button btHist011;
-    private Button btHist012;
-    private Button btHist013;
-    private Button btHist014;
-    private Button btHist015;
-    private Button btHist016;
-
+    private Button btHist017;
+    private Button btHist018;
+    private Button btHist019;
+    private Button btHist020;
+    private Button btHist021;
+    private Button btHist022;
+    private Button btHist023;
+    private Button btHist024;
+    private Button btHist025;
+    private Button btHist026;
+    private Button btHist027;
+    private Button btHist028;
+    private Button btHist029;
+    private Button btHist030;
 
     public NovoFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,8 +37,8 @@ public class NovoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_novo, container, false);
 
-        btHist001 = view.findViewById(R.id.btHist001);
-        btHist001.setOnClickListener(new View.OnClickListener() {
+        btHist017 = view.findViewById(R.id.btHist017);
+        btHist017.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), Historia02Activity.class);
