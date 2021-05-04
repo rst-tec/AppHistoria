@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.apphistoria.fragment.AntigoFragment;
+import com.example.apphistoria.fragment.NovoFragment;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -39,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         botao1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
+                Intent intent = new Intent(getApplicationContext(), ListaActivity.class);
+                intent.putExtra("lista", 1); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
@@ -49,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         botao2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Lista02Activity.class);
+                Intent intent = new Intent(getApplicationContext(), ListaActivity.class);
+                intent.putExtra("lista", 2); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
