@@ -8,27 +8,6 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/botao2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@drawable/novo01"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/botao3"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@drawable/bt_perguntas"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <Button
         android:id="@+id/botao1"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -46,12 +25,22 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Antigo Testamento"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/botao2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botao1" />
+
+    <Button
+        android:id="@+id/botao2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/novo01"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView2"
@@ -59,12 +48,23 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Novo Testamento"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/botao3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botao2" />
+
+    <Button
+        android:id="@+id/botao3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bt_perguntas"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView3"
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Jogo de Perguntas"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/adView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
