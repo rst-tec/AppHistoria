@@ -16,6 +16,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
+import static android.view.Gravity.CENTER;
+
 public class Historia02Activity extends AppCompatActivity {
 
     private ImageView foto;
@@ -371,7 +373,8 @@ public class Historia02Activity extends AppCompatActivity {
         editorDePreferencias.apply();
 
         historia.setGravity(Gravity.LEFT);
-        titulo.setGravity(Gravity.LEFT);
+        titulo.setGravity(Gravity.LEFT|CENTER);
+        titulo.setPadding(20,0,0,0);
         btAlinha.setBackgroundResource(R.drawable.esquerda);
         opc++;
     }
@@ -381,8 +384,8 @@ public class Historia02Activity extends AppCompatActivity {
         editorDePreferencias.putString("mudaTexto", "textoCentro");
         editorDePreferencias.apply();
 
-        historia.setGravity(Gravity.CENTER);
-        titulo.setGravity(Gravity.CENTER);
+        historia.setGravity(CENTER);
+        titulo.setGravity(CENTER);
         btAlinha.setBackgroundResource(R.drawable.centro);
         opc++;
     }
@@ -393,7 +396,8 @@ public class Historia02Activity extends AppCompatActivity {
         editorDePreferencias.apply();
 
         historia.setGravity(Gravity.RIGHT);
-        titulo.setGravity(Gravity.RIGHT);
+        titulo.setGravity(Gravity.RIGHT|CENTER);
+        titulo.setPadding(0,0,20,0);
         btAlinha.setBackgroundResource(R.drawable.direita);
         opc++;
     }

@@ -12,7 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_lendo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListaActivity"></activity>
         <activity
             android:name=".FinalJogoActivity"
             android:screenOrientation="portrait" />
@@ -23,13 +22,10 @@
             android:name=".Historia02Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Lista02Activity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".Historia01Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Lista01Activity"
+            android:name=".ListaActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
