@@ -762,25 +762,25 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 17) {
 
-            pergunta.setText("Qual animal tentou Eva no Jardim do Éden?");
+            pergunta.setText("Quando Jesus nasceu, onde Ele foi colocado?");
 
-            resposta1.setText("Leão");
+            resposta1.setText("Manjedoura");
             resposta1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaErrada();
-                }
-            });
-
-            resposta2.setText("Serpente");
-            resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaCorreta();
                 }
             });
 
-            resposta3.setText("Lagarto");
+            resposta2.setText("Cama");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Trono");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -793,54 +793,14 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     btLeitor.setBackgroundResource(R.drawable.musica_on);
-                    String textoLeitura ="Qual animal tentou Eva no Jardim do Éden? " +
-                            "Leão, Serpente, ou Lagarto.";
+                    String textoLeitura ="Quando Jesus nasceu, onde Ele foi colocado? " +
+                            "manjedoura, cama, ou trono.";
                     leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
 
         if (num == 18) {
-
-            pergunta.setText("Como chamava o jardim onde morou Adão e Eva?");
-
-            resposta1.setText("Jardim do éden");
-            resposta1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaCorreta();
-                }
-            });
-
-            resposta2.setText("Jardim Magnólia");
-            resposta2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaErrada();
-                }
-            });
-
-            resposta3.setText("Jardim Guanabara");
-            resposta3.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaErrada();
-                }
-            });
-
-            //BOTÃO PARA LEITURA DA PERGUNTA
-            btLeitor.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    btLeitor.setBackgroundResource(R.drawable.musica_on);
-                    String textoLeitura ="Como chamava o jardim onde morou Adão e Eva? " +
-                            "Jardim do éden, Jardim Magnólia, ou Jardim Guanabara.";
-                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
-                }
-            });
-        }
-
-        if (num == 19) {
 
             pergunta.setText("Como era o nome do esposo de Maria, mãe de Jesus?");
 
@@ -880,27 +840,27 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-        if (num == 20) {
+        if (num == 19) {
 
-            pergunta.setText("Quando Jesus nasceu, onde Ele foi colocado?");
+            pergunta.setText("Qual animal tentou Eva no Jardim do Éden?");
 
-            resposta1.setText("Manjedoura");
+            resposta1.setText("Leão");
             resposta1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    respostaCorreta();
-                }
-            });
-
-            resposta2.setText("Cama");
-            resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
 
-            resposta3.setText("Trono");
+            resposta2.setText("Serpente");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Lagarto");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -913,12 +873,53 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     btLeitor.setBackgroundResource(R.drawable.musica_on);
-                    String textoLeitura ="Quando Jesus nasceu, onde Ele foi colocado? " +
-                            "manjedoura, cama, ou trono.";
+                    String textoLeitura ="Qual animal tentou Eva no Jardim do Éden? " +
+                            "Leão, Serpente, ou Lagarto.";
                     leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
+
+        if (num == 20) {
+
+            pergunta.setText("Como chamava o jardim onde morou Adão e Eva?");
+
+            resposta1.setText("Jardim do éden");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("Jardim Magnólia");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Jardim Guanabara");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Como chamava o jardim onde morou Adão e Eva? " +
+                            "Jardim do éden, Jardim Magnólia, ou Jardim Guanabara.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
     }
 
     public void onPause(){

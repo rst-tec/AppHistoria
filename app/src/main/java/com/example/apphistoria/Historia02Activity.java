@@ -186,7 +186,7 @@ public class Historia02Activity extends AppCompatActivity {
                 musicaFundo.stop();
 
                 //ALTERAR ESSE NUMERO PARA O NUMERO DA ULTIMA HISTORIA
-                if (num == 1) {
+                if (num == 17) {
                     finish();  //VOLTAR PARA A LISTA DE HISTORIAS
                 }else {
 
@@ -207,7 +207,7 @@ public class Historia02Activity extends AppCompatActivity {
 //*************************************************************
 //MONTA A TELA DA HISTORIA
 
-        if (num == 1) {
+        if (num == 17) {
 
             foto.setImageResource(R.drawable.historia017);
             titulo.setText("O bebê Jesus");
