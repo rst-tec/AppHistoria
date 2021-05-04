@@ -22,6 +22,7 @@ public class Historia02Activity extends AppCompatActivity {
     private TextView titulo;
     private TextView historia;
     private ConstraintLayout fundoHistoria;
+    private Button btPergunta;
 
     private Button btInicio;    //Voltar para tela Inicial          - OK
     private Button btMusica;    //Iniciar Musica de fundo           - OK
@@ -115,6 +116,25 @@ public class Historia02Activity extends AppCompatActivity {
         foto = findViewById(R.id.idFoto);
         titulo = findViewById(R.id.idTitulo);
         historia = findViewById(R.id.idTexto);
+        btPergunta = findViewById(R.id.btPergunta);
+
+        //BOTÃO PARA ABRIR UMA PERGUNTA
+        btPergunta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mediaPlayer.stop();
+                musicaFundo.stop();
+                finish();
+
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                Bundle parametros = new Bundle();
+
+                parametros.putInt("pergunta", num); //Passa o numero da proxima pergunta
+                parametros.putInt("chave", 999);
+                intent.putExtras(parametros);
+                startActivity(intent);
+            }
+        });
 
         //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
         btInicio = findViewById(R.id.btInicio);
@@ -166,7 +186,7 @@ public class Historia02Activity extends AppCompatActivity {
                 musicaFundo.stop();
 
                 //ALTERAR ESSE NUMERO PARA O NUMERO DA ULTIMA HISTORIA
-                if (num == 1) {
+                if (num == 17) {
                     finish();  //VOLTAR PARA A LISTA DE HISTORIAS
                 }else {
 
@@ -187,7 +207,7 @@ public class Historia02Activity extends AppCompatActivity {
 //*************************************************************
 //MONTA A TELA DA HISTORIA
 
-        if (num == 1) {
+        if (num == 17) {
 
             foto.setImageResource(R.drawable.historia017);
             titulo.setText("O bebê Jesus");

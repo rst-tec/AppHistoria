@@ -72,7 +72,7 @@ public class Lista02Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
-                intent.putExtra("historia", 1); //PASSANDO VALOR PARA O BUNDLE
+                intent.putExtra("historia", 17); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });

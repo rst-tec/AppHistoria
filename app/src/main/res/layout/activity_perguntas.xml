@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -24,13 +23,15 @@
         android:text="Em quantos dias Deus fez a criação do mundo?"
         android:textColor="@color/color_verde"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/idResposta1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/idResposta1"
-        android:layout_width="345dp"
+        android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
@@ -43,18 +44,19 @@
         android:textAllCaps="false"
         android:textColor="@color/color_verde"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/idResposta2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idPergunta" />
 
     <Button
         android:id="@+id/idResposta2"
-        android:layout_width="345dp"
+        android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:background="@drawable/respostas"
@@ -63,17 +65,19 @@
         android:textAllCaps="false"
         android:textColor="@color/color_verde"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/idResposta3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idResposta1" />
 
     <Button
         android:id="@+id/idResposta3"
-        android:layout_width="345dp"
+        android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:background="@drawable/respostas"
@@ -82,29 +86,21 @@
         android:textAllCaps="false"
         android:textColor="@color/color_verde"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btFechar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idResposta2" />
-
-    <Button
-        android:id="@+id/btProxima"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/proximo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idResposta3" />
 
     <Button
         android:id="@+id/btFechar"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/fechar"
+        app:layout_constraintBottom_toTopOf="@+id/idStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idResposta3" />
 
@@ -112,12 +108,16 @@
         android:id="@+id/idStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Pergunta 1 de 10"
-        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="texto"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btFechar" />
 
     <Button
         android:id="@+id/btLeitor"
@@ -125,7 +125,7 @@
         android:layout_height="50dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="14dp"
         android:background="@drawable/musica_off"
         app:layout_constraintBottom_toBottomOf="@+id/idPergunta"
         app:layout_constraintEnd_toEndOf="@+id/idPergunta" />

@@ -16,12 +16,15 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
+import static android.view.Gravity.CENTER;
+
 public class Historia01Activity extends AppCompatActivity {
 
     private ImageView foto;
     private TextView titulo;
     private TextView historia;
     private ConstraintLayout fundoHistoria;
+    private Button btPergunta;
 
     private Button btInicio;    //Voltar para tela Inicial          - OK
     private Button btMusica;    //Iniciar Musica de fundo           - OK
@@ -111,6 +114,25 @@ public class Historia01Activity extends AppCompatActivity {
         foto = findViewById(R.id.idFoto);
         titulo = findViewById(R.id.idTitulo);
         historia = findViewById(R.id.idTexto);
+        btPergunta = findViewById(R.id.btPergunta);
+
+        //BOTÃO PARA ABRIR UMA PERGUNTA
+        btPergunta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mediaPlayer.stop();
+                musicaFundo.stop();
+                finish();
+
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                Bundle parametros = new Bundle();
+
+                parametros.putInt("pergunta", num); //Passa o numero da proxima pergunta
+                parametros.putInt("chave", 999);
+                intent.putExtras(parametros);
+                startActivity(intent);
+            }
+        });
 
         //BOTÃO PARA VOLTAR PARA A VOLTAR A LISTA DE HISTORIAS
         btInicio = findViewById(R.id.btInicio);
@@ -168,9 +190,7 @@ public class Historia01Activity extends AppCompatActivity {
                     finish();
                     Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
                     Bundle parametros = new Bundle();
-
                     parametros.putInt("historia", num + 1); //Numero da proxima historia
-
                     intent.putExtras(parametros);
                     startActivity(intent);
                 }
@@ -194,7 +214,7 @@ public class Historia01Activity extends AppCompatActivity {
                     "Então, a Terra produziu plantas, e as plantas produziram sementes, para crescerem mais plantas. A noite passou e o dia veio. O terceiro dia também terminou.\n\n" +
                     "Então, no quarto dia, Deus fez o sol para brilhar de dia e a lua e as estrelas de noite. Tudo era bom em todos os sentidos. A noite passou e a manhã veio. O quarto dia também terminou.\n\n" +
                     "No quinto dia, Deus disse: Que as águas se encham de Ser vivos e o ar se encha com pássaro. E então Deus fez as criaturas do mar e pássaros de todas as espécies e o quinto dia terminou.\n\n" +
-                    "No dia seguinte, Deus disse: Que haja todos os tipos de animais. E o mundo inteiro estava agora vivo com as criaturas de Deus. Ele os abençoou para terem bebés.\\n Finalmente, Deus fez o Homem a Sua própria imagem, do pó da Terra. O sexto dia terminou. Ele disse alegremente: Está tudo muito bom!\n\n" +
+                    "No dia seguinte, Deus disse: Que haja todos os tipos de animais. E o mundo inteiro estava agora vivo com as criaturas de Deus. Ele os abençoou para terem bebés. Finalmente, Deus fez o Homem a Sua própria imagem, do pó da Terra. O sexto dia terminou. Ele disse alegremente: Está tudo muito bom!\n\n" +
                     "Deus levou apenas seis dias para fazer tudo. Ele descansou no sétimo dia e o abençoou como um dia de descanso.\n\n" +
                     "FIM.\n");
 
@@ -424,7 +444,7 @@ public class Historia01Activity extends AppCompatActivity {
             foto.setImageResource(R.drawable.historia006);
             titulo.setText("O sonhador José");
             historia.setText("Jacó tinha doze Filhos, ele amava todos os seus filhos, mas era José quem mais amava, o primogênito de sua amada Raquel.\n\n" +
-                    "Um dia, Jacó deu de presente para José uma bela túnica. Seus irmãos mais velhos, vendo a túnica, ficaram com ciúmes de José. E depois daquele dia sua benignidade para com José diminuiu.\n\n" +
+                    "Um dia, Jacó deu de presente para José uma bela túnica toda colorida. Seus irmãos mais velhos, vendo a túnica, ficaram com ciúmes de José. E depois daquele dia sua benignidade para com José diminuiu.\n\n" +
                     "José tinha um dom, ele sonhava e os interpretava muito sabiamente para sua pouca idade. Um dia, ele foi com seus irmãos levar seus rebanhos para as pastagens. Lá, José contou aos irmãos sobre um sonho que ele havia tido.\n\n" +
                     "Ele tinha sonhado que todos eles estavam amarrando feixes de grãos no campo. De repente, apenas o feixe de José ficou em pé no centro e os feixes de todos os irmãos ficaram em pé ao redor do feixe dele e se curvaram!\n\n" +
                     "Seus irmãos entenderam o sonho, e gritaram: — O que? Nós nos curvaremos diante de você? Depois daquele dia, os irmãos de José o odiaram ainda mais.\n\n" +
@@ -955,7 +975,8 @@ public class Historia01Activity extends AppCompatActivity {
         editorDePreferencias.apply();
 
         historia.setGravity(Gravity.LEFT);
-        titulo.setGravity(Gravity.LEFT);
+        titulo.setGravity(Gravity.LEFT|CENTER);
+        titulo.setPadding(20,0,0,0);
         btAlinha.setBackgroundResource(R.drawable.esquerda);
         opc++;
     }
@@ -965,8 +986,8 @@ public class Historia01Activity extends AppCompatActivity {
         editorDePreferencias.putString("mudaTexto", "textoCentro");
         editorDePreferencias.apply();
 
-        historia.setGravity(Gravity.CENTER);
-        titulo.setGravity(Gravity.CENTER);
+        historia.setGravity(CENTER);
+        titulo.setGravity(CENTER);
         btAlinha.setBackgroundResource(R.drawable.centro);
         opc++;
     }
@@ -977,7 +998,8 @@ public class Historia01Activity extends AppCompatActivity {
         editorDePreferencias.apply();
 
         historia.setGravity(Gravity.RIGHT);
-        titulo.setGravity(Gravity.RIGHT);
+        titulo.setGravity(Gravity.RIGHT|CENTER);
+        titulo.setPadding(0,0,20,0);
         btAlinha.setBackgroundResource(R.drawable.direita);
         opc++;
     }

@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -16,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     private Button botao1; //Abre a lista de historias 01
     private Button botao2; //Abre a lista de historias 02
     private Button botao3; //Abre o jogo de perguntas
-    private Button botao4;
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR
     @Override
@@ -65,14 +62,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
                 intent.putExtra("pergunta", 1); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
-            }
-        });
-
-        botao4 = findViewById(R.id.botao4);
-        botao4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Em construção",Toast.LENGTH_LONG).show();
             }
         });
     }

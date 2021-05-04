@@ -13,39 +13,46 @@
         android:id="@+id/btColor"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/color1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/idFoto" />
 
     <Button
         android:id="@+id/btAlinha"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:background="@drawable/centro"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/idFoto" />
 
     <ImageView
         android:id="@+id/idFoto"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="150dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/ImagemHistoria001"
         android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/btColor"
+        app:layout_constraintStart_toEndOf="@+id/btAlinha"
+        app:layout_constraintTop_toBottomOf="@+id/adView" />
+
+    <TextView
+        android:id="@+id/idTitulo"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btColor"
+        app:layout_constraintStart_toEndOf="@+id/btAlinha"
+        app:layout_constraintTop_toBottomOf="@+id/idFoto" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -53,47 +60,35 @@
         android:layout_height="37dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
         app:adSize="BANNER"
         app:adUnitId="ca-app-pub-3774325968995797/7646350642"
-        app:layout_constraintEnd_toStartOf="@+id/btColor"
-        app:layout_constraintStart_toEndOf="@+id/btAlinha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
     </com.google.android.gms.ads.AdView>
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/btInicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idFoto">
+        app:layout_constraintTop_toBottomOf="@+id/idTitulo">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/idTitulo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:textSize="24sp"
-                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/idTexto"
@@ -102,6 +97,12 @@
                 android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btPergunta"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bt_perguntas" />
 
         </LinearLayout>
     </ScrollView>
