@@ -25,7 +25,7 @@
 
             <Button
                 android:id="@+id/btHist001"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -35,6 +35,7 @@
                 android:background="@drawable/historia001"
                 android:contentDescription="@string/BotaoHistoria001"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,7 +54,7 @@
 
             <Button
                 android:id="@+id/btHist002"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -63,6 +64,8 @@
                 android:background="@drawable/historia002"
                 android:contentDescription="@string/BotaoHistoria002"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -81,7 +84,7 @@
 
             <Button
                 android:id="@+id/btHist003"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -91,7 +94,7 @@
                 android:background="@drawable/historia003"
                 android:contentDescription="@string/BotaoHistoria003"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textHist001" />
 
@@ -109,7 +112,7 @@
 
             <Button
                 android:id="@+id/btHist004"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -119,7 +122,8 @@
                 android:background="@drawable/historia004"
                 android:contentDescription="@string/BotaoHistoria004"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/textHist002" />
 
@@ -138,7 +142,7 @@
 
             <Button
                 android:id="@+id/btHist005"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -148,7 +152,7 @@
                 android:background="@drawable/historia005"
                 android:contentDescription="@string/BotaoHistoria005"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textHist003" />
 
@@ -168,7 +172,7 @@
 
             <Button
                 android:id="@+id/btHist006"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -178,7 +182,8 @@
                 android:background="@drawable/historia006"
                 android:contentDescription="@string/BotaoHistoria006"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/textHist004" />
 
@@ -197,7 +202,7 @@
 
             <Button
                 android:id="@+id/btHist007"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -208,7 +213,7 @@
                 android:contentDescription="@string/BotaoHistoria007"
                 app:layout_constraintBottom_toTopOf="@+id/textHist007"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textHist005" />
 
@@ -226,7 +231,7 @@
 
             <Button
                 android:id="@+id/btHist008"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -236,7 +241,8 @@
                 android:background="@drawable/historia008"
                 android:contentDescription="@string/BotaoHistoria008"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/textHist006" />
 
@@ -254,7 +260,7 @@
 
             <Button
                 android:id="@+id/btHist009"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -264,7 +270,7 @@
                 android:background="@drawable/historia009"
                 android:contentDescription="@string/BotaoHistoria009"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textHist007" />
 
@@ -282,7 +288,7 @@
 
             <Button
                 android:id="@+id/btHist010"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -292,7 +298,8 @@
                 android:background="@drawable/historia010"
                 android:contentDescription="@string/BotaoHistoria010"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/textHist008" />
 
@@ -310,7 +317,7 @@
 
             <Button
                 android:id="@+id/btHist011"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -320,7 +327,7 @@
                 android:background="@drawable/historia011"
                 android:contentDescription="@string/BotaoHistoria011"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textHist009" />
 
@@ -339,7 +346,7 @@
 
             <Button
                 android:id="@+id/btHist012"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -349,7 +356,8 @@
                 android:background="@drawable/historia012"
                 android:contentDescription="@string/BotaoHistoria012"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@id/textHist010" />
 
@@ -367,7 +375,7 @@
 
             <Button
                 android:id="@+id/btHist013"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -377,7 +385,7 @@
                 android:background="@drawable/historia013"
                 android:contentDescription="@string/BotaoHistoria013"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textHist011" />
 
@@ -395,7 +403,7 @@
 
             <Button
                 android:id="@+id/btHist014"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -405,7 +413,8 @@
                 android:background="@drawable/historia014"
                 android:contentDescription="@string/BotaoHistoria014"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/textHist012" />
 
@@ -423,18 +432,17 @@
 
             <Button
                 android:id="@+id/btHist015"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-
                 android:background="@drawable/historia015"
                 android:contentDescription="@string/BotaoHistoria015"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textHist013" />
 
@@ -454,18 +462,18 @@
 
             <Button
                 android:id="@+id/btHist016"
-                android:layout_width="0dp"
+                android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-
                 android:background="@drawable/historia016"
                 android:contentDescription="@string/BotaoHistoria014"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/textHist014" />
 
