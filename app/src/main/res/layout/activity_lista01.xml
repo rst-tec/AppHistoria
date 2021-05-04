@@ -106,6 +106,7 @@
                 android:contentDescription="@string/TextoHistoria003"
                 android:text="@string/TextoHistoria003"
                 android:textSize="18sp"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btHist003" />
@@ -136,7 +137,7 @@
                 android:text="@string/TextoHistoria004"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/btHist004" />
 
@@ -165,7 +166,7 @@
                 android:text="@string/TextoHistoria005"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btHist005" />
 
@@ -225,6 +226,7 @@
                 android:contentDescription="@string/TextoHistoria007"
                 android:text="@string/TextoHistoria007"
                 android:textSize="18sp"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btHist007" />
@@ -255,6 +257,7 @@
                 android:text="@string/TextoHistoria008"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/btHist008" />
 
@@ -282,6 +285,7 @@
                 android:contentDescription="@string/TextoHistoria009"
                 android:text="@string/TextoHistoria009"
                 android:textSize="18sp"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btHist009" />
@@ -312,6 +316,7 @@
                 android:text="@string/TextoHistoria010"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/btHist010" />
 
@@ -339,6 +344,7 @@
                 android:contentDescription="@string/TextoHistoria011"
                 android:text="@string/TextoHistoria011"
                 android:textSize="18sp"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btHist011" />
@@ -370,6 +376,7 @@
                 android:text="@string/TextoHistoria012"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/btHist012" />
 
@@ -397,6 +404,7 @@
                 android:contentDescription="@string/TextoHistoria013"
                 android:text="@string/TextoHistoria013"
                 android:textSize="18sp"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btHist013" />
@@ -427,6 +435,7 @@
                 android:text="@string/TextoHistoria014"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/btHist014" />
 
@@ -456,6 +465,7 @@
                 android:text="@string/TextoHistoria015"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btHist015" />
@@ -488,6 +498,7 @@
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/btHist016" />
 
