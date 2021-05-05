@@ -11,12 +11,12 @@ as principais histórias bíblicas.
 - MainActivity: Foi adicionado um **banner** de anuncio. 
 - As listas de histórias: Foi desenvolvida utilizando **Fragmetos**, para alterar de uma para outra de forma mais suave, ele contém um **ScrollView** e um banner de anuncio no rodapé
 - Tela de história: 
-1 - Contém um Banner de anuncio no topo,
-2 - Contém um botão para alianhamento do texto (Esqueda, Centro ou Direita),
-3 - Contém um botão para alteração da cor de fundo,
-4 - Contém um botão para iniciar a leitura da história,
-5 - Contém um botão para iniciar uma musica de fundo,
-6 - Contém um botão para chamar um pergunta relaciona aquela historia,
-7 - Contém um botão para avançar para a proxima historia e ou tro botão para voltar a tela de lista de histórias.
+1. Contém um Banner de anuncio no topo.
+2. Contém um botão para alianhamento do texto (Esqueda, Centro ou Direita).
+3. Contém um botão para alteração da cor de fundo.
+4. Contém um botão para iniciar a leitura da história.
+5. Contém um botão para iniciar uma musica de fundo.
+6. Contém um botão para chamar um pergunta relaciona aquela história.
+7. Contém um botão para avançar para a proxima historia e ou tro botão para voltar a tela de lista de histórias.
 
 
