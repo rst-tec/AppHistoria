@@ -13,8 +13,7 @@ as principais histórias bíblicas.
 
 - Tela de história: 
 1. Contém um Banner de anuncio no topo.
-2. Contém um botão para alianhamento do texto (Esqueda, Centro ou Direita).
-3. Contém um botão para alteração da cor de fundo.
+2. Contém um botão para alianhamento do texto (Esqueda, Centro ou Direita), e um botão para alteração da cor de fundo, essas escolhas são salvas no **Shared Preferences.**
 4. Contém um botão para iniciar a leitura da história.
 5. Contém um botão para iniciar uma musica de fundo.
 6. Contém um botão para chamar um pergunta relaciona aquela história.
