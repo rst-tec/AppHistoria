@@ -10,6 +10,7 @@ as principais histórias bíblicas.
 - Tela Splash: Foi utilizado a função **randomica** para exibir de forma aleatorio um versiculo diferente a cada acesso.
 - MainActivity: Foi adicionado um **banner** de anuncio. 
 - As listas de histórias: Foi desenvolvida utilizando **Fragmetos**, para alterar de uma para outra de forma mais suave, ele contém um **ScrollView** e um banner de anuncio no rodapé
+
 - Tela de história: 
 1. Contém um Banner de anuncio no topo.
 2. Contém um botão para alianhamento do texto (Esqueda, Centro ou Direita).
