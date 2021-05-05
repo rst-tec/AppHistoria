@@ -6,8 +6,8 @@ Tudo começou quando procurei um aplicativo do genero para ler histórias para m
 Projeto independente sem fins lucrativos, com o objetivo de levar a palavra de Deus a diversos lares, onde os pais possam ler para seus filhos,
 as principais histórias bíblicas.
 
-- Tela Splash: Foi utilizado a função **randomica** para exibir de forma aleatório um versiculo diferente a cada acesso.
-- MainActivity: Foi adicionado um **banner** de anuncio. 
+- **Tela Splash:** Foi utilizado a função **randomica** para exibir de forma aleatório um versiculo diferente a cada acesso.
+- **MainActivity:** Foi adicionado um **banner** de anuncio. 
 - As listas de histórias: Foi desenvolvida utilizando **Fragmetos**, para alterar de uma para outra de forma mais suave, ele contém um **ScrollView** e um banner de anuncio no rodapé, cada história esta dentro de um botão que ao acionado estancia uma **Intent** e envia uma (chave e valor) via **putExtra.** para a tela de história selecionada, a tela de história recebe esse valor atraves de um **Bundle** **getExtras** e start a história.
 
 - Tela de história: 
