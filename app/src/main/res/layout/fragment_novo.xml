@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo_app"
-    tools:context=".Lista01Activity">
+    tools:context=".fragment.NovoFragment">
 
     <ScrollView
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constrainLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/fundo_app"
             android:orientation="vertical"
-            tools:context=".Lista01Activity">
+            tools:context=".Lista02Activity">
 
             <Button
-                android:id="@+id/btHist001"
+                android:id="@+id/btHist017"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -32,28 +31,27 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia001"
-                android:contentDescription="@string/BotaoHistoria001"
+                android:background="@drawable/historia017"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textHist001"
+                android:id="@+id/textHist017"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria001"
-                android:text="@string/TextoHistoria001"
+                android:contentDescription="@string/TextoHistoria017"
+                android:text="@string/TextoHistoria017"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btHist001" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist017" />
 
             <Button
-                android:id="@+id/btHist002"
+                android:id="@+id/btHist018"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -61,29 +59,27 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia002"
+                android:background="@drawable/historia018"
                 android:contentDescription="@string/BotaoHistoria002"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textHist002"
+                android:id="@+id/textHist018"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria002"
-                android:text="@string/TextoHistoria002"
+                android:text="Historia 02"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/btHist002" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist018" />
 
             <Button
-                android:id="@+id/btHist003"
+                android:id="@+id/btHist019"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -91,28 +87,27 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia003"
+                android:background="@drawable/historia019"
                 android:contentDescription="@string/BotaoHistoria003"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textHist001" />
+                app:layout_constraintTop_toBottomOf="@+id/textHist017" />
 
             <TextView
-                android:id="@+id/textHist003"
+                android:id="@+id/textHist019"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria003"
-                android:text="@string/TextoHistoria003"
+                android:text="Historia 03"
                 android:textSize="18sp"
-                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btHist003" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist019" />
 
             <Button
-                android:id="@+id/btHist004"
+                android:id="@+id/btHist020"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -120,29 +115,27 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia004"
+                android:background="@drawable/historia020"
                 android:contentDescription="@string/BotaoHistoria004"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/textHist002" />
+                app:layout_constraintTop_toBottomOf="@+id/textHist018" />
 
             <TextView
-                android:id="@+id/textHist004"
+                android:id="@+id/textHist020"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria004"
-                android:text="@string/TextoHistoria004"
+                android:text="Historia 04"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/btHist004" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist020" />
 
             <Button
-                android:id="@+id/btHist005"
+                android:id="@+id/btHist021"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -150,29 +143,28 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia005"
+                android:background="@android:drawable/ic_lock_lock"
                 android:contentDescription="@string/BotaoHistoria005"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textHist003" />
+                app:layout_constraintTop_toBottomOf="@+id/textHist019" />
 
             <TextView
-                android:id="@+id/textHist005"
+                android:id="@+id/textHist021"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria005"
-                android:text="@string/TextoHistoria005"
+                android:text="Historia 05"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btHist005" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist021" />
 
 
             <Button
-                android:id="@+id/btHist006"
+                android:id="@+id/btHist022"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -180,29 +172,27 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia006"
+                android:background="@android:drawable/ic_lock_lock"
                 android:contentDescription="@string/BotaoHistoria006"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/textHist004" />
+                app:layout_constraintTop_toBottomOf="@+id/textHist020" />
 
             <TextView
-                android:id="@+id/textHist006"
+                android:id="@+id/textHist022"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria006"
-                android:text="@string/TextoHistoria006"
+                android:text="Historia 06"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/btHist006" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist022" />
 
             <Button
-                android:id="@+id/btHist007"
+                android:id="@+id/btHist023"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -210,29 +200,27 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia007"
+                android:background="@android:drawable/ic_lock_lock"
                 android:contentDescription="@string/BotaoHistoria007"
-                app:layout_constraintBottom_toTopOf="@+id/textHist007"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textHist005" />
+                app:layout_constraintTop_toBottomOf="@+id/textHist021" />
 
             <TextView
-                android:id="@+id/textHist007"
+                android:id="@+id/textHist023"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria007"
-                android:text="@string/TextoHistoria007"
+                android:text="Historia 07"
                 android:textSize="18sp"
-                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btHist007" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist023" />
 
             <Button
-                android:id="@+id/btHist008"
+                android:id="@+id/btHist024"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -240,29 +228,27 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia008"
+                android:background="@android:drawable/ic_lock_lock"
                 android:contentDescription="@string/BotaoHistoria008"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/textHist006" />
+                app:layout_constraintTop_toBottomOf="@+id/textHist022" />
 
             <TextView
-                android:id="@+id/textHist008"
+                android:id="@+id/textHist024"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria008"
-                android:text="@string/TextoHistoria008"
+                android:text="Historia 08"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/btHist008" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist024" />
 
             <Button
-                android:id="@+id/btHist009"
+                android:id="@+id/btHist025"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -270,28 +256,27 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia009"
+                android:background="@android:drawable/ic_lock_lock"
                 android:contentDescription="@string/BotaoHistoria009"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textHist007" />
+                app:layout_constraintTop_toBottomOf="@+id/textHist023" />
 
             <TextView
-                android:id="@+id/textHist009"
+                android:id="@+id/textHist025"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria009"
-                android:text="@string/TextoHistoria009"
+                android:text="Historia 09"
                 android:textSize="18sp"
-                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btHist009" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist025" />
 
             <Button
-                android:id="@+id/btHist010"
+                android:id="@+id/btHist026"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -299,29 +284,27 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia010"
+                android:background="@android:drawable/ic_lock_lock"
                 android:contentDescription="@string/BotaoHistoria010"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/textHist008" />
+                app:layout_constraintTop_toBottomOf="@+id/textHist024" />
 
             <TextView
-                android:id="@+id/textHist010"
+                android:id="@+id/textHist026"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria010"
-                android:text="@string/TextoHistoria010"
+                android:text="Historia 10"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/btHist010" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist026" />
 
             <Button
-                android:id="@+id/btHist011"
+                android:id="@+id/btHist027"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -329,29 +312,28 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia011"
+                android:background="@android:drawable/ic_lock_lock"
                 android:contentDescription="@string/BotaoHistoria011"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textHist009" />
+                app:layout_constraintTop_toBottomOf="@+id/textHist025" />
 
             <TextView
-                android:id="@+id/textHist011"
+                android:id="@+id/textHist027"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria011"
-                android:text="@string/TextoHistoria011"
+                android:text="Historia 11"
                 android:textSize="18sp"
-                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btHist011" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist027" />
 
 
             <Button
-                android:id="@+id/btHist012"
+                android:id="@+id/btHist028"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -359,29 +341,27 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia012"
+                android:background="@android:drawable/ic_lock_lock"
                 android:contentDescription="@string/BotaoHistoria012"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@id/textHist010" />
+                app:layout_constraintTop_toBottomOf="@id/textHist026" />
 
             <TextView
-                android:id="@+id/textHist012"
+                android:id="@+id/textHist028"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria012"
-                android:text="@string/TextoHistoria012"
+                android:text="Historia 12"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/btHist012" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist028" />
 
             <Button
-                android:id="@+id/btHist013"
+                android:id="@+id/btHist029"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -389,89 +369,29 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia013"
+                android:background="@android:drawable/ic_lock_lock"
                 android:contentDescription="@string/BotaoHistoria013"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textHist011" />
+                app:layout_constraintTop_toBottomOf="@+id/textHist027" />
 
             <TextView
-                android:id="@+id/textHist013"
+                android:id="@+id/textHist029"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria013"
-                android:text="@string/TextoHistoria013"
-                android:textSize="18sp"
-                app:layout_constraintHorizontal_bias="0.50"
-                app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btHist013" />
-
-            <Button
-                android:id="@+id/btHist014"
-                android:layout_width="190dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:background="@drawable/historia014"
-                android:contentDescription="@string/BotaoHistoria014"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/guideline"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/textHist012" />
-
-            <TextView
-                android:id="@+id/textHist014"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:contentDescription="@string/TextoHistoria014"
-                android:text="@string/TextoHistoria014"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.50"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/btHist014" />
-
-            <Button
-                android:id="@+id/btHist015"
-                android:layout_width="190dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:background="@drawable/historia015"
-                android:contentDescription="@string/BotaoHistoria015"
-                app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textHist013" />
-
-            <TextView
-                android:id="@+id/textHist015"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="60dp"
-                android:contentDescription="@string/TextoHistoria013"
-                android:text="@string/TextoHistoria015"
+                android:layout_marginBottom="8dp"
+                android:text="Historia 13"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btHist015" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist029" />
 
             <Button
-                android:id="@+id/btHist016"
+                android:id="@+id/btHist030"
                 android:layout_width="190dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="8dp"
@@ -479,99 +399,35 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:background="@drawable/historia016"
+                android:background="@android:drawable/ic_lock_lock"
                 android:contentDescription="@string/BotaoHistoria014"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/textHist014" />
+                app:layout_constraintTop_toBottomOf="@+id/textHist028" />
 
             <TextView
-                android:id="@+id/textHist016"
+                android:id="@+id/textHist030"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="60dp"
-                android:contentDescription="@string/TextoHistoria016"
-                android:text="@string/TextoHistoria016"
+                android:layout_marginBottom="8dp"
+                android:text="Historia 14"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/btHist016" />
+                app:layout_constraintTop_toBottomOf="@+id/btHist030" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.5" />
+                app:layout_constraintGuide_percent="0.50121653" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </ScrollView>
-
-    <Button
-        android:id="@+id/btAntigo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/fundo_app"
-        android:text="Antigo Testamento"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <Button
-        android:id="@+id/btNovo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/fundo_app"
-        android:text="Novo Testamento"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btLinhaCor1"
-        android:layout_width="0dp"
-        android:layout_height="03dp"
-        android:background="@drawable/linhacor1"
-        android:text="Button"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btAntigo" />
-
-    <Button
-        android:id="@+id/btLinhaCor2"
-        android:layout_width="0dp"
-        android:layout_height="03dp"
-        android:background="@drawable/linhacor2"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/btNovo" />
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-3774325968995797/1002913064"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
-    </com.google.android.gms.ads.AdView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
