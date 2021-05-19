@@ -7,7 +7,6 @@ Projeto independente sem fins lucrativos, com o objetivo de levar a palavra de D
 as principais histórias bíblicas.
 
 - **Tela Splash:** Foi utilizado a função **randomica** para exibir de forma aleatório um versiculo diferente a cada acesso.
-- 
 ![alt text](https://github.com/rst-tec/AppHistoria/blob/AndroidNovaVersao/ImagensTelas/App-Tela-01.jpeg)
 
 - **MainActivity:** Foi adicionado um **banner** de anuncio. 
@@ -30,7 +29,6 @@ as principais histórias bíblicas.
 
 
 - **Tela jogo de perguntas:** 
-- 
 ![alt text](https://github.com/rst-tec/AppHistoria/blob/AndroidNovaVersao/ImagensTelas/App-Tela-05.jpeg).
 
 
