@@ -30,12 +30,12 @@ as principais histórias bíblicas.
 - Contém um botão para iniciar a leitura da história, e um botão para iniciar uma música de fundo, essas funções foram desenvolvidas utilizando o **MediaPlayer** nativo do Android que inicia os arquivos que estão embarcados dentro do aplicativo.
 - Contém um botão para chamar um pergunta relacionada aquela história.
 - Contém um botão para avançar para a proxima historia e ou tro botão para voltar a tela de lista de histórias.
-![alt text](https://github.com/rst-tec/AppHistoria/blob/AndroidNovaVersao/ImagensTelas/App-Tela-04.jpeg).
+![alt text](https://github.com/rst-tec/AppHistoria/blob/AndroidNovaVersao/ImagensTelas/App-Tela-04.jpeg)
 
 
 - **Tela jogo de perguntas:** 
 - Jogo de perguntas.
 - 
-![alt text](https://github.com/rst-tec/AppHistoria/blob/AndroidNovaVersao/ImagensTelas/App-Tela-05.jpeg).
+![alt text](https://github.com/rst-tec/AppHistoria/blob/AndroidNovaVersao/ImagensTelas/App-Tela-05.jpeg)
 
 
