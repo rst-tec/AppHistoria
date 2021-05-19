@@ -18,3 +18,7 @@ as principais histórias bíblicas.
 5. Contém um botão para avançar para a proxima historia e ou tro botão para voltar a tela de lista de histórias.
 
 
+
+![alt text](https://github.com/rst-tec/AppHistoria/blob/AndroidNovaVersao/ImagensTelas/App-Tela-01.jpeg)
+
+
