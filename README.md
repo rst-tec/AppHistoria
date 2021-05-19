@@ -13,6 +13,7 @@ as principais histórias bíblicas.
 - **MainActivity:** 
 - Foi adicionado um **banner** de anuncio. 
 - Contém 3 botões de acesso.
+- 
 ![alt text](https://github.com/rst-tec/AppHistoria/blob/AndroidNovaVersao/ImagensTelas/App-Tela-02.jpeg)
 
 
@@ -34,6 +35,7 @@ as principais histórias bíblicas.
 
 - **Tela jogo de perguntas:** 
 - Jogo de perguntas.
+- 
 ![alt text](https://github.com/rst-tec/AppHistoria/blob/AndroidNovaVersao/ImagensTelas/App-Tela-05.jpeg).
 
 
