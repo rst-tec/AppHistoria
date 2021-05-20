@@ -37,4 +37,5 @@ as principais histórias bíblicas.
 - Apenas uma alternativa correta, ao clicar é exibido um **alert** e toca um som para erro ou acerto.
 - Ao final de 10 perguntas, é exibido uma tela com apontuação final
 - Inicia uma música de fundo, essa função foi desenvolvidas utilizando o **MediaPlayer** nativo do Android que inicia o arquivo que está embarcados dentro do aplicativo.
+- 
 ![mao_05](https://user-images.githubusercontent.com/61321277/119016468-5d6f8f00-b970-11eb-8ad1-24860f5ba11f.jpg)
