@@ -11,7 +11,7 @@ as principais histórias bíblicas.
 ![mao_01](https://user-images.githubusercontent.com/61321277/119015505-55fbb600-b96f-11eb-8f9c-166c4a94bf7d.jpg)
 
 - **MainActivity:** 
-- Contém um **banner** de anuncio no rodapé e 3 botões de acesso.
+- Contém um **banner** de anuncio no rodapé e 3 botões de acesso.                                                   
 ![mao_02](https://user-images.githubusercontent.com/61321277/119015869-b559c600-b96f-11eb-9a8c-91b4af3c8d73.jpg)
 
 - **Lista de histórias:** 
