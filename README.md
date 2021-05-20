@@ -13,6 +13,7 @@ as principais histórias bíblicas.
 - **MainActivity:** 
 - Foi adicionado um **banner** de anuncio. 
 - Contém 3 botões de acesso.
+- 
 ![mao_02](https://user-images.githubusercontent.com/61321277/119015869-b559c600-b96f-11eb-9a8c-91b4af3c8d73.jpg)
 Ima
 
