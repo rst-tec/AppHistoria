@@ -20,7 +20,7 @@ as principais histórias bíblicas.
 - Foi desenvolvida utilizando **Fragmetos**, para alterar de uma para outra de forma mais suave.
 - Contém um **ScrollView** e um banner de anuncio no rodapé.
 - Cada história esta dentro de um botão que ao acionado estancia uma **Intent** e envia uma (chave e valor) via **putExtra** para a tela de história selecionada, a tela de história recebe esse valor atraves de um **Bundle** **getExtras** e start a história.
-![alt text](https://drive.google.com/file/d/1ogqboWCklmuOJz357Dv7IssAFctC26pH/view?usp=sharing)
+![mao_03](https://user-images.githubusercontent.com/61321277/119016279-213c2e80-b970-11eb-82e7-a16be75ec4d4.jpg)
 
 
 - **Tela de histórias:** 
