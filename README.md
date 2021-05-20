@@ -11,7 +11,7 @@ as principais histórias bíblicas.
 ![mao_01](https://user-images.githubusercontent.com/61321277/119015505-55fbb600-b96f-11eb-8f9c-166c4a94bf7d.jpg)
 
 - **MainActivity:** 
-- Foi adicionado um **banner** de anuncio. 
+- Foi adicionado um **banner** de anuncio no rodapé.
 - Contém 3 botões de acesso.
 - 
 ![mao_02](https://user-images.githubusercontent.com/61321277/119015869-b559c600-b96f-11eb-9a8c-91b4af3c8d73.jpg)
@@ -33,6 +33,8 @@ as principais histórias bíblicas.
 
 
 - **Tela jogo de perguntas:** 
-- Jogo de perguntas.
-- 
+- Contém um botão para iniciar a leitura da pergunta
+- Apenas uma alternativa correta, ao clicar é exibido um **alert** e toca um som para erro ou acerto.
+- Ao final de 10 perguntas, é exibido uma tela com apontuação final
+- Inicia uma música de fundo, essa função foi desenvolvidas utilizando o **MediaPlayer** nativo do Android que inicia o arquivo que está embarcados dentro do aplicativo.
 ![mao_05](https://user-images.githubusercontent.com/61321277/119016468-5d6f8f00-b970-11eb-8ad1-24860f5ba11f.jpg)
