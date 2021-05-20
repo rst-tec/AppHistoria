@@ -8,7 +8,7 @@ as principais histórias bíblicas.
 
 - **Tela Splash:** 
 - Foi utilizado a função **randomica** para exibir de forma aleatório um versiculo diferente a cada acesso.
-![mao_01](https://user-images.githubusercontent.com/61321277/119014567-79723100-b96e-11eb-884b-6672de327cc4.png)
+![mao_01](https://user-images.githubusercontent.com/61321277/119015505-55fbb600-b96f-11eb-8f9c-166c4a94bf7d.jpg)
 
 - **MainActivity:** 
 - Foi adicionado um **banner** de anuncio. 
