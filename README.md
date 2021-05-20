@@ -35,4 +35,4 @@ as principais histórias bíblicas.
 - **Tela jogo de perguntas:** 
 - Jogo de perguntas.
 - 
-![alt text](https://drive.google.com/file/d/1Nj3ZuJISDn7eJn7fZDh1H5hnatiP1LdE/view?usp=sharing)
+![mao_05](https://user-images.githubusercontent.com/61321277/119016468-5d6f8f00-b970-11eb-8ad1-24860f5ba11f.jpg)
