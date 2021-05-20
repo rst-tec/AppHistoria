@@ -39,3 +39,4 @@ as principais histórias bíblicas.
 - Inicia uma música de fundo, essa função foi desenvolvidas utilizando o **MediaPlayer** nativo do Android que inicia o arquivo que está embarcados dentro do aplicativo.
 - 
 ![mao_05](https://user-images.githubusercontent.com/61321277/119016468-5d6f8f00-b970-11eb-8ad1-24860f5ba11f.jpg)
+![mao_06](https://user-images.githubusercontent.com/61321277/119018830-e7205c00-b972-11eb-9770-8ab8e03d6818.jpg)
