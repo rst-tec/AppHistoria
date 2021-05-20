@@ -11,7 +11,7 @@ as principais histórias bíblicas.
 ![mao_01](https://user-images.githubusercontent.com/61321277/119015505-55fbb600-b96f-11eb-8f9c-166c4a94bf7d.jpg)
 
 - **MainActivity:** 
-- Contém um **banner** de anuncio no rodapé e 3 botões de acesso.                                                   
+- Foi desenvlvida com 3 botões de acesso e contém um **banner** de anuncio no rodapé.                                                                                
 ![mao_02](https://user-images.githubusercontent.com/61321277/119015869-b559c600-b96f-11eb-9a8c-91b4af3c8d73.jpg)
 
 - **Lista de histórias:** 
@@ -20,20 +20,23 @@ as principais histórias bíblicas.
 - Cada história esta dentro de um botão que ao acionado estancia uma **Intent** e envia uma (chave e valor) via **putExtra** para a tela de história selecionada, a tela de história recebe esse valor atraves de um **Bundle** **getExtras** e start a história.
 ![mao_03](https://user-images.githubusercontent.com/61321277/119016279-213c2e80-b970-11eb-82e7-a16be75ec4d4.jpg)
 
-
 - **Tela de histórias:** 
-- Contém um Banner de anuncio no topo.
+- Foi desenvlvida com um Banner de anuncio no topo.
 - Contém um botão para alianhamento do texto (Esqueda, Centro ou Direita), e um botão para alteração da cor de fundo, essas escolhas são salvas no **Shared Preferences.**
 - Contém um botão para iniciar a leitura da história, e um botão para iniciar uma música de fundo, essas funções foram desenvolvidas utilizando o **MediaPlayer** nativo do Android que inicia os arquivos que estão embarcados dentro do aplicativo.
 - Contém um botão para chamar um pergunta relacionada aquela história.
 - Contém um botão para avançar para a proxima história e outro botão para voltar a tela de lista de histórias.
 ![mao_04](https://user-images.githubusercontent.com/61321277/119016400-43ce4780-b970-11eb-8f85-4014e7e22ce6.jpg)
 
-
 - **Tela jogo de perguntas:** 
-- Contém um botão para iniciar a leitura da pergunta
-- Apenas uma alternativa correta, ao clicar é exibido um **alert** e toca um som para erro ou acerto.
-- Ao final de 10 perguntas, é exibido uma tela com apontuação final
-- Inicia uma música de fundo, essa função foi desenvolvidas utilizando o **MediaPlayer** nativo do Android 
+- Foi desenvolvida uma função utilizando o **TextToSpeech** que sintetiza a fala do texto para reprodução imediata, essa função faz a leitura da pergunta.
+- Contém 3 alternatvas onde apenas uma é a correta, ao clicar é exibido um **alert** e toca um som para erro ou acerto.
+- Caso acerte passa para a proxima pergunta, caso erre tente novamente.
+- O jogo foi dividido em fase de 10 perguntas cada.
+- Os erros e acertos são computados e exibidos ao final de cada fase.                                                           
 ![mao_05](https://user-images.githubusercontent.com/61321277/119016468-5d6f8f00-b970-11eb-8ad1-24860f5ba11f.jpg)
+
+- **Tela final do jogo:** 
+- A pontuação é salvas no **Shared Preferences.** e exibida ao final do jogo
+- Inicia uma música de fundo, essa função foi desenvolvidas utilizando o **MediaPlayer** nativo do Android                                   
 ![mao_06](https://user-images.githubusercontent.com/61321277/119018830-e7205c00-b972-11eb-9770-8ab8e03d6818.jpg)
