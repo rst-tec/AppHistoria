@@ -57,11 +57,7 @@
     <string name="BotaoReiniciar">Botao Reiniciar</string>
 
     <string name="BotaoHistoria017">Historia 017</string>
-    <string name="TextoHistoria017">O Bebê Jesus</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="TextoHistoria017">O Bebê Jesus</string>   
 
 </resources>
 
