@@ -188,7 +188,7 @@ public class Historia02Activity extends AppCompatActivity {
                 musicaFundo.stop();
 
                 //ALTERAR ESSE NUMERO PARA O NUMERO DA ULTIMA HISTORIA
-                if (num == 17) {
+                if (num == 30) {
                     finish();  //VOLTAR PARA A LISTA DE HISTORIAS
                 }else {
 
@@ -205,14 +205,14 @@ public class Historia02Activity extends AppCompatActivity {
         });
 
 //*************************************************************
-//ESCOLHEU HISTORIA 001 - O BEBE JESUS
+//ESCOLHEU HISTORIA 017 - O bebê Jesus
 //*************************************************************
 //MONTA A TELA DA HISTORIA
 
         if (num == 17) {
 
             foto.setImageResource(R.drawable.historia017);
-            titulo.setText("O bebê Jesus");
+            titulo.setText(R.string.TextoHistoria017);
             historia.setText("O anjo Gabriel disse a Maria, \"Você terá um filho!\" \"Como?\" perguntou Maria. \"Eu não sou casada.\" \"O Espírito Santo de Deus virá sobre você. O bebê será Filho de Deus\". Maria acreditou nele.\n\n" +
                     "Maria era noiva de José, mas ele não acreditou na história dela. Então, o anjo o visitou também. \"Maria não está mentindo. O bebê dela será o Filho de Deus. Seu nome será Jesus\".\n\n" +
                     "Assim, José casou-se com Maria. Muitos meses se passaram. Então, eles viajaram para Belém, a cidade natal de José, por ordem do governo. Depois daquela longa viagem, chegou a hora do bebê nascer.\n\n" +
@@ -246,30 +246,429 @@ public class Historia02Activity extends AppCompatActivity {
         }
 
 //*************************************************************
-//ESCOLHEU HISTORIA 002 - BONS AMIGOS
+//ESCOLHEU HISTORIA 018 - O batismo
 //*************************************************************
 //MONTA A TELA DA HISTORIA
 
-        if (num == 2) {
+        if (num == 18) {
 
             foto.setImageResource(R.drawable.historia018);
-            titulo.setText("Bons amigos");
-            historia.setText("Bons amigos");
+            titulo.setText(R.string.TextoHistoria018);
+            historia.setText(R.string.TextoHistoria018);
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
 
-            //BOTÃO PARA INICIAR A LEITURA DA HISTORIA
-            btPlayer = findViewById(R.id.btPlayer);
-            btPlayer.setOnClickListener(new View.OnClickListener() {
+            //BOTÃO PARA REINICIAR A LEITURA
+            btReiniciar = findViewById(R.id.btReiniciar);
+            btReiniciar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (!mediaPlayer.isPlaying()) {
-                        mediaPlayer.start();
-                        btPlayer.setBackgroundResource(R.drawable.pause);
-                    } else {
-                        mediaPlayer.pause();
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.stop();
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
                         btPlayer.setBackgroundResource(R.drawable.play);
+                    }
+                    if (musicaFundo.isPlaying()) {
+                        musicaFundo.stop();
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        btMusica.setBackgroundResource(R.drawable.musica_off);
+                    }
+                }
+            });
+        }
+
+//*************************************************************
+//ESCOLHEU HISTORIA 019 - O furo no teto
+//*************************************************************
+//MONTA A TELA DA HISTORIA
+
+        if (num == 19) {
+
+            foto.setImageResource(R.drawable.historia019);
+            titulo.setText(R.string.TextoHistoria019);
+            historia.setText(R.string.TextoHistoria019);
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+
+            //BOTÃO PARA REINICIAR A LEITURA
+            btReiniciar = findViewById(R.id.btReiniciar);
+            btReiniciar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.stop();
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        btPlayer.setBackgroundResource(R.drawable.play);
+                    }
+                    if (musicaFundo.isPlaying()) {
+                        musicaFundo.stop();
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        btMusica.setBackgroundResource(R.drawable.musica_off);
+                    }
+                }
+            });
+        }
+
+//*************************************************************
+//ESCOLHEU HISTORIA 020 - Hora de levantar
+//*************************************************************
+//MONTA A TELA DA HISTORIA
+
+        if (num == 20) {
+
+            foto.setImageResource(R.drawable.historia020);
+            titulo.setText(R.string.TextoHistoria020);
+            historia.setText(R.string.TextoHistoria020);
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+
+            //BOTÃO PARA REINICIAR A LEITURA
+            btReiniciar = findViewById(R.id.btReiniciar);
+            btReiniciar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.stop();
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        btPlayer.setBackgroundResource(R.drawable.play);
+                    }
+                    if (musicaFundo.isPlaying()) {
+                        musicaFundo.stop();
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        btMusica.setBackgroundResource(R.drawable.musica_off);
+                    }
+                }
+            });
+        }
+
+//*************************************************************
+//ESCOLHEU HISTORIA 021 - O piquenique
+//*************************************************************
+//MONTA A TELA DA HISTORIA
+
+        if (num == 21) {
+
+            foto.setImageResource(R.drawable.historia021);
+            titulo.setText(R.string.TextoHistoria021);
+            historia.setText(R.string.TextoHistoria021);
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+
+            //BOTÃO PARA REINICIAR A LEITURA
+            btReiniciar = findViewById(R.id.btReiniciar);
+            btReiniciar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.stop();
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        btPlayer.setBackgroundResource(R.drawable.play);
+                    }
+                    if (musicaFundo.isPlaying()) {
+                        musicaFundo.stop();
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        btMusica.setBackgroundResource(R.drawable.musica_off);
+                    }
+                }
+            });
+        }
+
+//*************************************************************
+//ESCOLHEU HISTORIA 022 - De volta ao lar
+//*************************************************************
+//MONTA A TELA DA HISTORIA
+
+        if (num == 22) {
+
+            foto.setImageResource(R.drawable.historia022);
+            titulo.setText(R.string.TextoHistoria022);
+            historia.setText(R.string.TextoHistoria022);
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+
+            //BOTÃO PARA REINICIAR A LEITURA
+            btReiniciar = findViewById(R.id.btReiniciar);
+            btReiniciar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.stop();
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        btPlayer.setBackgroundResource(R.drawable.play);
+                    }
+                    if (musicaFundo.isPlaying()) {
+                        musicaFundo.stop();
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        btMusica.setBackgroundResource(R.drawable.musica_off);
+                    }
+                }
+            });
+        }
+
+//*************************************************************
+//ESCOLHEU HISTORIA 023 - Hora do jantar
+//*************************************************************
+//MONTA A TELA DA HISTORIA
+
+        if (num == 23) {
+
+            foto.setImageResource(R.drawable.historia023);
+            titulo.setText(R.string.TextoHistoria023);
+            historia.setText(R.string.TextoHistoria023);
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+
+            //BOTÃO PARA REINICIAR A LEITURA
+            btReiniciar = findViewById(R.id.btReiniciar);
+            btReiniciar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.stop();
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        btPlayer.setBackgroundResource(R.drawable.play);
+                    }
+                    if (musicaFundo.isPlaying()) {
+                        musicaFundo.stop();
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        btMusica.setBackgroundResource(R.drawable.musica_off);
+                    }
+                }
+            });
+        }
+
+//*************************************************************
+//ESCOLHEU HISTORIA 024 - A crucificação
+//*************************************************************
+//MONTA A TELA DA HISTORIA
+
+        if (num == 24) {
+
+            foto.setImageResource(R.drawable.historia024);
+            titulo.setText(R.string.TextoHistoria024);
+            historia.setText(R.string.TextoHistoria024);
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+
+            //BOTÃO PARA REINICIAR A LEITURA
+            btReiniciar = findViewById(R.id.btReiniciar);
+            btReiniciar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.stop();
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        btPlayer.setBackgroundResource(R.drawable.play);
+                    }
+                    if (musicaFundo.isPlaying()) {
+                        musicaFundo.stop();
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        btMusica.setBackgroundResource(R.drawable.musica_off);
+                    }
+                }
+            });
+        }
+
+//*************************************************************
+//ESCOLHEU HISTORIA 025 - A ressureição
+//*************************************************************
+//MONTA A TELA DA HISTORIA
+
+        if (num == 25) {
+
+            foto.setImageResource(R.drawable.historia025);
+            titulo.setText(R.string.TextoHistoria025);
+            historia.setText(R.string.TextoHistoria025);
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+
+            //BOTÃO PARA REINICIAR A LEITURA
+            btReiniciar = findViewById(R.id.btReiniciar);
+            btReiniciar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.stop();
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        btPlayer.setBackgroundResource(R.drawable.play);
+                    }
+                    if (musicaFundo.isPlaying()) {
+                        musicaFundo.stop();
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        btMusica.setBackgroundResource(R.drawable.musica_off);
+                    }
+                }
+            });
+        }
+
+//*************************************************************
+//ESCOLHEU HISTORIA 026 - Nas nuvens
+//*************************************************************
+//MONTA A TELA DA HISTORIA
+
+        if (num == 26) {
+
+            foto.setImageResource(R.drawable.historia026);
+            titulo.setText(R.string.TextoHistoria026);
+            historia.setText(R.string.TextoHistoria026);
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+
+            //BOTÃO PARA REINICIAR A LEITURA
+            btReiniciar = findViewById(R.id.btReiniciar);
+            btReiniciar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.stop();
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        btPlayer.setBackgroundResource(R.drawable.play);
+                    }
+                    if (musicaFundo.isPlaying()) {
+                        musicaFundo.stop();
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        btMusica.setBackgroundResource(R.drawable.musica_off);
+                    }
+                }
+            });
+        }
+
+//*************************************************************
+//ESCOLHEU HISTORIA 027 - Nem prata nem ouro
+//*************************************************************
+//MONTA A TELA DA HISTORIA
+
+        if (num == 27) {
+
+            foto.setImageResource(R.drawable.historia027);
+            titulo.setText(R.string.TextoHistoria027);
+            historia.setText(R.string.TextoHistoria027);
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+
+            //BOTÃO PARA REINICIAR A LEITURA
+            btReiniciar = findViewById(R.id.btReiniciar);
+            btReiniciar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.stop();
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        btPlayer.setBackgroundResource(R.drawable.play);
+                    }
+                    if (musicaFundo.isPlaying()) {
+                        musicaFundo.stop();
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        btMusica.setBackgroundResource(R.drawable.musica_off);
+                    }
+                }
+            });
+        }
+
+//*************************************************************
+//ESCOLHEU HISTORIA 028 - Inimigo, agora amigo
+//*************************************************************
+//MONTA A TELA DA HISTORIA
+
+        if (num == 28) {
+
+            foto.setImageResource(R.drawable.historia028);
+            titulo.setText(R.string.TextoHistoria028);
+            historia.setText(R.string.TextoHistoria028);
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+
+            //BOTÃO PARA REINICIAR A LEITURA
+            btReiniciar = findViewById(R.id.btReiniciar);
+            btReiniciar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.stop();
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        btPlayer.setBackgroundResource(R.drawable.play);
+                    }
+                    if (musicaFundo.isPlaying()) {
+                        musicaFundo.stop();
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        btMusica.setBackgroundResource(R.drawable.musica_off);
+                    }
+                }
+            });
+        }
+
+//*************************************************************
+//ESCOLHEU HISTORIA 029 - Viajando por Jesus
+//*************************************************************
+//MONTA A TELA DA HISTORIA
+
+        if (num == 29) {
+
+            foto.setImageResource(R.drawable.historia029);
+            titulo.setText(R.string.TextoHistoria029);
+            historia.setText(R.string.TextoHistoria029);
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+
+            //BOTÃO PARA REINICIAR A LEITURA
+            btReiniciar = findViewById(R.id.btReiniciar);
+            btReiniciar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.stop();
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        btPlayer.setBackgroundResource(R.drawable.play);
+                    }
+                    if (musicaFundo.isPlaying()) {
+                        musicaFundo.stop();
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        btMusica.setBackgroundResource(R.drawable.musica_off);
+                    }
+                }
+            });
+        }
+
+//*************************************************************
+//ESCOLHEU HISTORIA 030 - Uma promessa eterna
+//*************************************************************
+//MONTA A TELA DA HISTORIA
+
+        if (num == 30) {
+
+            foto.setImageResource(R.drawable.historia030);
+            titulo.setText(R.string.TextoHistoria030);
+            historia.setText(R.string.TextoHistoria030);
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+
+            //BOTÃO PARA REINICIAR A LEITURA
+            btReiniciar = findViewById(R.id.btReiniciar);
+            btReiniciar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mediaPlayer.isPlaying()) {
+                        mediaPlayer.stop();
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        btPlayer.setBackgroundResource(R.drawable.play);
+                    }
+                    if (musicaFundo.isPlaying()) {
+                        musicaFundo.stop();
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        btMusica.setBackgroundResource(R.drawable.musica_off);
                     }
                 }
             });
