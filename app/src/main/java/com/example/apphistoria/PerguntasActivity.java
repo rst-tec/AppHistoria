@@ -74,6 +74,11 @@ public class PerguntasActivity extends AppCompatActivity {
             idNivel.setText("Fase - 02  ");
         }
 
+        if (num >= 21) {
+            idStatus.setText("Pergunta " + num + " de 30");
+            idNivel.setText("Fase - 03  ");
+        }
+
         //BOTÃO PARA VOLTAR PARA A TELA INICIAL
         btFechar = findViewById(R.id.btFechar);
         btFechar.setOnClickListener(new View.OnClickListener() {
@@ -920,6 +925,258 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
+//ADICIONAR AS PERGUNTAS CONFORME A HISTORIA
+
+        if (num == 21) {
+            pergunta.setText("O piquenique");
+            resposta1.setText(" ");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+            resposta3.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
+        if (num == 22) {
+            pergunta.setText("De volta ao lar");
+            resposta1.setText(" ");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+            resposta3.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
+        if (num == 23) {
+            pergunta.setText("Hora do jantar");
+            resposta1.setText(" ");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+            resposta3.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
+        if (num == 24) {
+            pergunta.setText("A crucificação");
+            resposta1.setText(" ");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+            resposta3.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
+        if (num == 25) {
+            pergunta.setText("A ressureição");
+            resposta1.setText(" ");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+            resposta3.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
+        if (num == 26) {
+            pergunta.setText("Nas nuvens");
+            resposta1.setText(" ");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+            resposta3.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
+        if (num == 27) {
+            pergunta.setText("Nem prata nem ouro");
+            resposta1.setText(" ");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+            resposta3.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
+        if (num == 28) {
+            pergunta.setText("Inimigo, agora amigo");
+            resposta1.setText(" ");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+            resposta3.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
+        if (num == 29) {
+            pergunta.setText("Viajando por Jesus");
+            resposta1.setText(" ");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+            resposta3.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
+        if (num == 30) {
+            pergunta.setText("Uma promessa eterna");
+            resposta1.setText(" ");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+            resposta3.setText(" ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+        }
     }
 
     public void onPause(){
@@ -1049,7 +1306,7 @@ public class PerguntasActivity extends AppCompatActivity {
     //ABRIR PROXIMA PERGUNTA
     private void proximaPergunta(){
 
-        if (num == 10|| num == 20) {
+        if (num == 10|| num == 20 || num == 30) {
             finalJogo();
             alerta.dismiss();
         }else {
