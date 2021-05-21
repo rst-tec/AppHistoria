@@ -102,7 +102,7 @@
                 android:id="@+id/btPergunta"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="@drawable/bt_perguntas" />
+                android:background="@drawable/bt_jogo_perguntas" />
 
         </LinearLayout>
     </ScrollView>

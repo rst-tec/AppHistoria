@@ -120,9 +120,9 @@ public class FinalJogoActivity extends AppCompatActivity {
         //BOTÃO PARA JOGAR NOVAMENTE
         btJogarNovamente = findViewById(R.id.btJogarNovamente);
         if (num == 30) {
-            btJogarNovamente.setBackgroundResource(R.drawable.bt_voltar);
+            btJogarNovamente.setBackgroundResource(R.drawable.bt_jogo_voltar);
         }else{
-            btJogarNovamente.setBackgroundResource(R.drawable.jogar_novamente);
+            btJogarNovamente.setBackgroundResource(R.drawable.bt_jogo_novamente);
         }
 
         btJogarNovamente.setOnClickListener(new View.OnClickListener() {
