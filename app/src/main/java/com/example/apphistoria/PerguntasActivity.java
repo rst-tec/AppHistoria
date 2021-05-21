@@ -945,7 +945,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
             resposta3.setText(" ");
-            resposta2.setOnClickListener(new View.OnClickListener() {
+            resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
@@ -970,7 +970,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
             resposta3.setText(" ");
-            resposta2.setOnClickListener(new View.OnClickListener() {
+            resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
@@ -995,7 +995,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
             resposta3.setText(" ");
-            resposta2.setOnClickListener(new View.OnClickListener() {
+            resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
@@ -1020,7 +1020,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
             resposta3.setText(" ");
-            resposta2.setOnClickListener(new View.OnClickListener() {
+            resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
@@ -1045,7 +1045,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
             resposta3.setText(" ");
-            resposta2.setOnClickListener(new View.OnClickListener() {
+            resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
@@ -1070,7 +1070,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
             resposta3.setText(" ");
-            resposta2.setOnClickListener(new View.OnClickListener() {
+            resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
@@ -1095,7 +1095,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
             resposta3.setText(" ");
-            resposta2.setOnClickListener(new View.OnClickListener() {
+            resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
@@ -1120,7 +1120,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
             resposta3.setText(" ");
-            resposta2.setOnClickListener(new View.OnClickListener() {
+            resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
@@ -1145,7 +1145,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
             resposta3.setText(" ");
-            resposta2.setOnClickListener(new View.OnClickListener() {
+            resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
@@ -1170,7 +1170,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
             resposta3.setText(" ");
-            resposta2.setOnClickListener(new View.OnClickListener() {
+            resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();

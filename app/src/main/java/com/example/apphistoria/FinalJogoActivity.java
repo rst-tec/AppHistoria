@@ -60,14 +60,43 @@ public class FinalJogoActivity extends AppCompatActivity {
         idPontos.setText("Total: " + pontos + " Pontos" );
 
         //MONTA A TELA DE RESULTADO COM AS ESTRELAS
-        if(pontos <=3) {
-            idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
+        //FASE 1
+        if(num == 10) {
+            if (pontos <= 3) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
+            }
+            if (pontos > 4 && pontos <= 6) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
+            }
+            if (pontos >= 7) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
+            }
         }
-        if(pontos >4 && pontos <=6) {
-            idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
+
+        //FASE 2
+        if(num == 20) {
+            if (pontos <= 13) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
+            }
+            if (pontos > 14 && pontos <= 16) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
+            }
+            if (pontos >= 17) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
+            }
         }
-        if(pontos >= 7){
-            idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
+
+        //FASE 3
+        if(num == 30) {
+            if (pontos <= 23) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
+            }
+            if (pontos > 24 && pontos <= 26) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
+            }
+            if (pontos >= 27) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
+            }
         }
 
         //INICIA A MUSICA DE FINAL DE JOGO
@@ -90,11 +119,10 @@ public class FinalJogoActivity extends AppCompatActivity {
 
         //BOTÃO PARA JOGAR NOVAMENTE
         btJogarNovamente = findViewById(R.id.btJogarNovamente);
-        btJogarNovamente.setBackgroundResource(R.drawable.jogar_novamente);
-
-        //MUDANDO O BACKGROUD DO BOTÃO QUANDO É A ULTIMA PERGUNTA DO JOGO
         if (num == 30) {
             btJogarNovamente.setBackgroundResource(R.drawable.bt_voltar);
+        }else{
+            btJogarNovamente.setBackgroundResource(R.drawable.jogar_novamente);
         }
 
         btJogarNovamente.setOnClickListener(new View.OnClickListener() {
