@@ -19,6 +19,7 @@ as principais histórias bíblicas.
 - Contém um **ScrollView** e um banner de anuncio no rodapé.
 - Cada história esta dentro de um botão que ao acionado estancia uma **Intent** e envia uma (chave e valor) via **putExtra** para a tela de história selecionada, a tela de história recebe esse valor atraves de um **Bundle** **getExtras** e start a história.
 ![mao_03](https://user-images.githubusercontent.com/61321277/119016279-213c2e80-b970-11eb-82e7-a16be75ec4d4.jpg)
+![mao_03-B](https://user-images.githubusercontent.com/61321277/119192483-9da93d00-ba56-11eb-8a7e-74eae2411e73.jpg)
 
 - **Tela de histórias:** 
 - Foi desenvlvida com um Banner de anuncio no topo.
