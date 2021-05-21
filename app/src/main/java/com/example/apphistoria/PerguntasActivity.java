@@ -1333,7 +1333,7 @@ public class PerguntasActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), FinalJogoActivity.class);
         Bundle parametros = new Bundle();
 
-        parametros.putInt("pergunta", num +1); //Passa o numero da proxima pergunta
+        parametros.putInt("pergunta", num);
         parametros.putInt("pontos", pontos);
         parametros.putInt("acertos", acertos);
         parametros.putInt("erros", erros);

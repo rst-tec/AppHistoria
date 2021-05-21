@@ -59,6 +59,7 @@ public class FinalJogoActivity extends AppCompatActivity {
         idErros.setText("Errou: " + erros);
         idPontos.setText("Total: " + pontos + " Pontos" );
 
+        //MONTA A TELA DE RESULTADO COM AS ESTRELAS
         if(pontos <=3) {
             idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
         }
@@ -91,7 +92,8 @@ public class FinalJogoActivity extends AppCompatActivity {
         btJogarNovamente = findViewById(R.id.btJogarNovamente);
         btJogarNovamente.setBackgroundResource(R.drawable.jogar_novamente);
 
-        if (num == 21) {
+        //MUDANDO O BACKGROUD DO BOTÃO QUANDO É A ULTIMA PERGUNTA DO JOGO
+        if (num == 30) {
             btJogarNovamente.setBackgroundResource(R.drawable.bt_voltar);
         }
 
@@ -102,7 +104,7 @@ public class FinalJogoActivity extends AppCompatActivity {
                 somFinal.stop();//FINALIZA MUSICA FINAL DE JOGO
 
                 //PARA FINALIZAR O JOGO
-                if (num == 21) {
+                if (num == 30) {
                     telaInicial();
                 }else {
 
@@ -110,7 +112,7 @@ public class FinalJogoActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
                     Bundle parametros = new Bundle();
 
-                    parametros.putInt("pergunta", num); //Passa o numero da proxima pergunta
+                    parametros.putInt("pergunta", num+1); //Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
                     parametros.putInt("acertos", acertos);
                     parametros.putInt("erros", erros);
