@@ -65,7 +65,7 @@ public class FinalJogoActivity extends AppCompatActivity {
             if (pontos <= 3) {
                 idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
             }
-            if (pontos > 4 && pontos <= 6) {
+            if (pontos >= 4 && pontos <= 6) {
                 idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
             }
             if (pontos >= 7) {
@@ -78,7 +78,7 @@ public class FinalJogoActivity extends AppCompatActivity {
             if (pontos <= 13) {
                 idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
             }
-            if (pontos > 14 && pontos <= 16) {
+            if (pontos >= 14 && pontos <= 16) {
                 idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
             }
             if (pontos >= 17) {
@@ -91,7 +91,7 @@ public class FinalJogoActivity extends AppCompatActivity {
             if (pontos <= 23) {
                 idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
             }
-            if (pontos > 24 && pontos <= 26) {
+            if (pontos >= 24 && pontos <= 26) {
                 idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
             }
             if (pontos >= 27) {
