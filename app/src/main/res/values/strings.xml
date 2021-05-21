@@ -57,7 +57,50 @@
     <string name="BotaoReiniciar">Botao Reiniciar</string>
 
     <string name="BotaoHistoria017">Historia 017</string>
-    <string name="TextoHistoria017">O Bebê Jesus</string>   
+    <string name="TextoHistoria017">O Bebê Jesus</string>
+
+    <string name="BotaoHistoria018">Historia 018</string>
+    <string name="TextoHistoria018">O batismo</string>
+
+    <string name="BotaoHistoria019">Historia 019</string>
+    <string name="TextoHistoria019">O furo no teto</string>
+
+    <string name="BotaoHistoria020">Historia 020</string>
+    <string name="TextoHistoria020">Hora de levantar</string>
+
+    <string name="BotaoHistoria021">Historia 021</string>
+    <string name="TextoHistoria021">O piquenique</string>
+
+    <string name="BotaoHistoria022">Historia 022</string>
+    <string name="TextoHistoria022">De volta ao lar</string>
+
+    <string name="BotaoHistoria023">Historia 023</string>
+    <string name="TextoHistoria023">Hora do jantar</string>
+
+    <string name="BotaoHistoria024">Historia 024</string>
+    <string name="TextoHistoria024">A crucificação</string>
+
+    <string name="BotaoHistoria025">Historia 025</string>
+    <string name="TextoHistoria025">A ressureição</string>
+
+    <string name="BotaoHistoria026">Historia 026</string>
+    <string name="TextoHistoria026">Nas nuvens</string>
+
+    <string name="BotaoHistoria027">Historia 027</string>
+    <string name="TextoHistoria027">Nem prata nem ouro</string>
+
+    <string name="BotaoHistoria028">Historia 028</string>
+    <string name="TextoHistoria028">Inimigo, agora amigo</string>
+
+    <string name="BotaoHistoria029">Historia 029</string>
+    <string name="TextoHistoria029">Viajando por Jesus</string>
+
+    <string name="BotaoHistoria030">Historia 030</string>
+    <string name="TextoHistoria030">Uma promessa eterna</string>
+
+
+
+
 
 </resources>
 
