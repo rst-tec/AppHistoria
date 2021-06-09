@@ -59,14 +59,44 @@ public class FinalJogoActivity extends AppCompatActivity {
         idErros.setText("Errou: " + erros);
         idPontos.setText("Total: " + pontos + " Pontos" );
 
-        if(pontos <=3) {
-            idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
+        //MONTA A TELA DE RESULTADO COM AS ESTRELAS
+        //FASE 1
+        if(num == 10) {
+            if (pontos <= 3) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
+            }
+            if (pontos >= 4 && pontos <= 6) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
+            }
+            if (pontos >= 7) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
+            }
         }
-        if(pontos >4 && pontos <=6) {
-            idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
+
+        //FASE 2
+        if(num == 20) {
+            if (pontos <= 13) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
+            }
+            if (pontos >= 14 && pontos <= 16) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
+            }
+            if (pontos >= 17) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
+            }
         }
-        if(pontos >= 7){
-            idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
+
+        //FASE 3
+        if(num == 30) {
+            if (pontos <= 23) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
+            }
+            if (pontos >= 24 && pontos <= 26) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
+            }
+            if (pontos >= 27) {
+                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
+            }
         }
 
         //INICIA A MUSICA DE FINAL DE JOGO
@@ -89,10 +119,10 @@ public class FinalJogoActivity extends AppCompatActivity {
 
         //BOTÃO PARA JOGAR NOVAMENTE
         btJogarNovamente = findViewById(R.id.btJogarNovamente);
-        btJogarNovamente.setBackgroundResource(R.drawable.jogar_novamente);
-
-        if (num == 21) {
-            btJogarNovamente.setBackgroundResource(R.drawable.bt_voltar);
+        if (num == 30) {
+            btJogarNovamente.setBackgroundResource(R.drawable.bt_jogo_voltar);
+        }else{
+            btJogarNovamente.setBackgroundResource(R.drawable.bt_jogo_novamente);
         }
 
         btJogarNovamente.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +132,7 @@ public class FinalJogoActivity extends AppCompatActivity {
                 somFinal.stop();//FINALIZA MUSICA FINAL DE JOGO
 
                 //PARA FINALIZAR O JOGO
-                if (num == 21) {
+                if (num == 30) {
                     telaInicial();
                 }else {
 
@@ -110,7 +140,7 @@ public class FinalJogoActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
                     Bundle parametros = new Bundle();
 
-                    parametros.putInt("pergunta", num); //Passa o numero da proxima pergunta
+                    parametros.putInt("pergunta", num+1); //Passa o numero da proxima pergunta
                     parametros.putInt("pontos", pontos);
                     parametros.putInt("acertos", acertos);
                     parametros.putInt("erros", erros);
