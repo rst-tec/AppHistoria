@@ -126,7 +126,7 @@ public class Historia02Activity extends AppCompatActivity {
             public void onClick(View v) {
                 mediaPlayer.stop();
                 musicaFundo.stop();
-                finish();
+                //finish();
 
                 Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
                 Bundle parametros = new Bundle();
