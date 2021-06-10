@@ -90,8 +90,8 @@ public class PerguntasActivity extends AppCompatActivity {
             }
         });
 
-        //CHAVE 999 PERGUNTA ABRIU PELA TELA DE HISTORIA
-        if (chave == 999){
+        //CHAVE 111 PERGUNTA ABRIU PELA TELA DE HISTORIA 01
+        if (chave == 111){
             idStatus.setText(" ");
             idNivel.setText(" ");
 
@@ -101,8 +101,27 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     finish();
-                    //Intent intent = new Intent(getApplicationContext(), Lista01Activity.class);
-                    //startActivity(intent);
+                    Intent intent = new Intent(getApplicationContext(), Historia01Activity.class);
+                    intent.putExtra("historia", num); //PASSANDO VALOR PARA O BUNDLE
+                    startActivity(intent);
+                }
+            });
+        }
+
+        //CHAVE 222 PERGUNTA ABRIU PELA TELA DE HISTORIA 02
+        if (chave == 222){
+            idStatus.setText(" ");
+            idNivel.setText(" ");
+
+            //BOTÃO PARA VOLTAR PARA A TELA INICIAL
+            btFechar = findViewById(R.id.btFechar);
+            btFechar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                    Intent intent = new Intent(getApplicationContext(), Historia02Activity.class);
+                    intent.putExtra("historia", num); //PASSANDO VALOR PARA O BUNDLE
+                    startActivity(intent);
                 }
             });
         }
@@ -1232,8 +1251,9 @@ public class PerguntasActivity extends AppCompatActivity {
                     alerta.dismiss();
                 }
 
-                //CHAVE 999 PERGUNTA ABRIU DENTRO DA HISTORIA NÃO VAI PARA PROXIMA PERGUNTA
-                if (chave != 999) {
+                if (chave == 111 || chave == 222) {
+                    //CHAVE 111 OU 222 PERGUNTA VEIO DA HISTORIA NÃO VAI PARA PROXIMA PERGUNTA
+                }else {
                     proximaPergunta();//ABRIR PROXIMA PERGUNTA
                 }
             }

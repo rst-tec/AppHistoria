@@ -126,13 +126,13 @@ public class Historia02Activity extends AppCompatActivity {
             public void onClick(View v) {
                 mediaPlayer.stop();
                 musicaFundo.stop();
-                //finish();
+                finish();
 
                 Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
                 Bundle parametros = new Bundle();
 
                 parametros.putInt("pergunta", num); //Passa o numero da pergunta
-                parametros.putInt("chave", 999);
+                parametros.putInt("chave", 222);
                 intent.putExtras(parametros);
                 startActivity(intent);
             }
