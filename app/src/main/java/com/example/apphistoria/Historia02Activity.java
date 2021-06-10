@@ -254,10 +254,15 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia018);
             titulo.setText(R.string.TextoHistoria018);
-            historia.setText(R.string.TextoHistoria018);
+            historia.setText("Antes de Deus enviar O Salvador, disse o profeta Malaquias, um mensageiro virá para preparar o caminho para Ele. Então, veio João antes de Jesus, pregando às margens do rio Jordão.\n\n" +
+                    "Preparem o caminho do Senhor! João disse. Deus está enviando alguém muito especial para o Seu povo. Mudem seus caminhos. Arrependam-se das coisas más que vocês têm feito. Sejam batizados.\n\n" +
+                    "E foi isso mesmo que as pessoas fizeram! Você é o prometido? eles perguntaram. Não, disse João. Eu não sou digno nem de carregar suas sandálias. Ele vai fazer coisas incríveis. Vocês vão ver!\n\n" +                    "Jesus veio até João para ser batizado. Quando João viu Jesus, ele disse: Eis o Cordeiro de Deus que tira o pecado do mundo!\n" +
+                    "Eu quero que você me batize, disse Jesus. Não, respondeu João. Eu é que preciso ser batizado por Você! Confie em mim, disse Jesus. Esta é a coisa certa a fazer.\n\n" +
+                    "Assim, João batizou Jesus. O Espírito de Deus desceu sobre Jesus como uma pomba. Este é o Meu Filho, Deus disse. Eu o amo. Ele me agrada muito!\n\n " +
+                    "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia018);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -266,12 +271,12 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia018);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
                         musicaFundo.stop();
-                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
                         btMusica.setBackgroundResource(R.drawable.musica_off);
                     }
                 }

@@ -49,13 +49,13 @@ public class PerguntasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perguntas);
 
-        idStatus = findViewById(R.id.idStatus);
-        idNivel = findViewById(R.id.idNivel);
-        pergunta = findViewById(R.id.idPergunta);
-        resposta1 = findViewById(R.id.idResposta1);
-        resposta2 = findViewById(R.id.idResposta2);
-        resposta3 = findViewById(R.id.idResposta3);
-        btLeitor = findViewById(R.id.btLeitor);
+        idStatus    = findViewById(R.id.idStatus);
+        idNivel     = findViewById(R.id.idNivel);
+        pergunta    = findViewById(R.id.idPergunta);
+        resposta1   = findViewById(R.id.idResposta1);
+        resposta2   = findViewById(R.id.idResposta2);
+        resposta3   = findViewById(R.id.idResposta3);
+        btLeitor    = findViewById(R.id.btLeitor);
 
         //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
         Bundle dados = getIntent().getExtras();
@@ -826,9 +826,9 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 18) {
 
-            pergunta.setText("Como era o nome do esposo de Maria, mãe de Jesus?");
+            pergunta.setText("Quem batizou Jesus?");
 
-            resposta1.setText("Tiago");
+            resposta1.setText("Pedro");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -836,19 +836,19 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText("Simão");
+            resposta2.setText("João");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaErrada();
+                    respostaCorreta();
                 }
             });
 
-            resposta3.setText("José");
+            resposta3.setText("Tiago");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaCorreta();
+                    respostaErrada();
                 }
             });
 
@@ -857,8 +857,8 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     btLeitor.setBackgroundResource(R.drawable.musica_on);
-                    String textoLeitura ="Como era o nome do esposo de Maria, mãe de Jesus? " +
-                            "Tiago, Simão, ou José.";
+                    String textoLeitura ="Quem batizou Jesus? " +
+                            "Pedro, João, ou Tiago.";
                     leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
