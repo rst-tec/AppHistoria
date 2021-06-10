@@ -866,9 +866,9 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 19) {
 
-            pergunta.setText("Qual animal tentou Eva no Jardim do Éden?");
+            pergunta.setText("Alguns homens levaram seu amigo para ser curado por Jesus, por que ele não podia?");
 
-            resposta1.setText("Leão");
+            resposta1.setText("Falar");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -876,19 +876,19 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText("Serpente");
+            resposta2.setText("Enxergar");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaCorreta();
+                    respostaErrada();
                 }
             });
 
-            resposta3.setText("Lagarto");
+            resposta3.setText("Andar");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaErrada();
+                    respostaCorreta();
                 }
             });
 
@@ -897,8 +897,8 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     btLeitor.setBackgroundResource(R.drawable.musica_on);
-                    String textoLeitura ="Qual animal tentou Eva no Jardim do Éden? " +
-                            "Leão, Serpente, ou Lagarto.";
+                    String textoLeitura ="Alguns homens levaram seu amigo para ser curado por Jesus, por que ele não podia? " +
+                            "Falar, Enxergar, ou Andar.";
                     leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });

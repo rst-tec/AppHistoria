@@ -292,10 +292,17 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia019);
             titulo.setText(R.string.TextoHistoria019);
-            historia.setText(R.string.TextoHistoria019);
+            historia.setText("Cheia! A casa estava cheia de gente! Jesus estava na casa ensinando e curando, e todos queriam vê-lo.\n\n" +
+                    "Alguns homens tinham um amigo que não andava. Eles acreditavam que Jesus poderia curá-lo, então o carregaram até aquela casa em uma esteira.\n\n" +
+                    "Eles não conseguiam entrar, pois a casa estava muito cheia. Então, eles subiram as escadas até o teto e começaram a abrir um furo!\n\n" +
+                    "Todos na casa olharam para cima admirados! Os homens baixaram seu amigo pela abertura, até o meio da multidão, bem na frente de Jesus.\n\n" +
+                    "Eles achavam que Jesus ia curar seu amigo. Ao invés disso, Jesus lhe disse, \"Seus pecados estão perdoados.\" Alguns líderes religiosos ficaram muito aborrecidos. \"Somente Deus pode perdoar os pecados,\" resmungaram eles.\n\n" +
+                    "\"O que é mais fácil?\", perguntou Jesus. \"Perdoar os pecados ou fazer este homem andar? Para mostrar a vocês que eu tenho autoridade de Deus para perdoar os pecados, vou curá-lo também\".\n\n" +
+                    "\"Levante-se, pegue sua esteira e vá para casa\", disse Jesus ao homem. E foi o que ele fez! Seus amigos e todas as outras pessoas ficaram muito alegres. Então a casa ficou cheia... cheia de louvor.\n\n" +
+                    "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia019);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -304,12 +311,12 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia019);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
                         musicaFundo.stop();
-                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
                         btMusica.setBackgroundResource(R.drawable.musica_off);
                     }
                 }
