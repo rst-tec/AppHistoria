@@ -1269,7 +1269,7 @@ public class PerguntasActivity extends AppCompatActivity {
         handler.postDelayed(runnable, 800);
     }
 
-    //ALERTA DE RESOSTA ERRADA
+    //ALERTA DE RESPOSTA ERRADA
     private void respostaErrada() {
         somResposta = MediaPlayer.create(getApplicationContext(), R.raw.som_errou);
         if (!somResposta.isPlaying()) {
