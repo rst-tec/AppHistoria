@@ -1019,7 +1019,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
         if (num == 23) {
-            pergunta.setText("Jesus disse para seus discípulos lembrarem Dele ao comerem qual alimento?");
+            pergunta.setText("Jesus disse para seus discípulos, lembrarem Dele ao comerem qual alimento?");
             resposta1.setText("Salada");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -1048,7 +1048,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     btLeitor.setBackgroundResource(R.drawable.musica_on);
-                    String textoLeitura ="Jesus disse para seus discípulos lembrarem Dele ao comerem qual alimento?" +
+                    String textoLeitura ="Jesus disse para seus discípulos, lembrarem Dele ao comerem qual alimento?" +
                             "Salada, Pão, ou Carne.";
                     leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
