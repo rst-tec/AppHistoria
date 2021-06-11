@@ -983,27 +983,38 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
         if (num == 22) {
-            pergunta.setText("De volta ao lar");
-            resposta1.setText(" ");
+            pergunta.setText("Quando o filho mais novo voltou para casa, o que o seu pai lhe deu?");
+            resposta1.setText("Brinquedos e presentes");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaCorreta();
+                    respostaErrada();
                 }
             });
 
-            resposta2.setText(" ");
+            resposta2.setText("Uma bicicleta");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
-            resposta3.setText(" ");
+            resposta3.setText("Roupas nova e um anel");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaErrada();
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quando o filho mais novo voltou para casa, o que o seu pai lhe deu?" +
+                            "Brinquedos e presentes, Uma bicicleta, ou Roupas nova e um anel.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }

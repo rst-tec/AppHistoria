@@ -410,10 +410,18 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia022);
             titulo.setText(R.string.TextoHistoria022);
-            historia.setText(R.string.TextoHistoria022);
+            historia.setText("\"Por que Jesus passa tempo com pessoas que fazem coisas ruins?\" Os líderes religiosos se perguntavam. Então Jesus contou uma história sobre o amor de Deus. Aconteceu assim...\n\n" +
+                    "... um homem tinha dois filhos. O filho mais novo pediu a parte da herança que receberia quando o pai morresse. De coração partido, o pai deu a ele a metade de seus bens.\n\n" +
+                    "O filho mudou-se para um país distante. Ele gastou todo o dinheiro, e teve que trabalhar alimentando porcos. Ele passava tanta fome que desejava comer a comida dos porcos.\n\n" +
+                    "\"Os Servos do meu pai vivem melhor do que isso\", pensou ele. \"Vou voltar para casa e confessar que pequei contra ele e Deus. Talvez ele me aceite como um de seus servos. \"\n\n" +
+                    "O filho voltou para casa. Ele ainda estava longe quando seu pai o avistou, correu até ele e o abraçou. \"Eu não sou digno de ser seu filho\", disse o rapaz ao seu pai.\n\n" +
+                    "\"Tragam roupas novas para meu filho!\" O pai disse aos empregados. \"Coloquem um anel em seu dedo. Preparem o bezerro mais gordo. Meu filho estava perdido, mas foi encontrado!\"\n\n" +
+                    "O filho mais velho ficou com raiva quando soube da festa. \"Não é justo\", ele reclamou. \"Sou fiel trabalhando aqui e não ganho nada. Ele desperdiça o dinheiro e ainda ganha uma festa! \"\n\n" +
+                    "\"Tudo o que é meu é seu\", respondeu o pai. \"Seu irmão estava morto, mas agora está vivo! Ele estava perdido, mas foi achado! O que mais podemos fazer, além de comemorar? \"\n\n" +
+                    "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia022);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -422,12 +430,12 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia022);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
                         musicaFundo.stop();
-                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
                         btMusica.setBackgroundResource(R.drawable.musica_off);
                     }
                 }
