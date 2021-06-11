@@ -451,9 +451,16 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia023);
             titulo.setText(R.string.TextoHistoria023);
-            historia.setText(R.string.TextoHistoria023);
+            historia.setText("Jesus curou pessoas doentes e alimentou pessoas famintas. Ele amava os rejeitados e ensinava a todos sobre o Reino de Deus. Mas alguns líderes religiosos não gostavam do que Jesus dizia e tinham inveja Dele.\n\n" +
+                    "Eles odiavam tanto a Jesus, que decidiram que Ele deveria morrer. Eles deram trinta moedas de prata para que Judas, um dos discípulos de Jesus, o traísse e entregasse.\n\n" +
+                    "Jesus e Seus discípulos celebravam a festa da Páscoa. Enquanto comiam, Jesus disse com tristeza, \"Um de vocês vai Me trair.\" Surpresos, cada um deles respondeu, \"Eu não, Senhor!\"\n\n" +
+                    "\"É verdade,\" disse Jesus. \"Um de vocês, alguém que está comendo aqui vai Me trair.\" \"Eu não, Senhor,\" disse Judas. \"Você sabe que é,\" Jesus respondeu. \"Vá! Faça isso depressa!\". Então Judas saiu.\n\n" +
+                    "Jesus tomou o pão e agradeceu a Deus. Ele o partiu, deu para Seus discípulos, e disse, \"Lembrem-se de Mim ao comerem. Este é o Meu corpo, entregue por vocês.\"\n\n" +
+                    "Então Jesus tomou um copo e agradeceu a Deus por ele. \"Bebam todos\" disse Ele. \"Este é o Meu sangue, derramado para que seus pecados sejam perdoados.\"\n\n" +
+                    "Quando terminaram de comer e beber, Jesus e Seus discípulos cantaram um hino. Depois foram ao Jardim do Getsêmani para orar.\n\n" +
+                    "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia023);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
 
             //BOTÃO PARA REINICIAR A LEITURA
@@ -463,7 +470,7 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia023);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
