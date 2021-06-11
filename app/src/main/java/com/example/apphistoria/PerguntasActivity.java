@@ -1056,7 +1056,7 @@ public class PerguntasActivity extends AppCompatActivity {
         }
         if (num == 24) {
             pergunta.setText("A crucificação");
-            resposta1.setText(" ");
+            resposta1.setText("Resposta certa");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1064,14 +1064,14 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText(" ");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
-            resposta3.setText(" ");
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1081,7 +1081,7 @@ public class PerguntasActivity extends AppCompatActivity {
         }
         if (num == 25) {
             pergunta.setText("A ressureição");
-            resposta1.setText(" ");
+            resposta1.setText("Resposta certa");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1089,14 +1089,15 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText(" ");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
-            resposta3.setText(" ");
+
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1106,7 +1107,7 @@ public class PerguntasActivity extends AppCompatActivity {
         }
         if (num == 26) {
             pergunta.setText("Nas nuvens");
-            resposta1.setText(" ");
+            resposta1.setText("Resposta certa");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1114,14 +1115,15 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText(" ");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
-            resposta3.setText(" ");
+
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1131,7 +1133,7 @@ public class PerguntasActivity extends AppCompatActivity {
         }
         if (num == 27) {
             pergunta.setText("Nem prata nem ouro");
-            resposta1.setText(" ");
+            resposta1.setText("Resposta certa");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1139,14 +1141,15 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText(" ");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
-            resposta3.setText(" ");
+
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1156,7 +1159,7 @@ public class PerguntasActivity extends AppCompatActivity {
         }
         if (num == 28) {
             pergunta.setText("Inimigo, agora amigo");
-            resposta1.setText(" ");
+            resposta1.setText("Resposta certa");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1164,14 +1167,15 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText(" ");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
-            resposta3.setText(" ");
+
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1181,7 +1185,7 @@ public class PerguntasActivity extends AppCompatActivity {
         }
         if (num == 29) {
             pergunta.setText("Viajando por Jesus");
-            resposta1.setText(" ");
+            resposta1.setText("Resposta certa");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1189,14 +1193,15 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText(" ");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
-            resposta3.setText(" ");
+
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1206,7 +1211,7 @@ public class PerguntasActivity extends AppCompatActivity {
         }
         if (num == 30) {
             pergunta.setText("Uma promessa eterna");
-            resposta1.setText(" ");
+            resposta1.setText("Resposta certa");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1214,14 +1219,15 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText(" ");
+            resposta2.setText("Resposta errada");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
-            resposta3.setText(" ");
+
+            resposta3.setText("Resposta errada");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
