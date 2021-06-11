@@ -332,9 +332,15 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia020);
             titulo.setText(R.string.TextoHistoria020);
-            historia.setText(R.string.TextoHistoria020);
+            historia.setText("Jairo, um líder em sua comunidade, se ajoelhou aos pés de Jesus. \"Minha filhinha está morrendo,\" exclamou ele. \"Se você colocar Suas mãos sobre ela, sei que ela viverá.\"\n\n" +
+                    "Jesus e Jairo estavam cercados por uma grande multidão. Alguns empregados de Jairo os encontraram ali. \"Sua filha já está morta,\" disseram eles. \"Não tenha medo,\" disse Jesus. \"Creia, e sua filha será curada.\"\n\n" +
+                    "Ao chegarem na casa de Jairo, encontraram pessoas chorando pela menina. \"Por que estão chorando?\" Jesus perguntou. \"A menina não está morta, mas apenas dormindo.\" As pessoas riram Dele.\n\n" +
+                    "Jesus e três de Seus discípulos, Pedro, Tiago e João, entraram na casa com Jairo e sua esposa. A menina estava deitada, exatamente como todos haviam dito.\n\n" +
+                    "Jesus pegou na mão dela. Então Ele falou, \"Levante-se, menina.\" E ela se levantou! Ela até andou pelo quarto!\n\n" +
+                    "Jairo e sua esposa ficaram maravilhados! Jesus pediu a eles que não contassem a ninguém o que Ele havia feito. \"Agora,\" disse Jesus, \"Acho que esta garotinha precisa comer alguma coisa!\"\n\n" +
+                    "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia020);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
 
             //BOTÃO PARA REINICIAR A LEITURA
@@ -344,7 +350,7 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia020);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
@@ -365,10 +371,16 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia021);
             titulo.setText(R.string.TextoHistoria021);
-            historia.setText(R.string.TextoHistoria021);
+            historia.setText("Jesus tinha acabado de ensinar. Todo mundo estava com fome. \"Mande que saiam para comprar comida\", disseram Seus discípulos. Mas Jesus queria demonstrar que eles podiam confiar em Deus.\n\n" +
+                    "\"Por que vocês mesmos não os alimentam?\", Jesus perguntou. \"Seria preciso o salário de um ano todo para comprar pão para tanta gente!\", disseram seus discípulos. \"Quanta comida vocês têm?\", perguntou Jesus.\n\n" +
+                    "\"Há um menino aqui\", disse André, \"que tem cinco pães e dois peixinhos\". Jesus sorriu. \"Perfeito. Diga ao povo para sentar na grama\".\n\n" +
+                    "Então, as pessoas se sentaram na encosta da colina. Jesus orou e agradeceu a Deus pelos pães e peixes. Em seguida, partiu-os em pedaços para os discípulos distribuírem.\n\n" +
+                    "Os discípulos de Jesus deram pão e peixe para toda aquela multidão. Havia cinco mil homens e também muitas mulheres e crianças. Todos comeram tanto quanto quiseram!\n\n" +
+                    "Depois disso, os discípulos recolheram o que sobrou. Eram doze cestos cheios, vindos de apenas cinco pães e dois peixes! Todos aprenderam que podiam confiar em Deus para cuidar deles.\n\n" +
+                    "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia021);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -377,12 +389,12 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia021);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
                         musicaFundo.stop();
-                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
                         btMusica.setBackgroundResource(R.drawable.musica_off);
                     }
                 }

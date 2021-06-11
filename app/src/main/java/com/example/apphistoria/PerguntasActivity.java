@@ -906,9 +906,9 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 20) {
 
-            pergunta.setText("Como chamava o jardim onde morou Adão e Eva?");
+            pergunta.setText("Qual era o nome do pai da menina que Jesus acordou?");
 
-            resposta1.setText("Jardim do éden");
+            resposta1.setText("Jairo");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -916,7 +916,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText("Jardim Magnólia");
+            resposta2.setText("Jeremias");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -924,7 +924,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3.setText("Jardim Guanabara");
+            resposta3.setText("João batista");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -937,8 +937,8 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     btLeitor.setBackgroundResource(R.drawable.musica_on);
-                    String textoLeitura ="Como chamava o jardim onde morou Adão e Eva? " +
-                            "Jardim do éden, Jardim Magnólia, ou Jardim Guanabara.";
+                    String textoLeitura ="Qual era o nome do pai da menina que Jesus acordou? " +
+                            "Jairo, Jeremias, ou João batista.";
                     leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
@@ -947,27 +947,38 @@ public class PerguntasActivity extends AppCompatActivity {
 //ADICIONAR AS PERGUNTAS CONFORME A HISTORIA
 
         if (num == 21) {
-            pergunta.setText("O piquenique");
-            resposta1.setText(" ");
+            pergunta.setText("O que o menino ofereceu para Jesus alimentar a multidão?");
+            resposta1.setText("Frutas");
             resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Pão e peixe");
+            resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaCorreta();
                 }
             });
-
-            resposta2.setText(" ");
-            resposta2.setOnClickListener(new View.OnClickListener() {
+            resposta3.setText("Arroz e feijão");
+            resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
-            resposta3.setText(" ");
-            resposta3.setOnClickListener(new View.OnClickListener() {
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
-                    respostaErrada();
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="O que o menino ofereceu para Jesus alimentar a multidão?" +
+                            "Frutas, Pão e peixe, ou Arroz e feijão.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
