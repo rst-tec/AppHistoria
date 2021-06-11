@@ -292,7 +292,7 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia019);
             titulo.setText(R.string.TextoHistoria019);
-            historia.setText("Cheia! A casa estava cheia de gente! Jesus estava na casa ensinando e curando, e todos queriam vê-lo.\n\n" +
+            historia.setText("A casa estava cheia de gente! Jesus estava na casa ensinando e curando, e todos queriam vê-lo.\n\n" +
                     "Alguns homens tinham um amigo que não andava. Eles acreditavam que Jesus poderia curá-lo, então o carregaram até aquela casa em uma esteira.\n\n" +
                     "Eles não conseguiam entrar, pois a casa estava muito cheia. Então, eles subiram as escadas até o teto e começaram a abrir um furo!\n\n" +
                     "Todos na casa olharam para cima admirados! Os homens baixaram seu amigo pela abertura, até o meio da multidão, bem na frente de Jesus.\n\n" +
