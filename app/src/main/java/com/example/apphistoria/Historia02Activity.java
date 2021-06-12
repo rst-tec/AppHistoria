@@ -491,10 +491,17 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia024);
             titulo.setText(R.string.TextoHistoria024);
-            historia.setText(R.string.TextoHistoria024);
+            historia.setText("Alguns líderes religiosos disseram ao governador Pilatos que Jesus era perigoso pois queria ser rei. Pilatos perguntou a Jesus: \"Isso é verdade?\", e Jesus respondeu: \"Eu sou rei, mas não deste mundo\".\n\n" +
+                    "\"Jesus é inocente\", disse Pilatos, \"Não há motivo para matá-lo. Eu o soltarei\". Mas a multidão começou a gritar: \"Mate-o!\"\n\n" +
+                    "Então, Pilatos mandou seus soldados baterem em Jesus. Eles enfiaram uma coroa de espinhos em sua cabeça e o fizeram carregar uma cruz de madeira morro acima.\n\n" +
+                    "No alto do monte os soldados romanos pregaram os pés e as mãos de Jesus na cruz. Eles fincaram a cruz no chão. Jesus foi crucificado entre dois criminosos.\n\n" +
+                    "Ao meio dia, o céu escureceu. Os amigos de Jesus choravam. Alguns líderes religiosos riam e zombavam dizendo, \"Você salvou outras pessoas. Por que não salva a si mesmo?\". \"Pai, perdoa-lhes\", disse Jesus.\n\n" +
+                    "Quando Jesus estava para morrer, ele fechou os olhos e disse, \"Está concluído.\" Ele havia completado a obra que veio realizar, por causa do seu grande amor.\n\n" +
+                    "Um dos discípulos de Jesus, chamado José, colocou o corpo de Jesus num túmulo novo e rolou uma grande pedra na entrada. Um longo e triste dia havia chegado ao fim.\n\n " +
+                    "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia024);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -503,12 +510,12 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia024);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
                         musicaFundo.stop();
-                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
                         btMusica.setBackgroundResource(R.drawable.musica_off);
                     }
                 }

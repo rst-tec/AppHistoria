@@ -1055,8 +1055,8 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
         if (num == 24) {
-            pergunta.setText("A crucificação");
-            resposta1.setText("Resposta certa");
+            pergunta.setText("Onde Jesus morreu?");
+            resposta1.setText("Na cruz");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1064,18 +1064,29 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText("Resposta errada");
+            resposta2.setText("Na guerra");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Em casa");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Onde Jesus morreu? " +
+                            "Na cruz, Na guerra, ou Em casa.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
