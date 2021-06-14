@@ -1179,8 +1179,8 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
         if (num == 28) {
-            pergunta.setText("Inimigo, agora amigo");
-            resposta1.setText("Resposta certa");
+            pergunta.setText("Jesus transformou Saulo, ele se tornou um líder na Igreja e seu nome foi mudado para?");
+            resposta1.setText("Paulo");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1188,7 +1188,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText("Resposta errada");
+            resposta2.setText("José");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1196,11 +1196,21 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Pedro");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
+                }
+            });
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Jesus transformou Saulo, ele se tornou um líder na Igreja e seu nome foi mudado para? " +
+                            "José, Pedro, ou Paulo.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
