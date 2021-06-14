@@ -609,7 +609,15 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia027);
             titulo.setText(R.string.TextoHistoria027);
-            historia.setText(R.string.TextoHistoria027);
+            historia.setText("Dois homens, vestidos de branco, apareceram. \"Jesus foi para o céu\", explicaram. \"Ele voltará da mesma forma que foi!\" Assim, os discípulos obedeceram a Jesus e foram para Jerusalém.\n\n" +
+                    "Pedro e João foram ao templo. Havia um homem ali, na Porta Formosa, que nunca havia andado antes. Ele mendigava, pedindo dinheiro às pessoas.\n\n" +
+                    "\"Vocês me dão um trocado?\", ele pediu a Pedro e João. Os dois discípulos olharam para o homem. Eles não tinham dinheiro, mas tinham algo muito melhor para oferecer a ele.\n\n" +
+                    "\"Olhe para nós!\" disse Pedro. O homem achou que lhe dariam dinheiro. \"Não tenho prata nem ouro\", disse Pedro, \"mas tenho outra coisa que lhe darei com alegria.\"\n\n" +
+                    "\"Em nome de Jesus Cristo de Nazaré\", disse Pedro, \"ande!\" Pedro segurou a mão do homem e seus pés e tornozelos se firmaram. O homem se levantou e começou a andar!\n\n" +
+                    "Ele acompanhou Pedro e João ao templo. Em pouco tempo, ele não estava apenas caminhando; ele pulava e louvava a Deus!\n\n" +
+                    "As pessoas o haviam visto na Porta. Elas sabiam que ele era paralítico de nascença. No entanto, ali estava ele, andando, pulando e agradecendo a Deus! Todos ficaram impressionados!\n\n" +
+                    "Pedro contou ao povo sobre Aquele cujo poder havia curado o homem. Ele falou de Jesus. Quando ele terminou de falar, muitos decidiram seguir a Jesus também!\n\n" +
+                    "FIM.\n");
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
