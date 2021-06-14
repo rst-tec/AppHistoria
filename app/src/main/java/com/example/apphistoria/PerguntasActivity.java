@@ -1179,16 +1179,16 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
         if (num == 28) {
-            pergunta.setText("Jesus transformou Saulo, ele se tornou um líder na Igreja e seu nome foi mudado para?");
-            resposta1.setText("Paulo");
+            pergunta.setText("Jesus transformou Saulo, ele se tornou um líder na Igreja e seu nome foi trocado para?");
+            resposta1.setText("José");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaCorreta();
+                    respostaErrada();
                 }
             });
 
-            resposta2.setText("José");
+            resposta2.setText("Pedro");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1196,11 +1196,11 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3.setText("Pedro");
+            resposta3.setText("Paulo");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaErrada();
+                    respostaCorreta();
                 }
             });
             //BOTÃO PARA LEITURA DA PERGUNTA
@@ -1208,35 +1208,46 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     btLeitor.setBackgroundResource(R.drawable.musica_on);
-                    String textoLeitura ="Jesus transformou Saulo, ele se tornou um líder na Igreja e seu nome foi mudado para? " +
+                    String textoLeitura ="Jesus transformou Saulo, ele se tornou um líder na Igreja e seu nome foi trocado para? " +
                             "José, Pedro, ou Paulo.";
                     leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
         if (num == 29) {
-            pergunta.setText("Viajando por Jesus");
-            resposta1.setText("Resposta certa");
+            pergunta.setText("Como Paulo fez suas viagens para levar a mensagem de Jesus?");
+            resposta1.setText("Cavalo");
             resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Navio");
+            resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaCorreta();
                 }
             });
 
-            resposta2.setText("Resposta errada");
-            resposta2.setOnClickListener(new View.OnClickListener() {
+            resposta3.setText("Andando");
+            resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
 
-            resposta3.setText("Resposta errada");
-            resposta3.setOnClickListener(new View.OnClickListener() {
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
-                    respostaErrada();
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Como Paulo fez suas viagens para levar a mensagem de Jesus? " +
+                            "Cavalo, Navio, ou Andando.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }

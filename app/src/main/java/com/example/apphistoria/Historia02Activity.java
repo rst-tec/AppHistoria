@@ -691,9 +691,17 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia029);
             titulo.setText(R.string.TextoHistoria029);
-            historia.setText(R.string.TextoHistoria029);
+            historia.setText("Paulo sabia que Deus o enviara para falar de Jesus aos gentios. Então ele fez três viagens pela Síria, Turquia e Grécia. Muitas pessoas creram em Jesus e começaram igrejas em toda a região.\n\n" +
+                    "Anos depois, Paulo voltou a Jerusalém. Os líderes religiosos daquele tempo o prenderam porque ele falava sobre Jesus. Uma vez que Paulo era cidadão romano, ele pediu para ser julgado em Roma.\n\n" +
+                    "Paulo foi enviado a Roma num barco. Seria uma longa e lenta viagem. \"Por que não esperamos em Creta, até a temporada de tempestades passar?\", sugeriu Paulo. Mas o capitão decidiu seguir viagem.\n\n" +
+                    "Veio uma grande tempestade; todos acharam que iam morrer. Um anjo disse a Paulo que todos se salvariam e que ele chegaria em Roma. Paulo contou isso aos outros.\n\n" +
+                    "Alguém avistou terra. Os marinheiros planejavam abandonar o navio e deixar os outros morrerem. Paulo os advertiu: \"Vocês só sobreviverão se todos ficarem juntos a ordo\". O barco bateu em uma ilha chamada Malta.\n\n" +
+                    "Os soldados tiveram medo de serem punidos se os prisioneiros escapassem. Então, eles decidiram matá-los. Mas o comandante gostava de Paulo, e ordenou que seus homens os deixassem viver.\n\n" +
+                    "Eles chegaram exaustos na praia. Assim, como Paulo havia dito, todos sobreviveram! O governante de Malta os recebeu. O pai dele estava doente. Quando Paulo orou por ele, Deus o curou.\n\n" +
+                    "Eles embarcaram em outro navio e foram para Roma.  Paulo ficou preso numa casa e, dali, escreveu cartas para as igrejas que havia iniciado. Algumas dessas cartas se tornaram parte da Bíblia.\n\n" +
+                    "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia029);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
 
             //BOTÃO PARA REINICIAR A LEITURA
@@ -703,7 +711,7 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia029);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
