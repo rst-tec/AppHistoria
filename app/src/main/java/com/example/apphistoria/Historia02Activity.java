@@ -619,8 +619,8 @@ public class Historia02Activity extends AppCompatActivity {
                     "Pedro contou ao povo sobre Aquele cujo poder havia curado o homem. Ele falou de Jesus. Quando ele terminou de falar, muitos decidiram seguir a Jesus também!\n\n" +
                     "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia027);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -629,12 +629,12 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia027);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
                         musicaFundo.stop();
-                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
                         btMusica.setBackgroundResource(R.drawable.musica_off);
                     }
                 }
