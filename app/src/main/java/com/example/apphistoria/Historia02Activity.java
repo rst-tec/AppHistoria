@@ -616,7 +616,7 @@ public class Historia02Activity extends AppCompatActivity {
                     "\"Em nome de Jesus Cristo de Nazaré\", disse Pedro, \"ande!\" Pedro segurou a mão do homem e seus pés e tornozelos se firmaram. O homem se levantou e começou a andar!\n\n" +
                     "Ele acompanhou Pedro e João ao templo. Em pouco tempo, ele não estava apenas caminhando; ele pulava e louvava a Deus!\n\n" +
                     "As pessoas o haviam visto na Porta. Elas sabiam que ele era paralítico de nascença. No entanto, ali estava ele, andando, pulando e agradecendo a Deus! Todos ficaram impressionados!\n\n" +
-                    "Pedro contou ao povo sobre Aquele cujo poder havia curado o homem. Ele falou de Jesus. Quando ele terminou de falar, muitos decidiram seguir a Jesus também!\n\n" +
+                    "Pedro contou ao povo sobre aquele cujo poder havia curado o homem. Ele falou de Jesus. Quando ele terminou de falar, muitos decidiram seguir a Jesus também!\n\n" +
                     "FIM.\n");
 
             mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia027);
@@ -650,10 +650,18 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia028);
             titulo.setText(R.string.TextoHistoria028);
-            historia.setText(R.string.TextoHistoria028);
+            historia.setText("Saulo era um homem religioso; um fariseu. Ele achava que qualquer um que acreditasse em Jesus estava espalhando uma mentira e deveria ser colocado na prisão, e até mesmo condenado à morte.\n\n" +
+                    "Saulo ia para Damasco para prender os seguidores de Jesus. De repente, uma luz brilhante o cercou. Ele caiu no chão. Uma voz lhe disse: \"Saulo, por que você é tão cruel comigo?\"\n\n" +
+                    "\"Quem és Tu, Senhor?\", Perguntou Saulo. A voz respondeu: \"Eu sou Jesus, a quem você está perseguindo. Vá para Damasco. Lá você será instruído sobre o que deve fazer.\"\n\n" +
+                    "Saulo levantou-se. Ele estava cego. Então, seus amigos o levaram para uma casa em Damasco. Saulo esperou lá por três dias. Ele não comeu e nem bebeu.\n\n" +
+                    "Enquanto isso, Jesus apareceu numa visão a Ananias, um de seus seguidores em Damasco. Jesus disse-lhe para ir visitar Saulo e orar para que ele pudesse enxergar novamente.\n\n" +
+                    "\"Mas Saulo está prendendo Seus seguidores\", disse Ananias, tremendo. \"Eu sei\", disse Jesus, \"mas eu escolhi Saulo para falar de mim no mundo inteiro\".\n\n" +
+                    "Ananias foi orar por Saulo. \"Jesus me enviou\", disse ele, \"para que você possa enxergar e ser cheio do Espírito Santo\". Saulo pôde ver de novo! Em seguida, ele foi batizado.\n\n" +
+                    "Jesus transformou Saulo. Ele deixou de ser o homem que perseguia os cristãos. Saulo se tornou um líder na Igreja e falava a todos sobre Jesus. Até seu nome foi mudado, de Saulo para Paulo.\n\n" +
+                    "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia028);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -662,12 +670,12 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia028);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
                         musicaFundo.stop();
-                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
                         btMusica.setBackgroundResource(R.drawable.musica_off);
                     }
                 }
