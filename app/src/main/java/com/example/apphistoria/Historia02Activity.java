@@ -571,9 +571,14 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia026);
             titulo.setText(R.string.TextoHistoria026);
-            historia.setText(R.string.TextoHistoria026);
+            historia.setText("Chegou a hora de Jesus voltar para o céu. Antes, Ele levou seus discípulos para uma montanha na Galiléia. \"Eis o que eu quero que vocês façam...\", disse Ele.\n\n" +
+                    "\"Esperem em Jerusalém até receberem o Espírito Santo que prometi. Em seguida, falem de mim para todos. Vão de Jerusalém para a Judéia, para Samaria e depois para o resto do mundo!\"\n\n" +
+                    "\"Façam muitos discípulos; Batizando-os em nome do Pai, do Filho e do Espírito Santo. Ensinem a eles tudo o que vocês aprenderam comigo. Sempre estarei com vocês\".\n\n" +
+                    "Depois de algum tempo ensinando essas coisas, Jesus voltou para o céu. Ele foi subindo, até desaparecer numa nuvem. Seus discípulos ficaram observando. Ficaram ali, olhando para o céu.\n\n" +
+                    "Dois homens, vestidos de branco, apareceram. \"Jesus foi para o céu\", explicaram. \"Ele voltará da mesma forma que foi!\" Assim, os discípulos obedeceram a Jesus e foram para Jerusalém.\n\n" +
+                    "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia026);
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
 
             //BOTÃO PARA REINICIAR A LEITURA
@@ -583,7 +588,7 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia026);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
