@@ -1091,16 +1091,16 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
         if (num == 25) {
-            pergunta.setText("A ressureição");
-            resposta1.setText("Resposta certa");
+            pergunta.setText("O que os anjos disseram, as mulheres que foram ao túmulo de Jesus?");
+            resposta1.setText("Voltem amanhã");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaCorreta();
+                    respostaErrada();
                 }
             });
 
-            resposta2.setText("Resposta errada");
+            resposta2.setText("Esse não é o túmulo");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1108,11 +1108,21 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Ele ressuscitou");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    respostaErrada();
+                    respostaCorreta();
+                }
+            });
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="O que os anjos disseram, as mulheres que foram ao túmulo de Jesus? " +
+                            "Voltem amanhã, Esse não é o túmulo, ou Ele ressuscitou.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }

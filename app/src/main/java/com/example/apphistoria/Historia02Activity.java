@@ -531,10 +531,17 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia025);
             titulo.setText(R.string.TextoHistoria025);
-            historia.setText(R.string.TextoHistoria025);
+            historia.setText("Domingo pela manhã, algumas mulheres foram ao túmulo para perfumar o corpo de Jesus. Elas sabiam que o túmulo estava fechado com uma grande pedra e estavam pensando como tirá-la.\n\n" +
+                    "Quando elas chegaram, a pedra já tinha sido tirada, o corpo de Jesus tinha desaparecido, e havia anjos no túmulo! \"Jesus está vivo! Ele ressuscitou!\" disseram os anjos. \"Vão contar aos discípulos Dele\".\n\n" +
+                    "As mulheres contaram aos discípulos. Pedro e João correram para o túmulo de Jesus, para ver se era isso mesmo. Só encontraram os panos com que Jesus fora enterrado e voltaram para casa confusos.\n\n" +
+                    "Mais tarde, os discípulos reuniram-se numa sala. Eles conversavam sobre o que estava acontecendo quando, de repente, Jesus apareceu. Eles ficaram apavorados. Pensaram que era um fantasma.\n\n" +
+                    "\"Não fiquem preocupados\", disse Jesus. \"Vejam minhas mãos e pés. Sou eu mesmo! Toquem em mim! Vocês não poderiam tocar se eu fosse um fantasma. Fantasmas não comem, mas eu estou com muita fome\".\n\n" +
+                    "Então Jesus comeu um pedaço de peixe, e depois começou a ensiná-los. \"As escrituras são claras\", disse ele. O Messias deveria sofrer e morrer, e depois, ressuscitar dos mortos\".\n\n" +
+                    "\"Agora anunciem ao mundo o que vocês viram. Que todos saibam que os seus pecados podem ser perdoados, se eles se voltarem para Deus! Isto é possível por causa do que eu fiz\".\n\n" +
+                    "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia025);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -543,12 +550,12 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia025);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
                         musicaFundo.stop();
-                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_app);
                         btMusica.setBackgroundResource(R.drawable.musica_off);
                     }
                 }
