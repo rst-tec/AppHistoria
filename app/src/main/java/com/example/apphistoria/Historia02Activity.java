@@ -732,10 +732,17 @@ public class Historia02Activity extends AppCompatActivity {
 
             foto.setImageResource(R.drawable.historia030);
             titulo.setText(R.string.TextoHistoria030);
-            historia.setText(R.string.TextoHistoria030);
+            historia.setText("João era discípulo de Jesus. Um dia, Jesus apareceu a ele em uma visão, brilhando como o sol. \"Não tenha medo\", disse Jesus. \"Eu morri. Agora eu vivo para sempre!\"\n\n" +
+                    "Então, João viu um novo céu e uma nova terra, a nova criação prometida por Deus. O primeiro céu e a primeira terra desapareceram e o mar sumiu!\n\n" +
+                    "Depois, João viu a Cidade Santa de Deus, a Nova Jerusalém. Ela descia do céu. Era linda, como uma noiva no dia do seu casamento, pronta para encontrar-se com seu esposo!\n\n" +
+                    "Então, João ouviu uma forte voz que vinha do trono de Deus dizendo, \"Agora a morada de Deus está entre o Seu povo e com eles Deus habitará\".\n\n" +
+                    "\"No novo Céu e na nova terra não haverá mais lágrimas, porque não haverá mais dor e ninguém morrerá. Estas coisas já passaram e se foram para sempre\".\n\n" +
+                    "Então, veio uma voz do trono e disse, \"Eu sou o Princípio e o Fim. Aquele que tem sede venha e eu lhe darei da fonte da água da vida\".\n\n" +
+                    "\"Meu novo mundo é para meus filhos, aqueles que são fiéis a mim. Estou fazendo novas todas as coisas. Isto é verdade. Você pode acreditar\".\n\n" +
+                    "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
-            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia030);
+            musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
 
             //BOTÃO PARA REINICIAR A LEITURA
             btReiniciar = findViewById(R.id.btReiniciar);
@@ -744,12 +751,12 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia001);
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia030);
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
                         musicaFundo.stop();
-                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
+                        musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_002);
                         btMusica.setBackgroundResource(R.drawable.musica_off);
                     }
                 }
