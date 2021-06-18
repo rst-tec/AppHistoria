@@ -1127,34 +1127,45 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
         if (num == 26) {
-            pergunta.setText("Nas nuvens");
-            resposta1.setText("Resposta certa");
+            pergunta.setText("O que Jesus pediu para seus discípulos fazerem?");
+            resposta1.setText("Dividirem a comida");
             resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Ensinar e batizar");
+            resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaCorreta();
                 }
             });
 
-            resposta2.setText("Resposta errada");
-            resposta2.setOnClickListener(new View.OnClickListener() {
+            resposta3.setText("Dividirem o dinheiro");
+            resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
                 }
             });
 
-            resposta3.setText("Resposta errada");
-            resposta3.setOnClickListener(new View.OnClickListener() {
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
-                    respostaErrada();
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="O que Jesus pediu para seus discípulos fazerem? " +
+                            "Dividirem a comida, Ensinar e batizar ou Dividirem o dinheiro.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
         if (num == 27) {
-            pergunta.setText("Nem prata nem ouro");
-            resposta1.setText("Resposta certa");
+            pergunta.setText("O que o homem queria de Pedro e João?");
+            resposta1.setText("Dinheiro");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1162,7 +1173,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText("Resposta errada");
+            resposta2.setText("Comida");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1170,11 +1181,22 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Oração");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="O que o homem queria de Pedro e João? " +
+                            "Dinheiro, Comida ou Oração.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
@@ -1252,8 +1274,8 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
         if (num == 30) {
-            pergunta.setText("Uma promessa eterna");
-            resposta1.setText("Resposta certa");
+            pergunta.setText("O que João viu na visão que Deus lhe deu?");
+            resposta1.setText("Novo céu e nova terra");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1261,7 +1283,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta2.setText("Resposta errada");
+            resposta2.setText("Uma nova arca");
             resposta2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1269,11 +1291,22 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
 
-            resposta3.setText("Resposta errada");
+            resposta3.setText("Um novo jardim");
             resposta3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="O que João viu na visão que Deus lhe deu? " +
+                            "Novo céu e nova terra, Uma nova arca ou Um novo jardim.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
         }
