@@ -11,6 +11,9 @@ public class FasesActivity extends AppCompatActivity {
     private Button btFase01;
     private Button btFase02;
     private Button btFase03;
+    private Button btFase04;
+    private Button btFase05;
+    private Button btFase06;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,9 @@ public class FasesActivity extends AppCompatActivity {
         btFase01 = findViewById(R.id.btFase01);
         btFase02 = findViewById(R.id.btFase02);
         btFase03 = findViewById(R.id.btFase03);
+        btFase04 = findViewById(R.id.btFase04);
+        btFase05 = findViewById(R.id.btFase05);
+        btFase06 = findViewById(R.id.btFase06);
 
         btFase01.setBackgroundResource(R.drawable.fundo_fases);
         btFase01.setText("Fase - 01");
@@ -53,5 +59,15 @@ public class FasesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        btFase04.setBackgroundResource(R.drawable.fundo_fases);
+        btFase04.setText("Fase - 04");
+
+        btFase05.setBackgroundResource(R.drawable.fundo_fases);
+        btFase05.setText("Fase - 05");
+
+        btFase06.setBackgroundResource(R.drawable.fundo_fases);
+        btFase06.setText("Fase - 06");
     }
 }
