@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class FasesActivity extends AppCompatActivity {
     private Button btFase01;
@@ -14,6 +15,9 @@ public class FasesActivity extends AppCompatActivity {
     private Button btFase04;
     private Button btFase05;
     private Button btFase06;
+    private TextView idFase1;
+
+    private int pontos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +31,17 @@ public class FasesActivity extends AppCompatActivity {
         btFase05 = findViewById(R.id.btFase05);
         btFase06 = findViewById(R.id.btFase06);
 
+        idFase1 = findViewById(R.id.idFase1);
+
+        //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
+        Bundle dados = getIntent().getExtras();
+        pontos  = dados.getInt("pontos");
+
+
         btFase01.setBackgroundResource(R.drawable.fundo_fases);
         btFase01.setText("Fase - 01");
+        idFase1.setText(" ");
+
         btFase01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,6 +76,14 @@ public class FasesActivity extends AppCompatActivity {
 
         btFase04.setBackgroundResource(R.drawable.fundo_fases);
         btFase04.setText("Fase - 04");
+        btFase04.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
+                startActivity(intent);
+            }
+        });
 
         btFase05.setBackgroundResource(R.drawable.fundo_fases);
         btFase05.setText("Fase - 05");

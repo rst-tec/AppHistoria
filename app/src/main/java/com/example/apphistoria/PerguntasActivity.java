@@ -28,9 +28,14 @@ public class PerguntasActivity extends AppCompatActivity {
     private int num;    // RECEBE O NUMERO DA PERGUNTA
     private int chave;  // RECEBE UM CODIGO QUE IDENTIFICA A PERGUNTA QUANDO ABERTO PELA TELA DA HISTORIA
 
-    private int pontos;
     private int acertos;
     private int erros;
+    private int pontos;
+    private int fase1;
+    private int fase2;
+    private int fase3;
+    private int fase4;
+
 
     private MediaPlayer somResposta; //Toca som de respota Correta ou Errada
 
@@ -66,17 +71,19 @@ public class PerguntasActivity extends AppCompatActivity {
         erros   = dados.getInt("erros");
 
         //EXIBIR NUMERAÇÃO DA PERGUNTA
-        idStatus.setText("Pergunta " + num + " de 10");
+        idStatus.setText("Pergunta 1 de 10");
         idNivel.setText("Fase - 01  ");
 
         if (num >= 11) {
-            idStatus.setText("Pergunta " + num + " de 20");
             idNivel.setText("Fase - 02  ");
         }
 
         if (num >= 21) {
-            idStatus.setText("Pergunta " + num + " de 30");
             idNivel.setText("Fase - 03  ");
+        }
+
+        if (num >= 31) {
+            idNivel.setText("Fase - 04  ");
         }
 
         //BOTÃO PARA VOLTAR PARA A TELA INICIAL
@@ -90,8 +97,8 @@ public class PerguntasActivity extends AppCompatActivity {
             }
         });
 
-        //CHAVE 111 PERGUNTA ABRIU PELA TELA DE HISTORIA 01
-        if (chave == 111){
+        //CHAVE 1 PERGUNTA ABRIU PELA TELA DE HISTORIA 01
+        if (chave == 1){
             idStatus.setText(" ");
             idNivel.setText(" ");
 
@@ -108,8 +115,8 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
-        //CHAVE 222 PERGUNTA ABRIU PELA TELA DE HISTORIA 02
-        if (chave == 222){
+        //CHAVE 2 PERGUNTA ABRIU PELA TELA DE HISTORIA 02
+        if (chave == 2){
             idStatus.setText(" ");
             idNivel.setText(" ");
 
@@ -1310,6 +1317,389 @@ public class PerguntasActivity extends AppCompatActivity {
                 }
             });
         }
+
+        if (num == 31) {
+            pergunta.setText("Qual o profeta que foi engolido por um grande peixe?");
+            resposta1.setText("João");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Jonas");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Isaías");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual o profeta que foi engolido por um grande peixe? " +
+                            "João, Jonas ou Isaías.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 32) {
+            pergunta.setText("Quem derrubou a muralha de Jericó?");
+            resposta1.setText("José");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Barnabé");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Josué");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quem derrubou a muralha de Jericó? " +
+                            "José, Barnabé ou Josué.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+        if (num == 33) {
+            pergunta.setText("Onde se encontra na Bíblia \" O Senhor é meu pastor, nada me faltará\"?");
+            resposta1.setText("Gênesis 1");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Salmos 23");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Salmos 90");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Onde se encontra na Bíblia \" O Senhor é meu pastor, nada me faltará\"? " +
+                            "Gênesis 1, Salmos 23 ou Salmos 90.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 34) {
+            pergunta.setText("Quantos discípulos Jesus tinha?");
+            resposta1.setText("3");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("10");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("12");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quantos discípulos Jesus tinha? " +
+                            "3, 10 ou 12.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 35) {
+            pergunta.setText("Qual destes nomes não era discípulo de Jesus?");
+            resposta1.setText("José");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("João");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Pedro");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual destes nomes não era discípulo de Jesus? " +
+                            "José, João ou Pedro.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 36) {
+            pergunta.setText("Por que Jonas foi engolido por um peixe?");
+            resposta1.setText("Por que ele era mau");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Por que ele desobedeceu ");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("O peixe estava com fome");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Por que Jonas foi engolido por um peixe? " +
+                            "Por que ele era mau, Por que ele desobedeceu ou O peixe estava com fome.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 37) {
+            pergunta.setText("Como é chamado na Bíblia o momento quando o mundo ficou coberto por água?");
+            resposta1.setText("Tempestade");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Enchente");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Dilúvio");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Como é chamado na Bíblia o momento quando o mundo ficou coberto por água? " +
+                            "Tempestade, Enchente ou Dilúvio.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 38) {
+            pergunta.setText("Qual era o nome da mãe de Jesus?");
+            resposta1.setText("Ana");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Rebeca");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Maria");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual era o nome da mãe de Jesus? " +
+                            "Ana, Rebeca ou Maria.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 39) {
+            pergunta.setText("Como se chamava o líder do Egito?");
+            resposta1.setText("Faraó");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("Rei");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Pastor");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Como se chamava o líder do Egito? " +
+                            "Faraó, Rei ou Pastor.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 40) {
+            pergunta.setText("Quantos mandamentos Deus deu a Moisés?");
+            resposta1.setText("20 mandamentos");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("10 mandamentos");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("7 mandamentos");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quantos mandamentos Deus deu a Moisés? " +
+                            "20 mandamentos, 10 mandamentos ou 7 mandamentos.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+
+
+
     }
 
     public void onPause(){
@@ -1365,8 +1755,8 @@ public class PerguntasActivity extends AppCompatActivity {
                     alerta.dismiss();
                 }
 
-                if (chave == 111 || chave == 222) {
-                    //CHAVE 111 OU 222 PERGUNTA VEIO DA HISTORIA NÃO VAI PARA PROXIMA PERGUNTA
+                if (chave == 1 || chave == 2) {
+                    //CHAVE 1 OU 2 PERGUNTA VEIO DA HISTORIA NÃO VAI PARA PROXIMA PERGUNTA
                 }else {
                     proximaPergunta();//ABRIR PROXIMA PERGUNTA
                 }
@@ -1440,7 +1830,8 @@ public class PerguntasActivity extends AppCompatActivity {
     //ABRIR PROXIMA PERGUNTA
     private void proximaPergunta(){
 
-        if (num == 10|| num == 20 || num == 30) {
+        if (num == 10 || num == 20 || num == 30 || num == 40) {
+            fase1 = pontos;
             finalJogo();
             alerta.dismiss();
         }else {

@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class FinalJogoActivity extends AppCompatActivity {
 
     private Button btFechar;
-    private Button btJogarNovamente;
+    //private Button btJogarNovamente;
     private ImageView idFundoResultado;
 
     //private TextView idAcertos;
@@ -51,52 +51,22 @@ public class FinalJogoActivity extends AppCompatActivity {
         Bundle dados = getIntent().getExtras();
         num = dados.getInt("pergunta");
 
-        pontos  = dados.getInt("pontos");
+        pontos = dados.getInt("pontos");
         acertos = dados.getInt("acertos");
-        erros   = dados.getInt("erros");
+        erros = dados.getInt("erros");
 
         //idAcertos.setText("Acertou: " + acertos );
         idErros.setText("Errou: " + erros);
-        idPontos.setText("Total: " + pontos + " Pontos" );
+        idPontos.setText("Total: " + pontos + " Pontos");
 
-        //MONTA A TELA DE RESULTADO COM AS ESTRELAS
-        //FASE 1
-        if(num == 10) {
-            if (pontos <= 3) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
-            }
-            if (pontos >= 4 && pontos <= 6) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
-            }
-            if (pontos >= 7) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
-            }
+        if (pontos <= 3) {
+            idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
         }
-
-        //FASE 2
-        if(num == 20) {
-            if (pontos <= 13) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
-            }
-            if (pontos >= 14 && pontos <= 16) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
-            }
-            if (pontos >= 17) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
-            }
+        if (pontos >= 4 && pontos <= 6) {
+            idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
         }
-
-        //FASE 3
-        if(num == 30) {
-            if (pontos <= 23) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
-            }
-            if (pontos >= 24 && pontos <= 26) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
-            }
-            if (pontos >= 27) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
-            }
+        if (pontos >= 7) {
+            idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
         }
 
         //INICIA A MUSICA DE FINAL DE JOGO
@@ -112,49 +82,13 @@ public class FinalJogoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 somFinal.stop();//FINALIZA MUSICA FINAL DE JOGO
                 finish();
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), FasesActivity.class);
+                Bundle parametros = new Bundle();
+                parametros.putInt("pontos", pontos);
+                intent.putExtras(parametros);
                 startActivity(intent);
             }
         });
-
-        //BOTÃO PARA JOGAR NOVAMENTE
-        btJogarNovamente = findViewById(R.id.btJogarNovamente);
-        if (num == 30) {
-            btJogarNovamente.setBackgroundResource(R.drawable.bt_jogo_voltar);
-        }else{
-            btJogarNovamente.setBackgroundResource(R.drawable.bt_jogo_novamente);
-        }
-
-        btJogarNovamente.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                somFinal.stop();//FINALIZA MUSICA FINAL DE JOGO
-
-                //PARA FINALIZAR O JOGO
-                if (num == 30) {
-                    telaInicial();
-                }else {
-
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                    Bundle parametros = new Bundle();
-
-                    parametros.putInt("pergunta", num+1); //Passa o numero da proxima pergunta
-                    parametros.putInt("pontos", pontos);
-                    parametros.putInt("acertos", acertos);
-                    parametros.putInt("erros", erros);
-
-                    intent.putExtras(parametros);
-                    startActivity(intent);
-                }
-            }
-        });
-    }
-    private void telaInicial(){
-        finish();
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
     }
 }
 

@@ -128,7 +128,7 @@ public class Historia01Activity extends AppCompatActivity {
                 Bundle parametros = new Bundle();
 
                 parametros.putInt("pergunta", num); //Passa o numero da pergunta
-                parametros.putInt("chave", 111);
+                parametros.putInt("chave", 1);
                 intent.putExtras(parametros);
                 startActivity(intent);
             }
