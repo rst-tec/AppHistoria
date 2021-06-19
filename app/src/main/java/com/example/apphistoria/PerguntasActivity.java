@@ -31,11 +31,6 @@ public class PerguntasActivity extends AppCompatActivity {
     private int acertos;
     private int erros;
     private int pontos;
-    private int fase1;
-    private int fase2;
-    private int fase3;
-    private int fase4;
-
 
     private MediaPlayer somResposta; //Toca som de respota Correta ou Errada
 
@@ -94,8 +89,8 @@ public class PerguntasActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
-                Intent intent = new Intent(getApplicationContext(), FasesActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(getApplicationContext(), FasesActivity.class);
+                //startActivity(intent);
             }
         });
 
@@ -104,7 +99,7 @@ public class PerguntasActivity extends AppCompatActivity {
             idStatus.setText(" ");
             idNivel.setText(" ");
 
-            //BOTÃO PARA VOLTAR PARA A TELA INICIAL
+            //BOTÃO PARA FECHAR
             btFechar = findViewById(R.id.btFechar);
             btFechar.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -1832,10 +1827,22 @@ public class PerguntasActivity extends AppCompatActivity {
     //ABRIR PROXIMA PERGUNTA
     private void proximaPergunta(){
 
-        if (num == 10 || num == 20 || num == 30 || num == 40) {
-            fase1 = pontos;
+        if (num == 10) {
             finalJogo();
             alerta.dismiss();
+
+        }else if (num == 20){
+            finalJogo();
+            alerta.dismiss();
+
+        }else if (num == 30){
+            finalJogo();
+            alerta.dismiss();
+
+        }else if (num == 40){
+            finalJogo();
+            alerta.dismiss();
+
         }else {
             finish();
             Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
@@ -1864,7 +1871,6 @@ public class PerguntasActivity extends AppCompatActivity {
         parametros.putInt("pontos", pontos);
         parametros.putInt("acertos", acertos);
         parametros.putInt("erros", erros);
-
         intent.putExtras(parametros);
         startActivity(intent);
 

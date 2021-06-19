@@ -21,7 +21,6 @@ public class FinalJogoActivity extends AppCompatActivity {
     private MediaPlayer somFinal; //Toca som de final de jogo
 
     private int num;
-
     private int pontos;
     private int acertos;
     private int erros;
@@ -40,7 +39,6 @@ public class FinalJogoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_jogo);
 
-        //idAcertos = findViewById(R.id.idAcertos);
         idErros = findViewById(R.id.idErros);
         idPontos = findViewById(R.id.idPontos);
         idFundoResultado = findViewById(R.id.idFundoResultado);
@@ -48,12 +46,10 @@ public class FinalJogoActivity extends AppCompatActivity {
         //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
         Bundle dados = getIntent().getExtras();
         num = dados.getInt("pergunta");
-
         pontos = dados.getInt("pontos");
         acertos = dados.getInt("acertos");
         erros = dados.getInt("erros");
 
-        //idAcertos.setText("Acertou: " + acertos );
         idErros.setText(erros + " Erros" );
         idPontos.setText(pontos + " Pontos");
 
