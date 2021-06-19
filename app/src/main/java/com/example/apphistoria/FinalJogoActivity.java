@@ -13,10 +13,8 @@ import android.widget.TextView;
 public class FinalJogoActivity extends AppCompatActivity {
 
     private Button btFechar;
-    //private Button btJogarNovamente;
     private ImageView idFundoResultado;
 
-    //private TextView idAcertos;
     private TextView idErros;
     private TextView idPontos;
 
