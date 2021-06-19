@@ -25,8 +25,8 @@ public class FasesActivity extends AppCompatActivity {
     private TextView idFase5;
     private TextView idFase6;
 
-    private int fase;    // RECEBE O NUMERO DA PERGUNTA
-    private int num;    // RECEBE O NUMERO DA PERGUNTA
+    private int fase;       // RECEBE O NUMERO DA PERGUNTA
+    private int num;        // RECEBE O NUMERO DA PERGUNTA
     private int pontos;
     private int pontosF1;
     private int pontosF2;
@@ -67,43 +67,32 @@ public class FasesActivity extends AppCompatActivity {
 
         //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
         Bundle dados = getIntent().getExtras();
-        fase     = dados.getInt("fase");
+        fase    = dados.getInt("fase");
         num     = dados.getInt("pergunta");
         pontos  = dados.getInt("pontos");
-
-        btFase01.setBackgroundResource(R.drawable.fundo_fases);
-        btFase01.setText("Fase - 01");
 
         if (num == 10) {
             pontosF1 = pontos;
             fase1();
-        }
-
-        if (num == 20) {
+        } else if (num == 20) {
             pontosF2 = pontos;
             fase1();
-        }
-
-        if (num == 30) {
+        } else if (num == 30) {
             pontosF3 = pontos;
             fase1();
-        }
-
-        if (num == 40) {
+        } else if (num == 40) {
             pontosF4 = pontos;
             fase1();
-        }
-
-        if (num == 50) {
+        } else if (num == 50) {
             pontosF5 = pontos;
             fase1();
-        }
-
-        if (num == 60) {
+        } else if (num == 60) {
             pontosF6 = pontos;
             fase1();
         }
 
+        btFase01.setBackgroundResource(R.drawable.fundo_fases);
+        btFase01.setText("Fase - 01");
         btFase01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -138,7 +127,6 @@ public class FasesActivity extends AppCompatActivity {
             }
         });
 
-
         btFase04.setBackgroundResource(R.drawable.fundo_fases);
         btFase04.setText("Fase - 04");
         btFase04.setOnClickListener(new View.OnClickListener() {
@@ -162,13 +150,13 @@ public class FasesActivity extends AppCompatActivity {
 //GRAVAR ALTERAÇÕES DE CORES
 //*************************************************************
 
-        if (preferencias.getString("atualizaPontos",null) == null){
+        if (preferencias.getString("atualizaPontos", null) == null) {
             SharedPreferences.Editor editorDePreferencias = preferencias.edit();
             editorDePreferencias.putString("atualizaPontos", "desativado");
             editorDePreferencias.apply();
         }
 
-        if (preferencias.getString("atualizaPontos",null).equals("fase1")){
+        if (preferencias.getString("atualizaPontos", null).equals("fase1")) {
             fase1();
         }
     }
@@ -184,7 +172,6 @@ public class FasesActivity extends AppCompatActivity {
         idFase4.setText(pontosF4 + " pontos");
         idFase5.setText(pontosF5 + " pontos");
         idFase6.setText(pontosF6 + " pontos");
-
     }
 }
 
