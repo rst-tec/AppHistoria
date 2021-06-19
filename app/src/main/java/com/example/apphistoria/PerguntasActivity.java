@@ -71,21 +71,23 @@ public class PerguntasActivity extends AppCompatActivity {
         erros   = dados.getInt("erros");
 
         //EXIBIR NUMERAÇÃO DA PERGUNTA
-        idStatus.setText("Pergunta 1 de 10");
+        idStatus.setText("Pergunta " + num + " de 10");
         idNivel.setText("Fase - 01  ");
 
         if (num >= 11) {
+            idStatus.setText("Pergunta " + (num -10) + " de 10");
             idNivel.setText("Fase - 02  ");
         }
 
         if (num >= 21) {
+            idStatus.setText("Pergunta " + (num -20) + " de 10");
             idNivel.setText("Fase - 03  ");
         }
 
         if (num >= 31) {
+            idStatus.setText("Pergunta " + (num -30) + " de 10");
             idNivel.setText("Fase - 04  ");
         }
-
         //BOTÃO PARA VOLTAR PARA A TELA INICIAL
         btFechar = findViewById(R.id.btFechar);
         btFechar.setOnClickListener(new View.OnClickListener() {
