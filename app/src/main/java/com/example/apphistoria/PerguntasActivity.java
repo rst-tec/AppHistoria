@@ -88,14 +88,14 @@ public class PerguntasActivity extends AppCompatActivity {
             idStatus.setText("Pergunta " + (num -30) + " de 10");
             idNivel.setText("Fase - 04  ");
         }
-        //BOTÃO PARA VOLTAR PARA A TELA INICIAL
+        //BOTÃO PARA FECHAR
         btFechar = findViewById(R.id.btFechar);
         btFechar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
-                //Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                //startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), FasesActivity.class);
+                startActivity(intent);
             }
         });
 

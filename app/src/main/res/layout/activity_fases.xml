@@ -94,11 +94,61 @@
     <TextView
         android:id="@+id/idFase1"
         android:layout_width="100dp"
-        android:layout_height="19dp"
+        android:layout_height="20dp"
         android:gravity="center"
         android:textColor="@color/color_verde"
         app:layout_constraintEnd_toEndOf="@+id/btFase01"
         app:layout_constraintStart_toStartOf="@+id/btFase01"
         app:layout_constraintTop_toBottomOf="@+id/btFase01" />
+
+    <TextView
+        android:id="@+id/idFase2"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="@color/color_verde"
+        app:layout_constraintEnd_toEndOf="@+id/btFase02"
+        app:layout_constraintStart_toStartOf="@+id/btFase02"
+        app:layout_constraintTop_toBottomOf="@+id/btFase02" />
+
+    <TextView
+        android:id="@+id/idFase3"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="@color/color_verde"
+        app:layout_constraintEnd_toEndOf="@+id/btFase03"
+        app:layout_constraintStart_toStartOf="@+id/btFase03"
+        app:layout_constraintTop_toBottomOf="@+id/btFase03" />
+
+    <TextView
+        android:id="@+id/idFase4"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="@color/color_verde"
+        app:layout_constraintEnd_toEndOf="@+id/btFase04"
+        app:layout_constraintStart_toStartOf="@+id/btFase04"
+        app:layout_constraintTop_toBottomOf="@+id/btFase04" />
+
+    <TextView
+        android:id="@+id/idFase5"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="@color/color_verde"
+        app:layout_constraintEnd_toEndOf="@+id/btFase05"
+        app:layout_constraintStart_toStartOf="@+id/btFase05"
+        app:layout_constraintTop_toBottomOf="@+id/btFase05" />
+
+    <TextView
+        android:id="@+id/idFase6"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="@color/color_verde"
+        app:layout_constraintEnd_toEndOf="@+id/btFase06"
+        app:layout_constraintStart_toStartOf="@+id/btFase06"
+        app:layout_constraintTop_toBottomOf="@+id/btFase06" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

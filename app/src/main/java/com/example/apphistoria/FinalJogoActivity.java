@@ -75,7 +75,7 @@ public class FinalJogoActivity extends AppCompatActivity {
             somFinal.start();
         }
 
-        //BOTÃO PARA VOLTAR PARA A TELA INICIAL
+        //BOTÃO PARA FECHAR
         btFechar = findViewById(R.id.btFechar);
         btFechar.setOnClickListener(new View.OnClickListener() {
             @Override
