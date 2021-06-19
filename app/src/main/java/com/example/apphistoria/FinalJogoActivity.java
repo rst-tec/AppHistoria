@@ -56,8 +56,8 @@ public class FinalJogoActivity extends AppCompatActivity {
         erros = dados.getInt("erros");
 
         //idAcertos.setText("Acertou: " + acertos );
-        idErros.setText("Errou: " + erros);
-        idPontos.setText("Total: " + pontos + " Pontos");
+        idErros.setText(erros + " Erros" );
+        idPontos.setText(pontos + " Pontos");
 
         if (pontos <= 3) {
             idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
