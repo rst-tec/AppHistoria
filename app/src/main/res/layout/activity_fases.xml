@@ -93,15 +93,12 @@
 
     <TextView
         android:id="@+id/idFase1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_width="100dp"
+        android:layout_height="19dp"
+        android:gravity="center"
         android:textColor="@color/color_verde"
-        app:layout_constraintBottom_toTopOf="@+id/btFase04"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.138"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btFase01"
-        app:layout_constraintVertical_bias="0.741" />
+        app:layout_constraintEnd_toEndOf="@+id/btFase01"
+        app:layout_constraintStart_toStartOf="@+id/btFase01"
+        app:layout_constraintTop_toBottomOf="@+id/btFase01" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

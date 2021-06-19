@@ -15,8 +15,11 @@ public class FasesActivity extends AppCompatActivity {
     private Button btFase04;
     private Button btFase05;
     private Button btFase06;
+
     private TextView idFase1;
 
+    private int fase;    // RECEBE O NUMERO DA PERGUNTA
+    private int num;    // RECEBE O NUMERO DA PERGUNTA
     private int pontos;
 
     @Override
@@ -35,12 +38,16 @@ public class FasesActivity extends AppCompatActivity {
 
         //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
         Bundle dados = getIntent().getExtras();
+        fase     = dados.getInt("fase");
+        num     = dados.getInt("pergunta");
         pontos  = dados.getInt("pontos");
-
 
         btFase01.setBackgroundResource(R.drawable.fundo_fases);
         btFase01.setText("Fase - 01");
-        idFase1.setText(" ");
+
+        if (num == 10) {
+            idFase1.setText(pontos + " pontos");
+        }
 
         btFase01.setOnClickListener(new View.OnClickListener() {
             @Override

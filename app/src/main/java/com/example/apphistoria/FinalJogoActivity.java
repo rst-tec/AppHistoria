@@ -84,6 +84,7 @@ public class FinalJogoActivity extends AppCompatActivity {
                 finish();
                 Intent intent = new Intent(getApplicationContext(), FasesActivity.class);
                 Bundle parametros = new Bundle();
+                parametros.putInt("pergunta", num);
                 parametros.putInt("pontos", pontos);
                 intent.putExtras(parametros);
                 startActivity(intent);
