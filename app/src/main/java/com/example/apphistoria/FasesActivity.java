@@ -31,8 +31,6 @@ public class FasesActivity extends AppCompatActivity {
     private int num;        // RECEBE O NUMERO DA PERGUNTA
     private int pontos;
 
-    SharedPreferences preferencias;//GRAVANDO PONTUAÇÃO
-
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR
     @Override
     public void onBackPressed() {
@@ -44,8 +42,6 @@ public class FasesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fases);
-
-        preferencias = PreferenceManager.getDefaultSharedPreferences(this);//GRAVANDO PONTUAÇÃO
 
         btFase01 = findViewById(R.id.btFase01);
         btFase02 = findViewById(R.id.btFase02);
@@ -67,60 +63,6 @@ public class FasesActivity extends AppCompatActivity {
         num = dados.getInt("pergunta");
         pontos = dados.getInt("pontos");
 
-        btFase01.setBackgroundResource(R.drawable.fundo_fases);
-        btFase01.setText("Fase - 01");
-        btFase01.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //finish();
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 1); //PASSANDO VALOR PARA O BUNDLE
-                startActivity(intent);
-            }
-        });
-
-        btFase02.setBackgroundResource(R.drawable.fundo_fases);
-        btFase02.setText("Fase - 02");
-        btFase02.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //finish()
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 11); //PASSANDO VALOR PARA O BUNDLE
-                startActivity(intent);
-            }
-        });
-
-        btFase03.setBackgroundResource(R.drawable.fundo_fases);
-        btFase03.setText("Fase - 03");
-        btFase03.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //finish();
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 21); //PASSANDO VALOR PARA O BUNDLE
-                startActivity(intent);
-            }
-        });
-
-        btFase04.setBackgroundResource(R.drawable.fundo_fases);
-        btFase04.setText("Fase - 04");
-        btFase04.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //finish();
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
-                startActivity(intent);
-            }
-        });
-
-        btFase05.setBackgroundResource(R.drawable.fundo_fases);
-        btFase05.setText("Fase - 05");
-
-        btFase06.setBackgroundResource(R.drawable.fundo_fases);
-        btFase06.setText("Fase - 06");
-
         //BOTÃO PARA FECHAR
         btFechar = findViewById(R.id.btFechar);
         btFechar.setOnClickListener(new View.OnClickListener() {
@@ -129,6 +71,64 @@ public class FasesActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        //BOTÃO PERGUNTAS FASE 01
+        btFase01.setBackgroundResource(R.drawable.fundo_fases);
+        btFase01.setText("Fase - 01");
+        btFase01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                intent.putExtra("pergunta", 1); //PASSANDO VALOR PARA O BUNDLE
+                startActivity(intent);
+            }
+        });
+
+        //BOTÃO PERGUNTAS FASE 02
+        btFase02.setBackgroundResource(R.drawable.fundo_fases);
+        btFase02.setText("Fase - 02");
+        btFase02.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                intent.putExtra("pergunta", 11); //PASSANDO VALOR PARA O BUNDLE
+                startActivity(intent);
+            }
+        });
+
+        //BOTÃO PERGUNTAS FASE 03
+        btFase03.setBackgroundResource(R.drawable.fundo_fases);
+        btFase03.setText("Fase - 03");
+        btFase03.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                intent.putExtra("pergunta", 21); //PASSANDO VALOR PARA O BUNDLE
+                startActivity(intent);
+            }
+        });
+
+        //BOTÃO PERGUNTAS FASE 04
+        btFase04.setBackgroundResource(R.drawable.fundo_fases);
+        btFase04.setText("Fase - 04");
+        btFase04.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
+                startActivity(intent);
+            }
+        });
+
+        //BOTÃO PERGUNTAS FASE 05
+        btFase05.setBackgroundResource(R.drawable.fundo_fases);
+        btFase05.setText("Fase - 05");
+
+        //BOTÃO PERGUNTAS FASE 06
+        btFase06.setBackgroundResource(R.drawable.fundo_fases);
+        btFase06.setText("Fase - 06");
+
+
     }
 }
 
