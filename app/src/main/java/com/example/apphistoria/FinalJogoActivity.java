@@ -76,12 +76,6 @@ public class FinalJogoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 somFinal.stop();//FINALIZA MUSICA FINAL DE JOGO
                 finish();
-                Intent intent = new Intent(getApplicationContext(), FasesActivity.class);
-                Bundle parametros = new Bundle();
-                parametros.putInt("pergunta", num);
-                parametros.putInt("pontos", pontos);
-                intent.putExtras(parametros);
-                startActivity(intent);
             }
         });
     }
