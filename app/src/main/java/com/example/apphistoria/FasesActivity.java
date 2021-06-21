@@ -17,6 +17,7 @@ public class FasesActivity extends AppCompatActivity {
     private Button btFase04;
     private Button btFase05;
     private Button btFase06;
+    private Button btFechar;
 
     private TextView idFase1;
     private TextView idFase2;
@@ -24,12 +25,6 @@ public class FasesActivity extends AppCompatActivity {
     private TextView idFase4;
     private TextView idFase5;
     private TextView idFase6;
-
-    private Button btFechar;
-
-    private int fase;       // RECEBE O NUMERO DA PERGUNTA
-    private int num;        // RECEBE O NUMERO DA PERGUNTA
-    private int pontos;
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR
     @Override
@@ -56,12 +51,6 @@ public class FasesActivity extends AppCompatActivity {
         idFase4 = findViewById(R.id.idFase4);
         idFase5 = findViewById(R.id.idFase5);
         idFase6 = findViewById(R.id.idFase6);
-
-        //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
-        Bundle dados = getIntent().getExtras();
-        fase = dados.getInt("fase");
-        num = dados.getInt("pergunta");
-        pontos = dados.getInt("pontos");
 
         //BOTÃO PARA FECHAR
         btFechar = findViewById(R.id.btFechar);
@@ -123,12 +112,26 @@ public class FasesActivity extends AppCompatActivity {
         //BOTÃO PERGUNTAS FASE 05
         btFase05.setBackgroundResource(R.drawable.fundo_fases);
         btFase05.setText("Fase - 05");
+        btFase05.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
+                startActivity(intent);
+            }
+        });
 
         //BOTÃO PERGUNTAS FASE 06
         btFase06.setBackgroundResource(R.drawable.fundo_fases);
         btFase06.setText("Fase - 06");
-
-
+        btFase06.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
+                startActivity(intent);
+            }
+        });
     }
 }
 

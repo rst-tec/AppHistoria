@@ -65,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), FasesActivity.class);
-                intent.putExtra("fase", 1); //PASSANDO VALOR PARA O BUNDLE
                 startActivity(intent);
             }
         });
