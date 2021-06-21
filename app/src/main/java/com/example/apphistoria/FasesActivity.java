@@ -146,12 +146,91 @@ public class FasesActivity extends AppCompatActivity {
 
         //EXIBINDO DADOS DO SHARED PREFERENCES
         sharedPreferences = getSharedPreferences(PREF_NOME, Context.MODE_PRIVATE);
-        idFase1.setText(sharedPreferences.getInt("pontosf1",0) + " pontos");
-        idFase2.setText(sharedPreferences.getInt("pontosf2",0) + " pontos");
-        idFase3.setText(sharedPreferences.getInt("pontosf3",0) + " pontos");
-        idFase4.setText(sharedPreferences.getInt("pontosf4",0) + " pontos");
-        idFase5.setText(sharedPreferences.getInt("pontosf5",0) + " pontos");
-        idFase6.setText(sharedPreferences.getInt("pontosf6",0) + " pontos");
+        int pf1 = sharedPreferences.getInt("pontosf1",0);
+
+        idFase1.setText(pf1 + " pontos");
+
+        if(pf1 == 0){
+            btFase01.setBackgroundResource(R.drawable.fundo_fases);
+        }else if (pf1 <= 3) {
+            btFase01.setBackgroundResource(R.drawable.fundo_resultado1);
+        }else if (pf1 >= 4 && pf1 <= 6) {
+            btFase01.setBackgroundResource(R.drawable.fundo_resultado2);
+        }else if (pf1 >= 7) {
+            btFase01.setBackgroundResource(R.drawable.fundo_resultado3);
+        }
+
+        int pf2 = sharedPreferences.getInt("pontosf2",0);
+
+        idFase2.setText(pf2 + " pontos");
+
+        if(pf2 == 0){
+            btFase02.setBackgroundResource(R.drawable.fundo_fases);
+        }else if (pf2 <= 3) {
+            btFase02.setBackgroundResource(R.drawable.fundo_resultado1);
+        }else if (pf2 >= 4 && pf2 <= 6) {
+            btFase02.setBackgroundResource(R.drawable.fundo_resultado2);
+        }else if (pf2 >= 7) {
+            btFase02.setBackgroundResource(R.drawable.fundo_resultado3);
+        }
+
+        int pf3 = sharedPreferences.getInt("pontosf3",0);
+
+        idFase3.setText(pf3 + " pontos");
+
+        if(pf3 == 0){
+            btFase03.setBackgroundResource(R.drawable.fundo_fases);
+        }else if (pf3 <= 3) {
+            btFase03.setBackgroundResource(R.drawable.fundo_resultado1);
+        }else if (pf3 >= 4 && pf3 <= 6) {
+            btFase03.setBackgroundResource(R.drawable.fundo_resultado2);
+        }else if (pf3 >= 7) {
+            btFase03.setBackgroundResource(R.drawable.fundo_resultado3);
+        }
+
+        int pf4 = sharedPreferences.getInt("pontosf4",0);
+
+        idFase4.setText(pf4 + " pontos");
+
+        if(pf4 == 0){
+            btFase04.setBackgroundResource(R.drawable.fundo_fases);
+        }else if (pf4 <= 3) {
+            btFase04.setBackgroundResource(R.drawable.fundo_resultado1);
+        }else if (pf4 >= 4 && pf4 <= 6) {
+            btFase04.setBackgroundResource(R.drawable.fundo_resultado2);
+        }else if (pf4 >= 7) {
+            btFase04.setBackgroundResource(R.drawable.fundo_resultado3);
+        }
+
+        int pf5 = sharedPreferences.getInt("pontosf5",0);
+
+        idFase5.setText(pf5 + " pontos");
+
+        if(pf5 == 0){
+            btFase05.setBackgroundResource(R.drawable.fundo_fases);
+        }else if (pf5 <= 3) {
+            btFase05.setBackgroundResource(R.drawable.fundo_resultado1);
+        }else if (pf5 >= 4 && pf5 <= 6) {
+            btFase05.setBackgroundResource(R.drawable.fundo_resultado2);
+        }else if (pf5 >= 7) {
+            btFase05.setBackgroundResource(R.drawable.fundo_resultado3);
+        }
+
+        int pf6 = sharedPreferences.getInt("pontosf6",0);
+
+        idFase6.setText(pf6 + " pontos");
+
+        if(pf6 == 0){
+            btFase06.setBackgroundResource(R.drawable.fundo_fases);
+        }else if (pf6 <= 3) {
+            btFase06.setBackgroundResource(R.drawable.fundo_resultado1);
+        }else if (pf6 >= 4 && pf6 <= 6) {
+            btFase06.setBackgroundResource(R.drawable.fundo_resultado2);
+        }else if (pf6 >= 7) {
+            btFase06.setBackgroundResource(R.drawable.fundo_resultado3);
+        }
+
+
     }
 }
 
