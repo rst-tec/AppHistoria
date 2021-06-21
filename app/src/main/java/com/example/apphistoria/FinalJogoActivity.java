@@ -99,7 +99,6 @@ public class FinalJogoActivity extends AppCompatActivity {
             dadospref.apply();
         }
 
-
         idErros.setText(erros + " Erros" );
         idPontos.setText(pontos + " pontos");
 

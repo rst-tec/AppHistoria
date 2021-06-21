@@ -30,7 +30,7 @@ public class FasesActivity extends AppCompatActivity {
     private static final String PREF_NOME = "preferencias";
 
     SharedPreferences sharedPreferences;
-    SharedPreferences.Editor dadospref;
+    //SharedPreferences.Editor dadospref;
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR
     @Override
