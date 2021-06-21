@@ -72,13 +72,30 @@ public class FinalJogoActivity extends AppCompatActivity {
             pontosf1 = pontos;
             dadospref.putInt("pontosf1", pontosf1);
             dadospref.apply();
+
         }else if (num == 20) {
             pontosf2 = pontos;
             dadospref.putInt("pontosf2", pontosf2);
             dadospref.apply();
+
         }else if (num == 30) {
             pontosf3 = pontos;
             dadospref.putInt("pontosf3", pontosf3);
+            dadospref.apply();
+
+        }else if (num == 40) {
+            pontosf4 = pontos;
+            dadospref.putInt("pontosf4", pontosf4);
+            dadospref.apply();
+
+        }else if (num == 50) {
+            pontosf5 = pontos;
+            dadospref.putInt("pontosf5", pontosf5);
+            dadospref.apply();
+
+        }else if (num == 60) {
+            pontosf6 = pontos;
+            dadospref.putInt("pontosf6", pontosf6);
             dadospref.apply();
         }
 
