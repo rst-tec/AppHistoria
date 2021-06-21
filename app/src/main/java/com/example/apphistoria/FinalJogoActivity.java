@@ -2,7 +2,9 @@ package com.example.apphistoria;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +26,18 @@ public class FinalJogoActivity extends AppCompatActivity {
     private int pontos;
     private int acertos;
     private int erros;
+
+    private static final String PREF_NOME = "preferencias";
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor dadospref;
+
+    int pontosf1;
+    int pontosf2;
+    int pontosf3;
+    int pontosf4;
+    int pontosf5;
+    int pontosf6;
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR - PARA A TELA INICIAL
     @Override
@@ -50,8 +64,27 @@ public class FinalJogoActivity extends AppCompatActivity {
         acertos = dados.getInt("acertos");
         erros = dados.getInt("erros");
 
+        //SALVANDO DADOS NO SHARED PREFERENCES
+        sharedPreferences = getSharedPreferences(PREF_NOME, Context.MODE_PRIVATE);
+        dadospref = sharedPreferences.edit();
+
+        if(num == 10) {
+            pontosf1 = pontos;
+            dadospref.putInt("pontosf1", pontosf1);
+            dadospref.apply();
+        }else if (num == 20) {
+            pontosf2 = pontos;
+            dadospref.putInt("pontosf2", pontosf2);
+            dadospref.apply();
+        }else if (num == 30) {
+            pontosf3 = pontos;
+            dadospref.putInt("pontosf3", pontosf3);
+            dadospref.apply();
+        }
+
+
         idErros.setText(erros + " Erros" );
-        idPontos.setText(pontos + " Pontos");
+        idPontos.setText(pontos + " pontos");
 
         if (pontos <= 3) {
             idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
