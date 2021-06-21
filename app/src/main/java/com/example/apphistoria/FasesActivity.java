@@ -67,15 +67,6 @@ public class FasesActivity extends AppCompatActivity {
             }
         });
 
-        //EXIBINDO DADOS DO SHARED PREFERENCES
-        sharedPreferences = getSharedPreferences(PREF_NOME, Context.MODE_PRIVATE);
-        idFase1.setText(sharedPreferences.getInt("pontosf1",0) + " pontos");
-        idFase2.setText(sharedPreferences.getInt("pontosf2",0) + " pontos");
-        idFase3.setText(sharedPreferences.getInt("pontosf3",0) + " pontos");
-        idFase4.setText(sharedPreferences.getInt("pontosf4",0) + " pontos");
-        idFase5.setText(sharedPreferences.getInt("pontosf5",0) + " pontos");
-        idFase6.setText(sharedPreferences.getInt("pontosf6",0) + " pontos");
-
         //BOTÃO PERGUNTAS FASE 01
         btFase01.setBackgroundResource(R.drawable.fundo_fases);
         btFase01.setText("Fase - 01");
@@ -147,6 +138,20 @@ public class FasesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        //EXIBINDO DADOS DO SHARED PREFERENCES
+        sharedPreferences = getSharedPreferences(PREF_NOME, Context.MODE_PRIVATE);
+        idFase1.setText(sharedPreferences.getInt("pontosf1",0) + " pontos");
+        idFase2.setText(sharedPreferences.getInt("pontosf2",0) + " pontos");
+        idFase3.setText(sharedPreferences.getInt("pontosf3",0) + " pontos");
+        idFase4.setText(sharedPreferences.getInt("pontosf4",0) + " pontos");
+        idFase5.setText(sharedPreferences.getInt("pontosf5",0) + " pontos");
+        idFase6.setText(sharedPreferences.getInt("pontosf6",0) + " pontos");
     }
 }
 
