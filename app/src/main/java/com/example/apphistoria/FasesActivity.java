@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class FasesActivity extends AppCompatActivity {
     private Button btFase01;
@@ -26,10 +27,17 @@ public class FasesActivity extends AppCompatActivity {
     private TextView idFase5;
     private TextView idFase6;
 
+    int pf1;
+    int pf2;
+    int pf3;
+    int pf4;
+    int pf5;
+    int pf6;
+
     private static final String PREF_NOME = "preferencias";
 
     SharedPreferences sharedPreferences;
-    //SharedPreferences.Editor dadospref;
+    SharedPreferences.Editor dadospref;
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR
     @Override
@@ -65,66 +73,6 @@ public class FasesActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-        //BOTÃO PERGUNTAS FASE 01
-        btFase01.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 1); //PASSANDO VALOR PARA O BUNDLE
-                startActivity(intent);
-            }
-        });
-
-        //BOTÃO PERGUNTAS FASE 02
-        btFase02.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 11); //PASSANDO VALOR PARA O BUNDLE
-                startActivity(intent);
-            }
-        });
-
-        //BOTÃO PERGUNTAS FASE 03
-        btFase03.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 21); //PASSANDO VALOR PARA O BUNDLE
-                startActivity(intent);
-            }
-        });
-
-        //BOTÃO PERGUNTAS FASE 04
-        btFase04.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
-                startActivity(intent);
-            }
-        });
-
-        //BOTÃO PERGUNTAS FASE 05
-        btFase05.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
-                startActivity(intent);
-            }
-        });
-
-        //BOTÃO PERGUNTAS FASE 06
-        btFase06.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
@@ -133,9 +81,25 @@ public class FasesActivity extends AppCompatActivity {
 
         //EXIBINDO DADOS DO SHARED PREFERENCES
         sharedPreferences = getSharedPreferences(PREF_NOME, Context.MODE_PRIVATE);
+        /* LIMPAR DADOS DO SHARED PREFERENCES
+
+        dadospref = sharedPreferences.edit();
+        dadospref.clear();
+        dadospref.apply();
+
+         */
 
         //BOTÃO PERGUNTAS FASE 01
-        int pf1 = sharedPreferences.getInt("pontosf1",0);
+        pf1 = sharedPreferences.getInt("pontosf1",0);
+
+        btFase01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                intent.putExtra("pergunta", 1); //PASSANDO VALOR PARA O BUNDLE
+                startActivity(intent);
+            }
+        });
 
         idFase1.setText(pf1 + " pontos");
 
@@ -155,13 +119,27 @@ public class FasesActivity extends AppCompatActivity {
 
 
         //BOTÃO PERGUNTAS FASE 02
-        int pf2 = sharedPreferences.getInt("pontosf2",0);
+        pf2 = sharedPreferences.getInt("pontosf2",0);
+
+        btFase02.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(pf1 > 5){
+                    Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                    intent.putExtra("pergunta", 11); //PASSANDO VALOR PARA O BUNDLE
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anteior", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
 
         idFase2.setText(pf2 + " pontos");
 
         if(pf2 == 0){
             btFase03.setBackgroundResource(R.drawable.fase_fundo_fechado);
-        }else if (pf2 <= 3) {
+        }else if (pf2 <= 5) {
             btFase02.setBackgroundResource(R.drawable.fase_fundo_1_estrelas);
             btFase03.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
         }else if (pf2 >= 4 && pf2 <= 6) {
@@ -173,7 +151,20 @@ public class FasesActivity extends AppCompatActivity {
         }
 
         //BOTÃO PERGUNTAS FASE 03
-        int pf3 = sharedPreferences.getInt("pontosf3",0);
+        pf3 = sharedPreferences.getInt("pontosf3",0);
+
+        btFase03.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(pf2 > 5) {
+                    Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                    intent.putExtra("pergunta", 21); //PASSANDO VALOR PARA O BUNDLE
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anteior", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         idFase3.setText(pf3 + " pontos");
 
@@ -191,13 +182,26 @@ public class FasesActivity extends AppCompatActivity {
         }
 
         //BOTÃO PERGUNTAS FASE 04
-        int pf4 = sharedPreferences.getInt("pontosf4",0);
+        pf4 = sharedPreferences.getInt("pontosf4",0);
+
+        btFase04.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(pf3 > 5) {
+                    Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                    intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anteior", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         idFase4.setText(pf4 + " pontos");
 
         if(pf4 == 0){
             btFase05.setBackgroundResource(R.drawable.fase_fundo_fechado);
-        }else if (pf4 <= 3) {
+        }else if (pf4 <= 5) {
             btFase04.setBackgroundResource(R.drawable.fase_fundo_1_estrelas);
             btFase05.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
         }else if (pf4 >= 4 && pf4 <= 6) {
@@ -209,7 +213,20 @@ public class FasesActivity extends AppCompatActivity {
         }
 
         //BOTÃO PERGUNTAS FASE 05
-        int pf5 = sharedPreferences.getInt("pontosf5",0);
+        pf5 = sharedPreferences.getInt("pontosf5",0);
+
+        btFase05.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(pf4 > 5) {
+                    Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                    intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anteior", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         idFase5.setText(pf5 + " pontos");
 
@@ -227,7 +244,20 @@ public class FasesActivity extends AppCompatActivity {
         }
 
         //BOTÃO PERGUNTAS FASE 06
-        int pf6 = sharedPreferences.getInt("pontosf6",0);
+        pf6 = sharedPreferences.getInt("pontosf6",0);
+
+        btFase06.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(pf5 > 5) {
+                    Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
+                    intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anteior", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         idFase6.setText(pf6 + " pontos");
 
