@@ -145,7 +145,7 @@ public class FasesActivity extends AppCompatActivity {
         super.onResume();
 
         //EXIBINDO DADOS DO SHARED PREFERENCES
-        sharedPreferences = getSharedPreferences(PREF_NOME, Context.MODE_PRIVATE);
+        //sharedPreferences = getSharedPreferences(PREF_NOME, Context.MODE_PRIVATE);
         int pf1 = sharedPreferences.getInt("pontosf1",0);
 
         idFase1.setText(pf1 + " pontos");
