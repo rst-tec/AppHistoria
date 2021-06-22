@@ -39,7 +39,8 @@ public class Historia02Activity extends AppCompatActivity {
     private Button btAlinha;    //Alinhamento de texto
     private int opc = 1;        //Opção do alinhamento e ou cores
 
-    private int num; //Numero da proxima historia
+    private int num;            //Numero da proxima historia
+    private String voz = "F";   //voz masculina ou feminina
 
     SharedPreferences preferencias;//Preferencias de alterações de cores
 
@@ -223,7 +224,12 @@ public class Historia02Activity extends AppCompatActivity {
                     "Depois de verem Jesus, os pastores atravessaram a cidade. Eles estavam muito animados! Contaram a todo mundo o que havia acontecido e louvaram a Deus por tudo o que Ele fez!\n\n" +
                     "FIM.\n");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017);
+            if (voz == "M") {
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017_m);
+            }else if (voz == "F") {
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017);
+            }
+
             musicaFundo = MediaPlayer.create(getApplicationContext(), R.raw.musica_001);
 
             //BOTÃO PARA REINICIAR A LEITURA
@@ -233,7 +239,17 @@ public class Historia02Activity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
-                        mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017);
+                        if (voz == "M") {
+                            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017_m);
+                        }else if (voz == "F") {
+                            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017);
+                        }
+
+                        if (voz == "M") {
+                            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017_m);
+                        }else if (voz == "F") {
+                            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.historia017);
+                        }
                         btPlayer.setBackgroundResource(R.drawable.play);
                     }
                     if (musicaFundo.isPlaying()) {
