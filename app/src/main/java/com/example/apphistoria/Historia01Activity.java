@@ -77,10 +77,11 @@ public class Historia01Activity extends AppCompatActivity {
         btColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (opc > 5) {opc = 1;}
+                if (opc > 5) {
+                    opc = 1;}
 
                 if (opc == 1) {
-                    fundoCinza();
+                    fundoPreto();
                 } else if (opc == 2) {
                     fundoRosa();
                 } else if (opc == 3) {
@@ -88,7 +89,7 @@ public class Historia01Activity extends AppCompatActivity {
                 } else if (opc == 4) {
                     fundoAzul();
                 } else if (opc == 5) {
-                    fundoPreto();
+                    fundoCinza();
                 }
             }
         });
@@ -98,12 +99,13 @@ public class Historia01Activity extends AppCompatActivity {
         btAlinha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (opc > 3) {opc = 1;}
+                if (opc > 3) {
+                    opc = 1;}
 
                 if (opc == 1) {
-                    textoEsquerda();
-                } else if (opc == 2) {
                     textoCentro();
+                } else if (opc == 2) {
+                    textoEsquerda();
                 } else if (opc == 3) {
                     textoDireita();
                 }
@@ -128,7 +130,7 @@ public class Historia01Activity extends AppCompatActivity {
                 Bundle parametros = new Bundle();
 
                 parametros.putInt("pergunta", num); //Passa o numero da pergunta
-                parametros.putInt("chave", 111);
+                parametros.putInt("chave", 1);
                 intent.putExtras(parametros);
                 startActivity(intent);
             }

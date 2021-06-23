@@ -41,7 +41,7 @@ public class SplashActivity extends AppCompatActivity {
             texto.setText("Eduque a criança no caminho em que deve andar, e até o fim da vida não se desviará dele.\n\n" +
                     "PROVÉRBIOS – 22:6");
         }else if (V == 3){
-            texto.setText("É bom corrigir e disciplinar a criança. Quando todas as suas vontades são feitas, ela acaba fazendo seus pais passarem vergonha.\n\n" +
+            texto.setText("É bom corrigir e disciplinar a criança. Quando todas as suas vontades são feitas, ela acaba fazendo seus pais passarem vergonha.\n" +
                     "PROVÉRBIOS – 29:15");
         }else if (V == 4){
             texto.setText("Quem não castiga o filho não o ama. Quem ama o filho castiga-o enquanto é tempo.\n\n" +

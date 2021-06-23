@@ -64,8 +64,7 @@ public class MainActivity extends AppCompatActivity {
         botao3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                intent.putExtra("pergunta", 1); //PASSANDO VALOR PARA O BUNDLE
+                Intent intent = new Intent(getApplicationContext(), FasesActivity.class);
                 startActivity(intent);
             }
         });

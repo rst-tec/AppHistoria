@@ -2,7 +2,9 @@ package com.example.apphistoria;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -13,20 +15,22 @@ import android.widget.TextView;
 public class FinalJogoActivity extends AppCompatActivity {
 
     private Button btFechar;
-    private Button btJogarNovamente;
     private ImageView idFundoResultado;
 
-    //private TextView idAcertos;
     private TextView idErros;
     private TextView idPontos;
 
     private MediaPlayer somFinal; //Toca som de final de jogo
 
     private int num;
-
     private int pontos;
     private int acertos;
     private int erros;
+
+    private static final String PREF_NOME = "preferencias";
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor dadospref;
 
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR - PARA A TELA INICIAL
     @Override
@@ -42,7 +46,6 @@ public class FinalJogoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_jogo);
 
-        //idAcertos = findViewById(R.id.idAcertos);
         idErros = findViewById(R.id.idErros);
         idPontos = findViewById(R.id.idPontos);
         idFundoResultado = findViewById(R.id.idFundoResultado);
@@ -50,53 +53,50 @@ public class FinalJogoActivity extends AppCompatActivity {
         //BUNDLE  RECEBENDO VALOR DE ESCOLHA DA PERGUNTA + PONTOS
         Bundle dados = getIntent().getExtras();
         num = dados.getInt("pergunta");
-
-        pontos  = dados.getInt("pontos");
+        pontos = dados.getInt("pontos");
         acertos = dados.getInt("acertos");
-        erros   = dados.getInt("erros");
+        erros = dados.getInt("erros");
 
-        //idAcertos.setText("Acertou: " + acertos );
-        idErros.setText("Errou: " + erros);
-        idPontos.setText("Total: " + pontos + " Pontos" );
+        //SALVANDO DADOS NO SHARED PREFERENCES
+        sharedPreferences = getSharedPreferences(PREF_NOME, Context.MODE_PRIVATE);
+        dadospref = sharedPreferences.edit();
 
-        //MONTA A TELA DE RESULTADO COM AS ESTRELAS
-        //FASE 1
         if(num == 10) {
-            if (pontos <= 3) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
-            }
-            if (pontos >= 4 && pontos <= 6) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
-            }
-            if (pontos >= 7) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
-            }
+            dadospref.putInt("pontosf1", pontos);
+            dadospref.apply();
+
+        }else if (num == 20) {
+            dadospref.putInt("pontosf2", pontos);
+            dadospref.apply();
+
+        }else if (num == 30) {
+            dadospref.putInt("pontosf3", pontos);
+            dadospref.apply();
+
+        }else if (num == 40) {
+            dadospref.putInt("pontosf4", pontos);
+            dadospref.apply();
+
+        }else if (num == 50) {
+            dadospref.putInt("pontosf5", pontos);
+            dadospref.apply();
+
+        }else if (num == 60) {
+            dadospref.putInt("pontosf6", pontos);
+            dadospref.apply();
         }
 
-        //FASE 2
-        if(num == 20) {
-            if (pontos <= 13) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
-            }
-            if (pontos >= 14 && pontos <= 16) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
-            }
-            if (pontos >= 17) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
-            }
-        }
+        idErros.setText(erros + " Erros" );
+        idPontos.setText(pontos + " pontos");
 
-        //FASE 3
-        if(num == 30) {
-            if (pontos <= 23) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
-            }
-            if (pontos >= 24 && pontos <= 26) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
-            }
-            if (pontos >= 27) {
-                idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
-            }
+        if (pontos <= 3) {
+            idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);
+        }
+        if (pontos >= 4 && pontos <= 6) {
+            idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado2);
+        }
+        if (pontos >= 7) {
+            idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado3);
         }
 
         //INICIA A MUSICA DE FINAL DE JOGO
@@ -105,56 +105,15 @@ public class FinalJogoActivity extends AppCompatActivity {
             somFinal.start();
         }
 
-        //BOTÃO PARA VOLTAR PARA A TELA INICIAL
+        //BOTÃO PARA FECHAR
         btFechar = findViewById(R.id.btFechar);
         btFechar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 somFinal.stop();//FINALIZA MUSICA FINAL DE JOGO
                 finish();
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
             }
         });
-
-        //BOTÃO PARA JOGAR NOVAMENTE
-        btJogarNovamente = findViewById(R.id.btJogarNovamente);
-        if (num == 30) {
-            btJogarNovamente.setBackgroundResource(R.drawable.bt_jogo_voltar);
-        }else{
-            btJogarNovamente.setBackgroundResource(R.drawable.bt_jogo_novamente);
-        }
-
-        btJogarNovamente.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                somFinal.stop();//FINALIZA MUSICA FINAL DE JOGO
-
-                //PARA FINALIZAR O JOGO
-                if (num == 30) {
-                    telaInicial();
-                }else {
-
-                    finish();
-                    Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                    Bundle parametros = new Bundle();
-
-                    parametros.putInt("pergunta", num+1); //Passa o numero da proxima pergunta
-                    parametros.putInt("pontos", pontos);
-                    parametros.putInt("acertos", acertos);
-                    parametros.putInt("erros", erros);
-
-                    intent.putExtras(parametros);
-                    startActivity(intent);
-                }
-            }
-        });
-    }
-    private void telaInicial(){
-        finish();
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
     }
 }
 
