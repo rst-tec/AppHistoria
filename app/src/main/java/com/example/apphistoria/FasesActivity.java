@@ -26,6 +26,7 @@ public class FasesActivity extends AppCompatActivity {
     private TextView idFase4;
     private TextView idFase5;
     private TextView idFase6;
+    private TextView idPontos;
 
     int pf1;
     int pf2;
@@ -64,6 +65,8 @@ public class FasesActivity extends AppCompatActivity {
         idFase4 = findViewById(R.id.idFase4);
         idFase5 = findViewById(R.id.idFase5);
         idFase6 = findViewById(R.id.idFase6);
+
+        idPontos = findViewById(R.id.idPontos);
 
         //BOTÃO PARA FECHAR
         btFechar = findViewById(R.id.btFechar);
@@ -116,11 +119,11 @@ public class FasesActivity extends AppCompatActivity {
         pf2 = sharedPreferences.getInt("pontosf2",0);
         idFase2.setText(pf2 + " pontos");
 
-        if(pf1 > 5) {
-            btFase02.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
-        }else if(pf1 < 5 && pf2 == 0){
+        if(pf1 < 5) {
             btFase02.setBackgroundResource(R.drawable.fase_fundo_fechado);
-        }else if (pf2 > 0 && pf2 <= 3) {
+        }else if(pf2 <= 0) {
+            btFase02.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
+        } else if (pf2 <= 3) {
             btFase02.setBackgroundResource(R.drawable.fase_fundo_1_estrelas);
         }else if (pf2 >= 4 && pf2 <= 6) {
             btFase02.setBackgroundResource(R.drawable.fase_fundo_2_estrelas);
@@ -145,11 +148,11 @@ public class FasesActivity extends AppCompatActivity {
         pf3 = sharedPreferences.getInt("pontosf3",0);
         idFase3.setText(pf3 + " pontos");
 
-        if(pf2 > 5) {
-            btFase03.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
-        }else if(pf2 < 5 && pf3 == 0){
+        if(pf2 < 5) {
             btFase03.setBackgroundResource(R.drawable.fase_fundo_fechado);
-        }else if (pf3 > 0 && pf3 <= 3) {
+        }else if(pf3 <= 0){
+            btFase03.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
+        } else if (pf3 <= 3) {
             btFase03.setBackgroundResource(R.drawable.fase_fundo_1_estrelas);
         }else if (pf3 >= 4 && pf3 <= 6) {
             btFase03.setBackgroundResource(R.drawable.fase_fundo_2_estrelas);
@@ -174,11 +177,11 @@ public class FasesActivity extends AppCompatActivity {
         pf4 = sharedPreferences.getInt("pontosf4",0);
         idFase4.setText(pf4 + " pontos");
 
-        if(pf3 > 5) {
-            btFase04.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
-        }else if(pf3 < 5 && pf4 == 0){
+        if(pf3 < 5) {
             btFase04.setBackgroundResource(R.drawable.fase_fundo_fechado);
-        }else if (pf4 >0 && pf4 <= 3) {
+        }else if(pf4 <= 0){
+            btFase04.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
+        } else if (pf4 <= 3) {
             btFase04.setBackgroundResource(R.drawable.fase_fundo_1_estrelas);
         }else if (pf4 >= 4 && pf4 <= 6) {
             btFase04.setBackgroundResource(R.drawable.fase_fundo_2_estrelas);
@@ -203,11 +206,11 @@ public class FasesActivity extends AppCompatActivity {
         pf5 = sharedPreferences.getInt("pontosf5",0);
         idFase5.setText(pf5 + " pontos");
 
-        if(pf4 > 5) {
-            btFase05.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
-        }else if(pf4 < 5 && pf5 == 0){
+        if(pf4 < 5) {
             btFase05.setBackgroundResource(R.drawable.fase_fundo_fechado);
-        }else if (pf5 > 0 && pf5 <= 3) {
+        }else if(pf5 <= 0){
+            btFase05.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
+        } else if (pf5 <= 3) {
             btFase05.setBackgroundResource(R.drawable.fase_fundo_1_estrelas);
         }else if (pf5 >= 4 && pf5 <= 6) {
             btFase05.setBackgroundResource(R.drawable.fase_fundo_2_estrelas);
@@ -232,11 +235,11 @@ public class FasesActivity extends AppCompatActivity {
         pf6 = sharedPreferences.getInt("pontosf6",0);
         idFase6.setText(pf6 + " pontos");
 
-        if(pf5 > 5) {
-            btFase06.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
-        }else if(pf5 < 5 && pf6 == 0){
+        if(pf5 < 5) {
             btFase06.setBackgroundResource(R.drawable.fase_fundo_fechado);
-        }else if (pf6 >0 && pf6 <= 3) {
+        }else if(pf6 <= 0){
+            btFase06.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
+        } else if (pf6 <= 3) {
             btFase06.setBackgroundResource(R.drawable.fase_fundo_1_estrelas);
         }else if (pf6 >= 4 && pf6 <= 6) {
             btFase06.setBackgroundResource(R.drawable.fase_fundo_2_estrelas);
@@ -256,6 +259,9 @@ public class FasesActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //EXIBINDO PONTUAÇÃO TOTAL
+        idPontos.setText("Pontuação Total: " + (pf1 + pf2 + pf3 + pf4 + pf5 + pf6));
     }
 }
 
