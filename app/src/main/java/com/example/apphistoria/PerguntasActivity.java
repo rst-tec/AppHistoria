@@ -1843,6 +1843,14 @@ public class PerguntasActivity extends AppCompatActivity {
             finalJogo();
             alerta.dismiss();
 
+        }else if (num == 50){
+            finalJogo();
+            alerta.dismiss();
+
+        }else if (num == 60){
+            finalJogo();
+            alerta.dismiss();
+
         }else {
             finish();
             Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
