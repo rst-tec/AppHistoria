@@ -32,13 +32,6 @@ public class FinalJogoActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor dadospref;
 
-    int pontosf1;
-    int pontosf2;
-    int pontosf3;
-    int pontosf4;
-    int pontosf5;
-    int pontosf6;
-
     //VOLTAR COM BOTÃO VIRTUAL DO CELULAR - PARA A TELA INICIAL
     @Override
     public void onBackPressed() {
@@ -69,33 +62,27 @@ public class FinalJogoActivity extends AppCompatActivity {
         dadospref = sharedPreferences.edit();
 
         if(num == 10) {
-            pontosf1 = pontos;
-            dadospref.putInt("pontosf1", pontosf1);
+            dadospref.putInt("pontosf1", pontos);
             dadospref.apply();
 
         }else if (num == 20) {
-            pontosf2 = pontos;
-            dadospref.putInt("pontosf2", pontosf2);
+            dadospref.putInt("pontosf2", pontos);
             dadospref.apply();
 
         }else if (num == 30) {
-            pontosf3 = pontos;
-            dadospref.putInt("pontosf3", pontosf3);
+            dadospref.putInt("pontosf3", pontos);
             dadospref.apply();
 
         }else if (num == 40) {
-            pontosf4 = pontos;
-            dadospref.putInt("pontosf4", pontosf4);
+            dadospref.putInt("pontosf4", pontos);
             dadospref.apply();
 
         }else if (num == 50) {
-            pontosf5 = pontos;
-            dadospref.putInt("pontosf5", pontosf5);
+            dadospref.putInt("pontosf5", pontos);
             dadospref.apply();
 
         }else if (num == 60) {
-            pontosf6 = pontos;
-            dadospref.putInt("pontosf6", pontosf6);
+            dadospref.putInt("pontosf6", pontos);
             dadospref.apply();
         }
 
