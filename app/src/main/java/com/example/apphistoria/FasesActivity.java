@@ -130,7 +130,7 @@ public class FasesActivity extends AppCompatActivity {
                     intent.putExtra("pergunta", 11); //PASSANDO VALOR PARA O BUNDLE
                     startActivity(intent);
                 }else{
-                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anteior", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anterior", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -165,7 +165,7 @@ public class FasesActivity extends AppCompatActivity {
                     intent.putExtra("pergunta", 21); //PASSANDO VALOR PARA O BUNDLE
                     startActivity(intent);
                 }else{
-                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anteior", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anterior", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -199,7 +199,7 @@ public class FasesActivity extends AppCompatActivity {
                     intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
                     startActivity(intent);
                 }else{
-                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anteior", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anterior", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -233,7 +233,7 @@ public class FasesActivity extends AppCompatActivity {
                     intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
                     startActivity(intent);
                 }else{
-                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anteior", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anterior", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -267,7 +267,7 @@ public class FasesActivity extends AppCompatActivity {
                     intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
                     startActivity(intent);
                 }else{
-                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anteior", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anterior", Toast.LENGTH_SHORT).show();
                 }
             }
         });
