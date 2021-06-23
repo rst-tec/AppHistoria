@@ -173,7 +173,7 @@ public class FasesActivity extends AppCompatActivity {
         idFase3.setText(pf3 + " pontos");
 
         if(pf3 == 0){
-            btFase03.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
+            btFase03.setBackgroundResource(R.drawable.fase_fundo_fechado);
         }else if (pf3 <= 3) {
             btFase03.setBackgroundResource(R.drawable.fase_fundo_1_estrelas);
         }else if (pf3 >= 4 && pf3 <= 6) {
@@ -207,7 +207,7 @@ public class FasesActivity extends AppCompatActivity {
         idFase4.setText(pf4 + " pontos");
 
         if(pf4 == 0){
-            btFase04.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
+            btFase04.setBackgroundResource(R.drawable.fase_fundo_fechado);
         }else if (pf4 <= 3) {
             btFase04.setBackgroundResource(R.drawable.fase_fundo_1_estrelas);
         }else if (pf4 >= 4 && pf4 <= 6) {
@@ -241,7 +241,7 @@ public class FasesActivity extends AppCompatActivity {
         idFase5.setText(pf5 + " pontos");
 
         if(pf5 == 0){
-            btFase05.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
+            btFase05.setBackgroundResource(R.drawable.fase_fundo_fechado);
         }else if (pf5 <= 3) {
             btFase05.setBackgroundResource(R.drawable.fase_fundo_1_estrelas);
         }else if (pf5 >= 4 && pf5 <= 6) {
@@ -275,7 +275,7 @@ public class FasesActivity extends AppCompatActivity {
         idFase6.setText(pf6 + " pontos");
 
         if(pf6 == 0){
-            btFase06.setBackgroundResource(R.drawable.fase_fundo_0_estrelas);
+            btFase06.setBackgroundResource(R.drawable.fase_fundo_fechado);
         }else if (pf6 <= 3) {
             btFase06.setBackgroundResource(R.drawable.fase_fundo_1_estrelas);
         }else if (pf6 >= 4 && pf6 <= 6) {
