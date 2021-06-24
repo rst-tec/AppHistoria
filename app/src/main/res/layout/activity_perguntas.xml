@@ -25,7 +25,7 @@
     <TextView
         android:id="@+id/idPergunta"
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="160dp"
         android:gravity="center_horizontal|top"
         android:inputType="textMultiLine"
         android:paddingLeft="15dp"
@@ -142,7 +142,7 @@
         android:id="@+id/idNivel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/bangers"
         android:gravity="center"
         android:textColor="@color/color_rosa"
