@@ -37,7 +37,8 @@ public class Historia01Activity extends AppCompatActivity {
 
     private Button btColor;     //Botão para alterar as cores
     private Button btAlinha;    //Alinhamento de texto
-    private int opc = 1;        //Opção do alinhamento e ou cores
+    private int alinhar = 1;    //Opção do alinhamento do texto
+    private int cor = 1;        //Opção de cores de fundo
 
     private int num; //Numero da proxima historia
 
@@ -77,18 +78,19 @@ public class Historia01Activity extends AppCompatActivity {
         btColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (opc > 5) {
-                    opc = 1;}
+                if (cor > 5) {
+                    cor = 1;
+                }
 
-                if (opc == 1) {
+                if (cor == 1) {
                     fundoPreto();
-                } else if (opc == 2) {
+                } else if (cor == 2) {
                     fundoRosa();
-                } else if (opc == 3) {
+                } else if (cor == 3) {
                     fundoVerde();
-                } else if (opc == 4) {
+                } else if (cor == 4) {
                     fundoAzul();
-                } else if (opc == 5) {
+                } else if (cor == 5) {
                     fundoCinza();
                 }
             }
@@ -99,15 +101,15 @@ public class Historia01Activity extends AppCompatActivity {
         btAlinha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (opc > 3) {
-                    opc = 1;}
+                if (alinhar > 3) {
+                    alinhar = 1;}
 
-                if (opc == 1) {
+                if (alinhar == 1) {
                     textoCentro();
-                } else if (opc == 2) {
-                    textoEsquerda();
-                } else if (opc == 3) {
+                } else if (alinhar == 2) {
                     textoDireita();
+                } else if (alinhar == 3) {
+                    textoEsquerda();
                 }
             }
         });
@@ -924,7 +926,7 @@ public class Historia01Activity extends AppCompatActivity {
         fundoHistoria.setBackgroundResource(R.color.color_cinza);
         historia.setTextColor(getResources().getColor(R.color.color_branco));
         titulo.setTextColor(getResources().getColor(R.color.color_branco));
-        opc++;
+        cor++;
     }
 
     private void fundoRosa() {
@@ -935,7 +937,7 @@ public class Historia01Activity extends AppCompatActivity {
         fundoHistoria.setBackgroundResource(R.color.color_rosa);
         historia.setTextColor(getResources().getColor(R.color.color_cinza));
         titulo.setTextColor(getResources().getColor(R.color.color_cinza));
-        opc++;
+        cor++;
     }
 
     private void fundoAzul() {
@@ -946,7 +948,7 @@ public class Historia01Activity extends AppCompatActivity {
         fundoHistoria.setBackgroundResource(R.color.color_azul);
         historia.setTextColor(getResources().getColor(R.color.color_preto));
         titulo.setTextColor(getResources().getColor(R.color.color_preto));
-        opc++;
+        cor++;
     }
 
     private void fundoVerde() {
@@ -957,7 +959,7 @@ public class Historia01Activity extends AppCompatActivity {
         fundoHistoria.setBackgroundResource(R.color.color_verde);
         historia.setTextColor(getResources().getColor(R.color.color_preto));
         titulo.setTextColor(getResources().getColor(R.color.color_preto));
-        opc++;
+        cor++;
     }
 
     private void fundoPreto() {
@@ -968,7 +970,7 @@ public class Historia01Activity extends AppCompatActivity {
         fundoHistoria.setBackgroundResource(R.color.color_preto);
         historia.setTextColor(getResources().getColor(R.color.color_branco));
         titulo.setTextColor(getResources().getColor(R.color.color_branco));
-        opc++;
+        cor++;
     }
 
     private void textoEsquerda() {
@@ -980,7 +982,7 @@ public class Historia01Activity extends AppCompatActivity {
         titulo.setGravity(Gravity.LEFT|CENTER);
         titulo.setPadding(20,0,0,0);
         btAlinha.setBackgroundResource(R.drawable.esquerda);
-        opc++;
+        alinhar++;
     }
 
     private void textoCentro() {
@@ -991,7 +993,7 @@ public class Historia01Activity extends AppCompatActivity {
         historia.setGravity(CENTER);
         titulo.setGravity(CENTER);
         btAlinha.setBackgroundResource(R.drawable.centro);
-        opc++;
+        alinhar++;
     }
 
     private void textoDireita() {
@@ -1003,6 +1005,6 @@ public class Historia01Activity extends AppCompatActivity {
         titulo.setGravity(Gravity.RIGHT|CENTER);
         titulo.setPadding(0,0,20,0);
         btAlinha.setBackgroundResource(R.drawable.direita);
-        opc++;
+        alinhar++;
     }
 }//FINALIZA O PROGRAMA
