@@ -19,6 +19,8 @@ public class FasesActivity extends AppCompatActivity {
     private Button btFase05;
     private Button btFase06;
     private Button btFechar;
+    private Button btZerar;
+    private int opc = 1;
 
     private TextView idFase1;
     private TextView idFase2;
@@ -26,7 +28,6 @@ public class FasesActivity extends AppCompatActivity {
     private TextView idFase4;
     private TextView idFase5;
     private TextView idFase6;
-    private TextView idPontos;
 
     int pf1;
     int pf2;
@@ -34,6 +35,7 @@ public class FasesActivity extends AppCompatActivity {
     int pf4;
     int pf5;
     int pf6;
+
 
     private static final String PREF_NOME = "preferencias";
 
@@ -58,6 +60,7 @@ public class FasesActivity extends AppCompatActivity {
         btFase04 = findViewById(R.id.btFase04);
         btFase05 = findViewById(R.id.btFase05);
         btFase06 = findViewById(R.id.btFase06);
+        btZerar  = findViewById(R.id.btZerar);
 
         idFase1 = findViewById(R.id.idFase1);
         idFase2 = findViewById(R.id.idFase2);
@@ -65,8 +68,6 @@ public class FasesActivity extends AppCompatActivity {
         idFase4 = findViewById(R.id.idFase4);
         idFase5 = findViewById(R.id.idFase5);
         idFase6 = findViewById(R.id.idFase6);
-
-        idPontos = findViewById(R.id.idPontos);
 
         //BOTÃO PARA FECHAR
         btFechar = findViewById(R.id.btFechar);
@@ -84,13 +85,6 @@ public class FasesActivity extends AppCompatActivity {
 
         //EXIBINDO DADOS DO SHARED PREFERENCES
         sharedPreferences = getSharedPreferences(PREF_NOME, Context.MODE_PRIVATE);
-        /* LIMPAR DADOS DO SHARED PREFERENCES
-
-        dadospref = sharedPreferences.edit();
-        dadospref.clear();
-        dadospref.apply();
-
-         */
 
         //BOTÃO PERGUNTAS FASE 01
         pf1 = sharedPreferences.getInt("pontosf1",0);
@@ -261,7 +255,25 @@ public class FasesActivity extends AppCompatActivity {
         });
 
         //EXIBINDO PONTUAÇÃO TOTAL
-        idPontos.setText("Pontuação Total: " + (pf1 + pf2 + pf3 + pf4 + pf5 + pf6));
+        btZerar.setText("Pontuação Total: " + (pf1 + pf2 + pf3 + pf4 + pf5 + pf6));
+
+        //LIMPAR DADOS DO SHARED PREFERENCES
+        btZerar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (opc > 5) {
+                    opc = 1;
+                }
+
+                if (opc == 5) {
+                    dadospref = sharedPreferences.edit();
+                    dadospref.clear();
+                    dadospref.apply();
+                    Toast.makeText(getApplicationContext(), "Pontuação zerada", Toast.LENGTH_SHORT).show();
+                }
+                opc++;
+            }
+        });
     }
 }
 
