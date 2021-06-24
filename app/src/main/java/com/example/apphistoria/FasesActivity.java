@@ -261,7 +261,7 @@ public class FasesActivity extends AppCompatActivity {
         btZerar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (opc > 5) {
+                if (opc > 10) {
                     opc = 1;
                 }
 
@@ -271,6 +271,19 @@ public class FasesActivity extends AppCompatActivity {
                     dadospref.apply();
                     Toast.makeText(getApplicationContext(), "Pontuação zerada", Toast.LENGTH_SHORT).show();
                 }
+
+                if (opc == 10) {
+                    dadospref = sharedPreferences.edit();
+                    dadospref.putInt("pontosf1", 10);
+                    dadospref.putInt("pontosf2", 10);
+                    dadospref.putInt("pontosf3", 10);
+                    dadospref.putInt("pontosf4", 10);
+                    dadospref.putInt("pontosf5", 10);
+                    dadospref.putInt("pontosf6", 10);
+                    dadospref.apply();
+                    Toast.makeText(getApplicationContext(), "Pontuação Turbinada", Toast.LENGTH_SHORT).show();
+                }
+
                 opc++;
             }
         });
