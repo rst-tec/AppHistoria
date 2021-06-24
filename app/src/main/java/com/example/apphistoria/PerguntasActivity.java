@@ -83,6 +83,17 @@ public class PerguntasActivity extends AppCompatActivity {
             idStatus.setText("Pergunta " + (num -30) + " de 10");
             idNivel.setText("Fase - 04  ");
         }
+
+        if (num >= 41) {
+            idStatus.setText("Pergunta " + (num -40) + " de 10");
+            idNivel.setText("Fase - 05  ");
+        }
+
+        if (num >= 51) {
+            idStatus.setText("Pergunta " + (num -50) + " de 10");
+            idNivel.setText("Fase - 06  ");
+        }
+
         //BOTÃO PARA FECHAR
         btFechar = findViewById(R.id.btFechar);
         btFechar.setOnClickListener(new View.OnClickListener() {
@@ -147,6 +158,7 @@ public class PerguntasActivity extends AppCompatActivity {
 
         if (num == 1) {
 
+            //pergunta.setText("Qual personagem da Bíblia que sofreu muito, mas não negou a Deus em nenhum momento?");
             pergunta.setText("Em quantos dias Deus fez a criação do mundo?");
 
             resposta1.setText("7 dias");
@@ -1168,7 +1180,7 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
         if (num == 27) {
-            pergunta.setText("O que o homem queria de Pedro e João?");
+            pergunta.setText("O que o paralítico na porta do templo, queria de Pedro e João?");
             resposta1.setText("Dinheiro");
             resposta1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -1198,7 +1210,7 @@ public class PerguntasActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     btLeitor.setBackgroundResource(R.drawable.musica_on);
-                    String textoLeitura ="O que o homem queria de Pedro e João? " +
+                    String textoLeitura ="O que o paralítico na porta do templo, queria de Pedro e João? " +
                             "Dinheiro, Comida ou Oração.";
                     leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
@@ -1689,6 +1701,766 @@ public class PerguntasActivity extends AppCompatActivity {
                     btLeitor.setBackgroundResource(R.drawable.musica_on);
                     String textoLeitura ="Quantos mandamentos Deus deu a Moisés? " +
                             "20 mandamentos, 10 mandamentos ou 7 mandamentos.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 41) {
+            pergunta.setText("O que Davi fazia antes de ser rei?");
+            resposta1.setText("Era um pescador");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Artesão");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Pastor de ovelhas");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="O que Davi fazia antes de ser rei? " +
+                            "Era um pescador, Artesão ou Pastor de ovelhas.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 42) {
+            pergunta.setText("Quem andou sobre as águas com Jesus?");
+            resposta1.setText("Pedro");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("Thiago");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("João");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quem andou sobre as águas com Jesus? " +
+                            "Pedro, Thiago ou João.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 43) {
+            pergunta.setText("Depois de quantos dias Jesus ressuscitou?");
+            resposta1.setText("3 dias");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("7 dias");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("40 dias");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Depois de quantos dias Jesus ressuscitou? " +
+                            "3 dias, 7 dias ou 40 dias.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 44) {
+            pergunta.setText("Qual foi o discípulo que negou Jesus três vezes?");
+            resposta1.setText("Judas");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Pedro");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("João");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual foi o discípulo que negou Jesus três vezes? " +
+                            "Judas, Pedro ou João.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 45) {
+            pergunta.setText("Qual o nome do primeiro livro da Bíblia?");
+            resposta1.setText("Apocalipse");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Mateus");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Gênesis");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual o nome do primeiro livro da Bíblia? " +
+                            "Apocalipse, Mateus ou Gênesis.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 46) {
+            pergunta.setText("Qual o nome do último livro da Bíblia?");
+            resposta1.setText("Atos");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Apocalipse");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Salmos");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual o nome do último livro da Bíblia? " +
+                            "Atos, Apocalipse ou Salmos.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 47) {
+            pergunta.setText("Depois que Pedro negou Jesus 3 vezes, o que aconteceu?");
+            resposta1.setText("O galo cantou");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("O mar se abriu");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Caiu uma tempestade");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Depois que Pedro negou Jesus 3 vezes, o que aconteceu? " +
+                            "O galo cantou, O mar se abriu ou Caiu uma tempestade.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 48) {
+            pergunta.setText("Qual destas pessoas foi obediente a Deus?");
+            resposta1.setText("Saul");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Faraó");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Samuel");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual destas pessoas foi obediente a Deus? " +
+                            "Saul, Faraó ou Samuel.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 49) {
+            pergunta.setText("Qual o nome da cidade que Jesus nasceu?");
+            resposta1.setText("Salomão");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Belém");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Babilônia");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual o nome da cidade que Jesus nasceu? " +
+                            "Egito, Belém ou Babilônia.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 50) {
+            pergunta.setText("Quem era considerado um homem muito inteligente?");
+            resposta1.setText("Salomão");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("Sansão");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Abraão");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quem era considerado um homem muito inteligente? " +
+                            "Salomão, Sansão ou Abraão.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 51) {
+            pergunta.setText("Quem foi \"o pai de uma grande nação\"?");
+            resposta1.setText("Paulo");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Abraão");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Noé");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quem foi \"o pai de uma grande nação\"? " +
+                            "Paulo, Abraão ou Noé.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 52) {
+            pergunta.setText("Quem foi chamado de \"rei dos judeus\"?");
+            resposta1.setText("Judas");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Davi");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Jesus");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quem foi chamado de \"rei dos judeus\"? " +
+                            "Judas, Davi ou Jesus.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 53) {
+            pergunta.setText("Quem avisou a Maria que ela teria um filho?");
+            resposta1.setText("Um anjo");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("Um soldado");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Um profeta");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quem avisou a Maria que ela teria um filho? " +
+                            "Um anjo, Um soldado ou Um profeta.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 54) {
+            pergunta.setText("Qual o nome da esposa de Abraão?");
+            resposta1.setText("Ana");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Raquel");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Sara");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual o nome da esposa de Abraão? " +
+                            "Ana, Raquel ou Sara.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 55) {
+            pergunta.setText("Quando o anjo disse a Abraão que ele teria um filho, como Sara reagiu?");
+            resposta1.setText("Ela chorou");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Ela riu");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Ela desmaiou");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quando o anjo disse a Abraão que ele teria um filho, como Sara reagiu? " +
+                            "Ela chorou, Ela riu ou Ela desmaiou.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 56) {
+            pergunta.setText("Qual personagem da Bíblia que sofreu muito, mas não negou a Deus em nenhum momento?");
+            resposta1.setText("Jó");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("Jonas");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Judas ");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual personagem da Bíblia que sofreu muito, mas não negou a Deus em nenhum momento? " +
+                            "Jó, Jonas ou Judas .";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 57) {
+            pergunta.setText("Qual o nome do anjo que aparaceu a Maria?");
+            resposta1.setText("Rafael");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Miguel");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Gabriel ");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual o nome do anjo que aparaceu a Maria? " +
+                            "Rafael, Miguel ou Gabriel .";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 58) {
+            pergunta.setText("Qual animal tentou Eva no Jardim do Éden?");
+            resposta1.setText("Leão");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Serpente");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Lagarto ");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual animal tentou Eva no Jardim do Éden? " +
+                            "Leão, Serpente ou Lagarto .";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 59) {
+            pergunta.setText("Qual ser humano Deus criou primeiro?");
+            resposta1.setText("Eva");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Adão");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("foram criados juntos ");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual ser humano Deus criou primeiro? " +
+                            "Eva, Adão ou foram criados juntos.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 60) {
+            pergunta.setText("O que Jesus pediu para a mulher samaritana?");
+            resposta1.setText("Água ");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("Comida");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Dinheiro");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="O que Jesus pediu para a mulher samaritana? " +
+                            "Água, comida ou dinheiro";
                     leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
                 }
             });
