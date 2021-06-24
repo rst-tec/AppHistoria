@@ -1694,6 +1694,386 @@ public class PerguntasActivity extends AppCompatActivity {
             });
         }
 
+        if (num == 41) {
+            pergunta.setText("O que Davi fazia antes de ser rei?");
+            resposta1.setText("Era um pescador");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Artesão");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Pastor de ovelhas");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="O que Davi fazia antes de ser rei? " +
+                            "Era um pescador, Artesão ou Pastor de ovelhas.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 42) {
+            pergunta.setText("Quem andou nas águas com Jesus?");
+            resposta1.setText("Pedro");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("Judas");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("João");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Quem andou nas águas com Jesus? " +
+                            "Pedro, Judas ou João.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 43) {
+            pergunta.setText("Depois de quantos dias Jesus ressuscitou?");
+            resposta1.setText("3 dias");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("7 dias");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("40 dias");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Depois de quantos dias Jesus ressuscitou? " +
+                            "3 dias, 7 dias ou 40 dias.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 44) {
+            pergunta.setText("Qual foi o discípulo que negou Jesus três vezes?");
+            resposta1.setText("Judas");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Pedro");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("João");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual foi o discípulo que negou Jesus três vezes? " +
+                            "Judas, Pedro ou João.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 45) {
+            pergunta.setText("Qual o nome do primeiro livro da Bíblia?");
+            resposta1.setText("Apocalipse");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Mateus");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Gênesis");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual o nome do primeiro livro da Bíblia? " +
+                            "Apocalipse, Mateus ou Gênesis.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 46) {
+            pergunta.setText("Qual o nome do último livro da Bíblia?");
+            resposta1.setText("Atos");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Apocalipse");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Salmos");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual o nome do último livro da Bíblia? " +
+                            "Atos, Apocalipse ou Salmos.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 47) {
+            pergunta.setText("Depois que Pedro negou Jesus 3 vezes, o que aconteceu?");
+            resposta1.setText("O galo cantou");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("O mar se abriu");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Caiu uma tempestade");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Depois que Pedro negou Jesus 3 vezes, o que aconteceu? " +
+                            "O galo cantou, O mar se abriu ou Caiu uma tempestade.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 48) {
+            pergunta.setText("Qual destas pessoas foi obediente a Deus?");
+            resposta1.setText("Saul");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Faraó");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Samuel");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual destas pessoas foi obediente a Deus? " +
+                            "Saul, Faraó ou Samuel.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 49) {
+            pergunta.setText("Qual cidade Jesus nasceu?");
+            resposta1.setText("Salomão");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta2.setText("Belém");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta3.setText("Babilônia");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Qual cidade Jesus nasceu? " +
+                            "Egito, Belém ou Babilônia.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
+        if (num == 50) {
+            pergunta.setText("Na Bíblia, qual o nome do homem que foi muito inteligente?");
+            resposta1.setText("Salomão");
+            resposta1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaCorreta();
+                }
+            });
+
+            resposta2.setText("Sansão");
+            resposta2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            resposta3.setText("Abraão");
+            resposta3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    respostaErrada();
+                }
+            });
+
+            //BOTÃO PARA LEITURA DA PERGUNTA
+            btLeitor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    btLeitor.setBackgroundResource(R.drawable.musica_on);
+                    String textoLeitura ="Na Bíblia, qual o nome do homem que foi muito inteligente? " +
+                            "Salomão, Sansão ou Abraão.";
+                    leitor.speak(textoLeitura, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
+        }
+
 
 
 

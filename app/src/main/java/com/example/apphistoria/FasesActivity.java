@@ -223,7 +223,7 @@ public class FasesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(pf4 > 5) {
                     Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                    intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
+                    intent.putExtra("pergunta", 41); //PASSANDO VALOR PARA O BUNDLE
                     startActivity(intent);
                 }else{
                     Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anterior", Toast.LENGTH_SHORT).show();
@@ -252,7 +252,7 @@ public class FasesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(pf5 > 5) {
                     Intent intent = new Intent(getApplicationContext(), PerguntasActivity.class);
-                    intent.putExtra("pergunta", 31); //PASSANDO VALOR PARA O BUNDLE
+                    intent.putExtra("pergunta", 51); //PASSANDO VALOR PARA O BUNDLE
                     startActivity(intent);
                 }else{
                     Toast.makeText(getApplicationContext(), "Pontuação não atiginda, na fase anterior", Toast.LENGTH_SHORT).show();
