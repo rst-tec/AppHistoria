@@ -86,8 +86,17 @@ public class FinalJogoActivity extends AppCompatActivity {
             dadospref.apply();
         }
 
-        idErros.setText(erros + " Erros" );
-        idPontos.setText(pontos + " pontos");
+        if(erros == 0 || erros == 1){
+            idErros.setText(erros + " Erro");
+        }else {
+            idErros.setText(erros + " Erros");
+        }
+
+        if(pontos == 0 || pontos == 1){
+            idPontos.setText(pontos + " Ponto");
+        }else {
+            idPontos.setText(pontos + " Pontos");
+        }
 
         if (pontos <= 3) {
             idFundoResultado.setBackgroundResource(R.drawable.fundo_resultado1);

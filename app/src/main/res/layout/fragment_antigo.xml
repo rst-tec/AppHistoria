@@ -64,7 +64,6 @@
                 android:background="@drawable/historia002"
                 android:contentDescription="@string/BotaoHistoria002"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -507,7 +506,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_end="205dp" />
+                app:layout_constraintGuide_percent="0.50" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

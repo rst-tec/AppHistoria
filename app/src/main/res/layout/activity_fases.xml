@@ -10,13 +10,15 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btFase02"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/titulo" />
@@ -33,17 +35,19 @@
         app:layout_constraintEnd_toStartOf="@+id/btFase02"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/btFase02" />
 
     <Button
         android:id="@+id/btFase02"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/bangers"
         android:gravity="center|top"
         android:text="2"
         android:textColor="@color/color_verde"
         android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/btFase05"
         app:layout_constraintEnd_toStartOf="@+id/btFase03"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btFase01"
@@ -61,13 +65,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btFase02"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/btFase02" />
 
     <Button
         android:id="@+id/btFase04"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/bangers"
         android:gravity="center|top"
         android:text="4"
@@ -76,7 +79,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btFase05"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btFase01" />
+        app:layout_constraintTop_toTopOf="@+id/btFase05" />
 
     <Button
         android:id="@+id/btFase05"
@@ -88,6 +91,7 @@
         android:text="5"
         android:textColor="@color/color_verde"
         android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/btZerar"
         app:layout_constraintEnd_toStartOf="@+id/btFase06"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btFase04"
@@ -97,7 +101,6 @@
         android:id="@+id/btFase06"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/bangers"
         android:gravity="center|top"
         android:text="6"
@@ -106,7 +109,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btFase05"
-        app:layout_constraintTop_toBottomOf="@+id/btFase03" />
+        app:layout_constraintTop_toTopOf="@+id/btFase05" />
 
     <TextView
         android:id="@+id/idFase1"
@@ -172,18 +175,21 @@
         android:id="@+id/btFechar"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/bt_jogo_fechar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idFase5" />
+        app:layout_constraintTop_toBottomOf="@+id/btZerar" />
 
     <Button
         android:id="@+id/btZerar"
-        android:layout_width="0dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:background="@drawable/bt_jogo_respostas"
@@ -192,8 +198,8 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btFechar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idFase5" />
+        app:layout_constraintTop_toBottomOf="@+id/btFase05" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
